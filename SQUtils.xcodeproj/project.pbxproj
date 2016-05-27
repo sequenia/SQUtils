@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		80F3D2AD1CF80D0D00B3F10D /* NSArray+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D26D1CF80D0D00B3F10D /* NSArray+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80F3D2AE1CF80D0D00B3F10D /* NSArray+SQExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F3D26E1CF80D0D00B3F10D /* NSArray+SQExtended.m */; };
+		80F3D2AF1CF80D0D00B3F10D /* NSData+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D26F1CF80D0D00B3F10D /* NSData+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80F3D2B01CF80D0D00B3F10D /* NSData+SQExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F3D2701CF80D0D00B3F10D /* NSData+SQExtended.m */; };
+		80F3D2B11CF80D0D00B3F10D /* NSDate+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D2711CF80D0D00B3F10D /* NSDate+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80F3D2B21CF80D0D00B3F10D /* NSDate+SQExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F3D2721CF80D0D00B3F10D /* NSDate+SQExtended.m */; };
+		80F3D2B31CF80D0D00B3F10D /* NSDictionary+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D2731CF80D0D00B3F10D /* NSDictionary+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80F3D2B41CF80D0D00B3F10D /* NSDictionary+SQExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F3D2741CF80D0D00B3F10D /* NSDictionary+SQExtended.m */; };
+		80F3D2B51CF80D0D00B3F10D /* NSError+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D2751CF80D0D00B3F10D /* NSError+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80F3D2B61CF80D0D00B3F10D /* NSError+SQExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F3D2761CF80D0D00B3F10D /* NSError+SQExtended.m */; };
+		80F3D2B71CF80D0D00B3F10D /* NSMutableArray+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D2771CF80D0D00B3F10D /* NSMutableArray+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80F3D2B81CF80D0D00B3F10D /* NSMutableArray+SQExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F3D2781CF80D0D00B3F10D /* NSMutableArray+SQExtended.m */; };
+		80F3D2B91CF80D0D00B3F10D /* NSString+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D2791CF80D0D00B3F10D /* NSString+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80F3D2BA1CF80D0D00B3F10D /* NSString+SQExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F3D27A1CF80D0D00B3F10D /* NSString+SQExtended.m */; };
+		80F3D2BB1CF80D0D00B3F10D /* SQCategories.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D27B1CF80D0D00B3F10D /* SQCategories.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80F3D2BC1CF80D0D00B3F10D /* UICollectionView+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D27D1CF80D0D00B3F10D /* UICollectionView+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80F3D2BD1CF80D0D00B3F10D /* UICollectionView+SQExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F3D27E1CF80D0D00B3F10D /* UICollectionView+SQExtended.m */; };
+		80F3D2BE1CF80D0D00B3F10D /* UIColor+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D27F1CF80D0D00B3F10D /* UIColor+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80F3D2BF1CF80D0D00B3F10D /* UIColor+SQExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F3D2801CF80D0D00B3F10D /* UIColor+SQExtended.m */; };
+		80F3D2C01CF80D0D00B3F10D /* UIImage+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D2811CF80D0D00B3F10D /* UIImage+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80F3D2C11CF80D0D00B3F10D /* UIImage+SQExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F3D2821CF80D0D00B3F10D /* UIImage+SQExtended.m */; };
+		80F3D2C21CF80D0D00B3F10D /* UIImageView+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D2831CF80D0D00B3F10D /* UIImageView+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80F3D2C31CF80D0D00B3F10D /* UIImageView+SQExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F3D2841CF80D0D00B3F10D /* UIImageView+SQExtended.m */; };
+		80F3D2C41CF80D0D00B3F10D /* UITableView+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D2851CF80D0D00B3F10D /* UITableView+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80F3D2C51CF80D0D00B3F10D /* UITableView+SQExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F3D2861CF80D0D00B3F10D /* UITableView+SQExtended.m */; };
+		80F3D2C61CF80D0D00B3F10D /* UITextField+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D2871CF80D0D00B3F10D /* UITextField+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80F3D2C71CF80D0D00B3F10D /* UITextField+SQExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F3D2881CF80D0D00B3F10D /* UITextField+SQExtended.m */; };
+		80F3D2C81CF80D0D00B3F10D /* UITextView+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D2891CF80D0D00B3F10D /* UITextView+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80F3D2C91CF80D0D00B3F10D /* UITextView+SQExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F3D28A1CF80D0D00B3F10D /* UITextView+SQExtended.m */; };
+		80F3D2CA1CF80D0D00B3F10D /* UIView+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D28B1CF80D0D00B3F10D /* UIView+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80F3D2CB1CF80D0D00B3F10D /* UIView+SQExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F3D28C1CF80D0D00B3F10D /* UIView+SQExtended.m */; };
+		80F3D2CC1CF80D0D00B3F10D /* UIViewController+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D28D1CF80D0D00B3F10D /* UIViewController+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80F3D2CD1CF80D0D00B3F10D /* UIViewController+SQExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F3D28E1CF80D0D00B3F10D /* UIViewController+SQExtended.m */; };
+		80F3D2CF1CF80D0D00B3F10D /* NKAddressBookPickerBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D2931CF80D0D00B3F10D /* NKAddressBookPickerBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80F3D2D01CF80D0D00B3F10D /* NKAddressBookPickerBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F3D2941CF80D0D00B3F10D /* NKAddressBookPickerBehavior.m */; };
+		80F3D2D11CF80D0D00B3F10D /* NKBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D2961CF80D0D00B3F10D /* NKBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80F3D2D21CF80D0D00B3F10D /* NKBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F3D2971CF80D0D00B3F10D /* NKBehavior.m */; };
+		80F3D2D31CF80D0D00B3F10D /* NKPagingBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D2991CF80D0D00B3F10D /* NKPagingBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80F3D2D41CF80D0D00B3F10D /* NKPagingBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F3D29A1CF80D0D00B3F10D /* NKPagingBehavior.m */; };
+		80F3D2D51CF80D0D00B3F10D /* NKPhotoPickerBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D29C1CF80D0D00B3F10D /* NKPhotoPickerBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80F3D2D61CF80D0D00B3F10D /* NKPhotoPickerBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F3D29D1CF80D0D00B3F10D /* NKPhotoPickerBehavior.m */; };
+		80F3D2D71CF80D0D00B3F10D /* SQBehaviors.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D29E1CF80D0D00B3F10D /* SQBehaviors.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80F3D2D81CF80D0D00B3F10D /* GSKeyboardManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D2A01CF80D0D00B3F10D /* GSKeyboardManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80F3D2D91CF80D0D00B3F10D /* GSKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F3D2A11CF80D0D00B3F10D /* GSKeyboardManager.m */; };
+		80F3D2DA1CF80D0D00B3F10D /* SeqButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D2A41CF80D0D00B3F10D /* SeqButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80F3D2DB1CF80D0D00B3F10D /* SeqButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F3D2A51CF80D0D00B3F10D /* SeqButton.m */; };
+		80F3D2DC1CF80D0D00B3F10D /* SeqOnboardingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D2A71CF80D0D00B3F10D /* SeqOnboardingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80F3D2DD1CF80D0D00B3F10D /* SeqOnboardingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F3D2A81CF80D0D00B3F10D /* SeqOnboardingView.m */; };
+		80F3D2DE1CF80D0D00B3F10D /* TopAlignedLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D2AA1CF80D0D00B3F10D /* TopAlignedLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80F3D2DF1CF80D0D00B3F10D /* TopAlignedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F3D2AB1CF80D0D00B3F10D /* TopAlignedLabel.m */; };
+		80F3D2ED1CF80F5900B3F10D /* SQUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D2AC1CF80D0D00B3F10D /* SQUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		80F3D25F1CF80C6000B3F10D /* SQUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SQUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80F3D26D1CF80D0D00B3F10D /* NSArray+SQExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SQExtended.h"; sourceTree = "<group>"; };
+		80F3D26E1CF80D0D00B3F10D /* NSArray+SQExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SQExtended.m"; sourceTree = "<group>"; };
+		80F3D26F1CF80D0D00B3F10D /* NSData+SQExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SQExtended.h"; sourceTree = "<group>"; };
+		80F3D2701CF80D0D00B3F10D /* NSData+SQExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SQExtended.m"; sourceTree = "<group>"; };
+		80F3D2711CF80D0D00B3F10D /* NSDate+SQExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+SQExtended.h"; sourceTree = "<group>"; };
+		80F3D2721CF80D0D00B3F10D /* NSDate+SQExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+SQExtended.m"; sourceTree = "<group>"; };
+		80F3D2731CF80D0D00B3F10D /* NSDictionary+SQExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SQExtended.h"; sourceTree = "<group>"; };
+		80F3D2741CF80D0D00B3F10D /* NSDictionary+SQExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SQExtended.m"; sourceTree = "<group>"; };
+		80F3D2751CF80D0D00B3F10D /* NSError+SQExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+SQExtended.h"; sourceTree = "<group>"; };
+		80F3D2761CF80D0D00B3F10D /* NSError+SQExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+SQExtended.m"; sourceTree = "<group>"; };
+		80F3D2771CF80D0D00B3F10D /* NSMutableArray+SQExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SQExtended.h"; sourceTree = "<group>"; };
+		80F3D2781CF80D0D00B3F10D /* NSMutableArray+SQExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SQExtended.m"; sourceTree = "<group>"; };
+		80F3D2791CF80D0D00B3F10D /* NSString+SQExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SQExtended.h"; sourceTree = "<group>"; };
+		80F3D27A1CF80D0D00B3F10D /* NSString+SQExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SQExtended.m"; sourceTree = "<group>"; };
+		80F3D27B1CF80D0D00B3F10D /* SQCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQCategories.h; sourceTree = "<group>"; };
+		80F3D27D1CF80D0D00B3F10D /* UICollectionView+SQExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+SQExtended.h"; sourceTree = "<group>"; };
+		80F3D27E1CF80D0D00B3F10D /* UICollectionView+SQExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+SQExtended.m"; sourceTree = "<group>"; };
+		80F3D27F1CF80D0D00B3F10D /* UIColor+SQExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SQExtended.h"; sourceTree = "<group>"; };
+		80F3D2801CF80D0D00B3F10D /* UIColor+SQExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SQExtended.m"; sourceTree = "<group>"; };
+		80F3D2811CF80D0D00B3F10D /* UIImage+SQExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SQExtended.h"; sourceTree = "<group>"; };
+		80F3D2821CF80D0D00B3F10D /* UIImage+SQExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SQExtended.m"; sourceTree = "<group>"; };
+		80F3D2831CF80D0D00B3F10D /* UIImageView+SQExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SQExtended.h"; sourceTree = "<group>"; };
+		80F3D2841CF80D0D00B3F10D /* UIImageView+SQExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SQExtended.m"; sourceTree = "<group>"; };
+		80F3D2851CF80D0D00B3F10D /* UITableView+SQExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SQExtended.h"; sourceTree = "<group>"; };
+		80F3D2861CF80D0D00B3F10D /* UITableView+SQExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SQExtended.m"; sourceTree = "<group>"; };
+		80F3D2871CF80D0D00B3F10D /* UITextField+SQExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+SQExtended.h"; sourceTree = "<group>"; };
+		80F3D2881CF80D0D00B3F10D /* UITextField+SQExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+SQExtended.m"; sourceTree = "<group>"; };
+		80F3D2891CF80D0D00B3F10D /* UITextView+SQExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+SQExtended.h"; sourceTree = "<group>"; };
+		80F3D28A1CF80D0D00B3F10D /* UITextView+SQExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+SQExtended.m"; sourceTree = "<group>"; };
+		80F3D28B1CF80D0D00B3F10D /* UIView+SQExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SQExtended.h"; sourceTree = "<group>"; };
+		80F3D28C1CF80D0D00B3F10D /* UIView+SQExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SQExtended.m"; sourceTree = "<group>"; };
+		80F3D28D1CF80D0D00B3F10D /* UIViewController+SQExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SQExtended.h"; sourceTree = "<group>"; };
+		80F3D28E1CF80D0D00B3F10D /* UIViewController+SQExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SQExtended.m"; sourceTree = "<group>"; };
+		80F3D2931CF80D0D00B3F10D /* NKAddressBookPickerBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKAddressBookPickerBehavior.h; sourceTree = "<group>"; };
+		80F3D2941CF80D0D00B3F10D /* NKAddressBookPickerBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKAddressBookPickerBehavior.m; sourceTree = "<group>"; };
+		80F3D2961CF80D0D00B3F10D /* NKBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKBehavior.h; sourceTree = "<group>"; };
+		80F3D2971CF80D0D00B3F10D /* NKBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKBehavior.m; sourceTree = "<group>"; };
+		80F3D2991CF80D0D00B3F10D /* NKPagingBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKPagingBehavior.h; sourceTree = "<group>"; };
+		80F3D29A1CF80D0D00B3F10D /* NKPagingBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKPagingBehavior.m; sourceTree = "<group>"; };
+		80F3D29C1CF80D0D00B3F10D /* NKPhotoPickerBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKPhotoPickerBehavior.h; sourceTree = "<group>"; };
+		80F3D29D1CF80D0D00B3F10D /* NKPhotoPickerBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKPhotoPickerBehavior.m; sourceTree = "<group>"; };
+		80F3D29E1CF80D0D00B3F10D /* SQBehaviors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQBehaviors.h; sourceTree = "<group>"; };
+		80F3D2A01CF80D0D00B3F10D /* GSKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSKeyboardManager.h; sourceTree = "<group>"; };
+		80F3D2A11CF80D0D00B3F10D /* GSKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSKeyboardManager.m; sourceTree = "<group>"; };
+		80F3D2A41CF80D0D00B3F10D /* SeqButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeqButton.h; sourceTree = "<group>"; };
+		80F3D2A51CF80D0D00B3F10D /* SeqButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeqButton.m; sourceTree = "<group>"; };
+		80F3D2A71CF80D0D00B3F10D /* SeqOnboardingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeqOnboardingView.h; sourceTree = "<group>"; };
+		80F3D2A81CF80D0D00B3F10D /* SeqOnboardingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeqOnboardingView.m; sourceTree = "<group>"; };
+		80F3D2AA1CF80D0D00B3F10D /* TopAlignedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopAlignedLabel.h; sourceTree = "<group>"; };
+		80F3D2AB1CF80D0D00B3F10D /* TopAlignedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopAlignedLabel.m; sourceTree = "<group>"; };
+		80F3D2AC1CF80D0D00B3F10D /* SQUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQUtils.h; sourceTree = "<group>"; };
+		80F3D2E21CF80D4700B3F10D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80F3D2E51CF80DAE00B3F10D /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		80F3D2E61CF80DAE00B3F10D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		80F3D2E71CF80DAE00B3F10D /* SQUtils.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SQUtils.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		80F3D2EB1CF80DDE00B3F10D /* Default.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Default.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		80F3D25B1CF80C6000B3F10D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		80F3D2551CF80C6000B3F10D = {
+			isa = PBXGroup;
+			children = (
+				80F3D26A1CF80D0D00B3F10D /* Sources */,
+				80F3D2E41CF80DA400B3F10D /* Metadata */,
+				80F3D2E11CF80D4700B3F10D /* Supporting Files */,
+				80F3D2601CF80C6000B3F10D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		80F3D2601CF80C6000B3F10D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80F3D25F1CF80C6000B3F10D /* SQUtils.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		80F3D26A1CF80D0D00B3F10D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				80F3D26B1CF80D0D00B3F10D /* Categories */,
+				80F3D28F1CF80D0D00B3F10D /* Classes */,
+				80F3D2AC1CF80D0D00B3F10D /* SQUtils.h */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		80F3D26B1CF80D0D00B3F10D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				80F3D26C1CF80D0D00B3F10D /* Foundation */,
+				80F3D27B1CF80D0D00B3F10D /* SQCategories.h */,
+				80F3D27C1CF80D0D00B3F10D /* UIKit */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		80F3D26C1CF80D0D00B3F10D /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				80F3D26D1CF80D0D00B3F10D /* NSArray+SQExtended.h */,
+				80F3D26E1CF80D0D00B3F10D /* NSArray+SQExtended.m */,
+				80F3D26F1CF80D0D00B3F10D /* NSData+SQExtended.h */,
+				80F3D2701CF80D0D00B3F10D /* NSData+SQExtended.m */,
+				80F3D2711CF80D0D00B3F10D /* NSDate+SQExtended.h */,
+				80F3D2721CF80D0D00B3F10D /* NSDate+SQExtended.m */,
+				80F3D2731CF80D0D00B3F10D /* NSDictionary+SQExtended.h */,
+				80F3D2741CF80D0D00B3F10D /* NSDictionary+SQExtended.m */,
+				80F3D2751CF80D0D00B3F10D /* NSError+SQExtended.h */,
+				80F3D2761CF80D0D00B3F10D /* NSError+SQExtended.m */,
+				80F3D2771CF80D0D00B3F10D /* NSMutableArray+SQExtended.h */,
+				80F3D2781CF80D0D00B3F10D /* NSMutableArray+SQExtended.m */,
+				80F3D2791CF80D0D00B3F10D /* NSString+SQExtended.h */,
+				80F3D27A1CF80D0D00B3F10D /* NSString+SQExtended.m */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		80F3D27C1CF80D0D00B3F10D /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				80F3D27D1CF80D0D00B3F10D /* UICollectionView+SQExtended.h */,
+				80F3D27E1CF80D0D00B3F10D /* UICollectionView+SQExtended.m */,
+				80F3D27F1CF80D0D00B3F10D /* UIColor+SQExtended.h */,
+				80F3D2801CF80D0D00B3F10D /* UIColor+SQExtended.m */,
+				80F3D2811CF80D0D00B3F10D /* UIImage+SQExtended.h */,
+				80F3D2821CF80D0D00B3F10D /* UIImage+SQExtended.m */,
+				80F3D2831CF80D0D00B3F10D /* UIImageView+SQExtended.h */,
+				80F3D2841CF80D0D00B3F10D /* UIImageView+SQExtended.m */,
+				80F3D2851CF80D0D00B3F10D /* UITableView+SQExtended.h */,
+				80F3D2861CF80D0D00B3F10D /* UITableView+SQExtended.m */,
+				80F3D2871CF80D0D00B3F10D /* UITextField+SQExtended.h */,
+				80F3D2881CF80D0D00B3F10D /* UITextField+SQExtended.m */,
+				80F3D2891CF80D0D00B3F10D /* UITextView+SQExtended.h */,
+				80F3D28A1CF80D0D00B3F10D /* UITextView+SQExtended.m */,
+				80F3D28B1CF80D0D00B3F10D /* UIView+SQExtended.h */,
+				80F3D28C1CF80D0D00B3F10D /* UIView+SQExtended.m */,
+				80F3D28D1CF80D0D00B3F10D /* UIViewController+SQExtended.h */,
+				80F3D28E1CF80D0D00B3F10D /* UIViewController+SQExtended.m */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		80F3D28F1CF80D0D00B3F10D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				80F3D2911CF80D0D00B3F10D /* Behavior */,
+				80F3D29F1CF80D0D00B3F10D /* Keyboard */,
+				80F3D2A21CF80D0D00B3F10D /* View */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		80F3D2911CF80D0D00B3F10D /* Behavior */ = {
+			isa = PBXGroup;
+			children = (
+				80F3D2921CF80D0D00B3F10D /* Address Book Picker Behaviour */,
+				80F3D2951CF80D0D00B3F10D /* Base behavior */,
+				80F3D2981CF80D0D00B3F10D /* Paging Behavior */,
+				80F3D29B1CF80D0D00B3F10D /* Photo Picker Behavior */,
+				80F3D29E1CF80D0D00B3F10D /* SQBehaviors.h */,
+			);
+			path = Behavior;
+			sourceTree = "<group>";
+		};
+		80F3D2921CF80D0D00B3F10D /* Address Book Picker Behaviour */ = {
+			isa = PBXGroup;
+			children = (
+				80F3D2931CF80D0D00B3F10D /* NKAddressBookPickerBehavior.h */,
+				80F3D2941CF80D0D00B3F10D /* NKAddressBookPickerBehavior.m */,
+			);
+			path = "Address Book Picker Behaviour";
+			sourceTree = "<group>";
+		};
+		80F3D2951CF80D0D00B3F10D /* Base behavior */ = {
+			isa = PBXGroup;
+			children = (
+				80F3D2961CF80D0D00B3F10D /* NKBehavior.h */,
+				80F3D2971CF80D0D00B3F10D /* NKBehavior.m */,
+			);
+			path = "Base behavior";
+			sourceTree = "<group>";
+		};
+		80F3D2981CF80D0D00B3F10D /* Paging Behavior */ = {
+			isa = PBXGroup;
+			children = (
+				80F3D2991CF80D0D00B3F10D /* NKPagingBehavior.h */,
+				80F3D29A1CF80D0D00B3F10D /* NKPagingBehavior.m */,
+			);
+			path = "Paging Behavior";
+			sourceTree = "<group>";
+		};
+		80F3D29B1CF80D0D00B3F10D /* Photo Picker Behavior */ = {
+			isa = PBXGroup;
+			children = (
+				80F3D29C1CF80D0D00B3F10D /* NKPhotoPickerBehavior.h */,
+				80F3D29D1CF80D0D00B3F10D /* NKPhotoPickerBehavior.m */,
+			);
+			path = "Photo Picker Behavior";
+			sourceTree = "<group>";
+		};
+		80F3D29F1CF80D0D00B3F10D /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				80F3D2A01CF80D0D00B3F10D /* GSKeyboardManager.h */,
+				80F3D2A11CF80D0D00B3F10D /* GSKeyboardManager.m */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		80F3D2A21CF80D0D00B3F10D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				80F3D2A31CF80D0D00B3F10D /* Buttons */,
+				80F3D2A61CF80D0D00B3F10D /* Custom Views */,
+				80F3D2A91CF80D0D00B3F10D /* Labels */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		80F3D2A31CF80D0D00B3F10D /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				80F3D2A41CF80D0D00B3F10D /* SeqButton.h */,
+				80F3D2A51CF80D0D00B3F10D /* SeqButton.m */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		80F3D2A61CF80D0D00B3F10D /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				80F3D2A71CF80D0D00B3F10D /* SeqOnboardingView.h */,
+				80F3D2A81CF80D0D00B3F10D /* SeqOnboardingView.m */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		80F3D2A91CF80D0D00B3F10D /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				80F3D2AA1CF80D0D00B3F10D /* TopAlignedLabel.h */,
+				80F3D2AB1CF80D0D00B3F10D /* TopAlignedLabel.m */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		80F3D2E11CF80D4700B3F10D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				80F3D2E21CF80D4700B3F10D /* Info.plist */,
+				80F3D2EB1CF80DDE00B3F10D /* Default.xcconfig */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		80F3D2E41CF80DA400B3F10D /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				80F3D2E51CF80DAE00B3F10D /* LICENSE */,
+				80F3D2E61CF80DAE00B3F10D /* README.md */,
+				80F3D2E71CF80DAE00B3F10D /* SQUtils.podspec */,
+			);
+			name = Metadata;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		80F3D25C1CF80C6000B3F10D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80F3D2DC1CF80D0D00B3F10D /* SeqOnboardingView.h in Headers */,
+				80F3D2C41CF80D0D00B3F10D /* UITableView+SQExtended.h in Headers */,
+				80F3D2B11CF80D0D00B3F10D /* NSDate+SQExtended.h in Headers */,
+				80F3D2CA1CF80D0D00B3F10D /* UIView+SQExtended.h in Headers */,
+				80F3D2D31CF80D0D00B3F10D /* NKPagingBehavior.h in Headers */,
+				80F3D2D11CF80D0D00B3F10D /* NKBehavior.h in Headers */,
+				80F3D2BE1CF80D0D00B3F10D /* UIColor+SQExtended.h in Headers */,
+				80F3D2C61CF80D0D00B3F10D /* UITextField+SQExtended.h in Headers */,
+				80F3D2D81CF80D0D00B3F10D /* GSKeyboardManager.h in Headers */,
+				80F3D2CF1CF80D0D00B3F10D /* NKAddressBookPickerBehavior.h in Headers */,
+				80F3D2B51CF80D0D00B3F10D /* NSError+SQExtended.h in Headers */,
+				80F3D2C01CF80D0D00B3F10D /* UIImage+SQExtended.h in Headers */,
+				80F3D2D71CF80D0D00B3F10D /* SQBehaviors.h in Headers */,
+				80F3D2D51CF80D0D00B3F10D /* NKPhotoPickerBehavior.h in Headers */,
+				80F3D2BC1CF80D0D00B3F10D /* UICollectionView+SQExtended.h in Headers */,
+				80F3D2AF1CF80D0D00B3F10D /* NSData+SQExtended.h in Headers */,
+				80F3D2B71CF80D0D00B3F10D /* NSMutableArray+SQExtended.h in Headers */,
+				80F3D2B91CF80D0D00B3F10D /* NSString+SQExtended.h in Headers */,
+				80F3D2DE1CF80D0D00B3F10D /* TopAlignedLabel.h in Headers */,
+				80F3D2B31CF80D0D00B3F10D /* NSDictionary+SQExtended.h in Headers */,
+				80F3D2CC1CF80D0D00B3F10D /* UIViewController+SQExtended.h in Headers */,
+				80F3D2C81CF80D0D00B3F10D /* UITextView+SQExtended.h in Headers */,
+				80F3D2BB1CF80D0D00B3F10D /* SQCategories.h in Headers */,
+				80F3D2ED1CF80F5900B3F10D /* SQUtils.h in Headers */,
+				80F3D2C21CF80D0D00B3F10D /* UIImageView+SQExtended.h in Headers */,
+				80F3D2DA1CF80D0D00B3F10D /* SeqButton.h in Headers */,
+				80F3D2AD1CF80D0D00B3F10D /* NSArray+SQExtended.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		80F3D25E1CF80C6000B3F10D /* SQUtils */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80F3D2671CF80C6000B3F10D /* Build configuration list for PBXNativeTarget "SQUtils" */;
+			buildPhases = (
+				80F3D25A1CF80C6000B3F10D /* Sources */,
+				80F3D25B1CF80C6000B3F10D /* Frameworks */,
+				80F3D25C1CF80C6000B3F10D /* Headers */,
+				80F3D25D1CF80C6000B3F10D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SQUtils;
+			productName = SQUtils;
+			productReference = 80F3D25F1CF80C6000B3F10D /* SQUtils.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		80F3D2561CF80C6000B3F10D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Nikolay Kagala";
+				TargetAttributes = {
+					80F3D25E1CF80C6000B3F10D = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 80F3D2591CF80C6000B3F10D /* Build configuration list for PBXProject "SQUtils" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 80F3D2551CF80C6000B3F10D;
+			productRefGroup = 80F3D2601CF80C6000B3F10D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				80F3D25E1CF80C6000B3F10D /* SQUtils */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		80F3D25D1CF80C6000B3F10D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		80F3D25A1CF80C6000B3F10D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80F3D2D21CF80D0D00B3F10D /* NKBehavior.m in Sources */,
+				80F3D2C51CF80D0D00B3F10D /* UITableView+SQExtended.m in Sources */,
+				80F3D2BF1CF80D0D00B3F10D /* UIColor+SQExtended.m in Sources */,
+				80F3D2BA1CF80D0D00B3F10D /* NSString+SQExtended.m in Sources */,
+				80F3D2C71CF80D0D00B3F10D /* UITextField+SQExtended.m in Sources */,
+				80F3D2C91CF80D0D00B3F10D /* UITextView+SQExtended.m in Sources */,
+				80F3D2CD1CF80D0D00B3F10D /* UIViewController+SQExtended.m in Sources */,
+				80F3D2CB1CF80D0D00B3F10D /* UIView+SQExtended.m in Sources */,
+				80F3D2B81CF80D0D00B3F10D /* NSMutableArray+SQExtended.m in Sources */,
+				80F3D2D01CF80D0D00B3F10D /* NKAddressBookPickerBehavior.m in Sources */,
+				80F3D2C31CF80D0D00B3F10D /* UIImageView+SQExtended.m in Sources */,
+				80F3D2B21CF80D0D00B3F10D /* NSDate+SQExtended.m in Sources */,
+				80F3D2D91CF80D0D00B3F10D /* GSKeyboardManager.m in Sources */,
+				80F3D2C11CF80D0D00B3F10D /* UIImage+SQExtended.m in Sources */,
+				80F3D2B61CF80D0D00B3F10D /* NSError+SQExtended.m in Sources */,
+				80F3D2AE1CF80D0D00B3F10D /* NSArray+SQExtended.m in Sources */,
+				80F3D2D61CF80D0D00B3F10D /* NKPhotoPickerBehavior.m in Sources */,
+				80F3D2DD1CF80D0D00B3F10D /* SeqOnboardingView.m in Sources */,
+				80F3D2BD1CF80D0D00B3F10D /* UICollectionView+SQExtended.m in Sources */,
+				80F3D2DF1CF80D0D00B3F10D /* TopAlignedLabel.m in Sources */,
+				80F3D2B01CF80D0D00B3F10D /* NSData+SQExtended.m in Sources */,
+				80F3D2D41CF80D0D00B3F10D /* NKPagingBehavior.m in Sources */,
+				80F3D2B41CF80D0D00B3F10D /* NSDictionary+SQExtended.m in Sources */,
+				80F3D2DB1CF80D0D00B3F10D /* SeqButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		80F3D2651CF80C6000B3F10D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		80F3D2661CF80C6000B3F10D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		80F3D2681CF80C6000B3F10D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80F3D2EB1CF80DDE00B3F10D /* Default.xcconfig */;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sequenia.SQUtils;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		80F3D2691CF80C6000B3F10D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80F3D2EB1CF80DDE00B3F10D /* Default.xcconfig */;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sequenia.SQUtils;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		80F3D2591CF80C6000B3F10D /* Build configuration list for PBXProject "SQUtils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80F3D2651CF80C6000B3F10D /* Debug */,
+				80F3D2661CF80C6000B3F10D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80F3D2671CF80C6000B3F10D /* Build configuration list for PBXNativeTarget "SQUtils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80F3D2681CF80C6000B3F10D /* Debug */,
+				80F3D2691CF80C6000B3F10D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 80F3D2561CF80C6000B3F10D /* Project object */;
+}
