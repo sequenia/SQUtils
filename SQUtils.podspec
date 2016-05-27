@@ -13,15 +13,17 @@ Pod::Spec.new do |s|
   s.author                  = { 'sequenia' => 'sequenia@sequenia.com' }
   s.source                  = { :git => 'https://github.com/sequenia/SQUtils.git', :tag => s.version.to_s }
   s.requires_arc            = true
-  s.source_files            = 'Sources/SQUtils.h'
   s.ios.deployment_target   = '8.0'
 
+  s.source_files            = 'Sources/SQUtils.h'
+  
   s.subspec 'Categories' do |ss|
-      ss.source_files           = 'Sources/Categories/**/*'
+      ss.source_files = 'Sources/Categories/**/*'
   end
   
   s.subspec 'Classes' do |ss|
-      ss.source_files           = 'Sources/Classes/**/*'
+      ss.dependency 'SQUtils/Categories'
+      ss.source_files = 'Sources/Classes/**/*'
   end
 
 end
