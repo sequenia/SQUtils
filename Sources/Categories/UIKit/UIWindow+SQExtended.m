@@ -10,7 +10,7 @@
 
 @implementation UIWindow (SQExtended)
 
-- (void)setRootViewController: (UIViewController *)rootViewController animated: (BOOL)animated {
+- (void)sq_setRootViewController: (UIViewController *)rootViewController animated: (BOOL)animated {
     UIView *snapShotView;
     
     if (animated) {

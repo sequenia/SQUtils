@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		80BD54CE1CFD3B43009711C4 /* UIWindow+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80BD54CC1CFD3B43009711C4 /* UIWindow+SQExtended.h */; };
+		80BD54CE1CFD3B43009711C4 /* UIWindow+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80BD54CC1CFD3B43009711C4 /* UIWindow+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80BD54CF1CFD3B43009711C4 /* UIWindow+SQExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 80BD54CD1CFD3B43009711C4 /* UIWindow+SQExtended.m */; };
 		80F3D2AD1CF80D0D00B3F10D /* NSArray+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D26D1CF80D0D00B3F10D /* NSArray+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80F3D2AE1CF80D0D00B3F10D /* NSArray+SQExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F3D26E1CF80D0D00B3F10D /* NSArray+SQExtended.m */; };

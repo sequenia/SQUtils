@@ -21,4 +21,5 @@
 #import "UICollectionView+SQExtended.h"
 #import "UIColor+SQExtended.h"
 #import "UIViewController+SQExtended.h"
+#import "UIWindow+SQExtended.h"
  
