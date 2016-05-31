@@ -58,6 +58,9 @@
 		80F3D2DE1CF80D0D00B3F10D /* TopAlignedLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D2AA1CF80D0D00B3F10D /* TopAlignedLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80F3D2DF1CF80D0D00B3F10D /* TopAlignedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F3D2AB1CF80D0D00B3F10D /* TopAlignedLabel.m */; };
 		80F3D2ED1CF80F5900B3F10D /* SQUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D2AC1CF80D0D00B3F10D /* SQUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80F3D3731CF85CA900B3F10D /* InstagramLoginViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D3701CF85CA900B3F10D /* InstagramLoginViewController.h */; };
+		80F3D3741CF85CA900B3F10D /* InstagramLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F3D3711CF85CA900B3F10D /* InstagramLoginViewController.m */; };
+		80F3D3751CF85CA900B3F10D /* InstagramLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80F3D3721CF85CA900B3F10D /* InstagramLoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +121,9 @@
 		80F3D2E61CF80DAE00B3F10D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		80F3D2E71CF80DAE00B3F10D /* SQUtils.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SQUtils.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		80F3D2EB1CF80DDE00B3F10D /* Default.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Default.xcconfig; sourceTree = "<group>"; };
+		80F3D3701CF85CA900B3F10D /* InstagramLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramLoginViewController.h; sourceTree = "<group>"; };
+		80F3D3711CF85CA900B3F10D /* InstagramLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramLoginViewController.m; sourceTree = "<group>"; };
+		80F3D3721CF85CA900B3F10D /* InstagramLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstagramLoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +158,7 @@
 		80F3D26A1CF80D0D00B3F10D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				80F3D36E1CF85C6600B3F10D /* Social */,
 				80F3D26B1CF80D0D00B3F10D /* Categories */,
 				80F3D28F1CF80D0D00B3F10D /* Classes */,
 				80F3D2AC1CF80D0D00B3F10D /* SQUtils.h */,
@@ -338,6 +345,24 @@
 			name = Metadata;
 			sourceTree = "<group>";
 		};
+		80F3D36E1CF85C6600B3F10D /* Social */ = {
+			isa = PBXGroup;
+			children = (
+				80F3D36F1CF85CA200B3F10D /* Instagram */,
+			);
+			path = Social;
+			sourceTree = "<group>";
+		};
+		80F3D36F1CF85CA200B3F10D /* Instagram */ = {
+			isa = PBXGroup;
+			children = (
+				80F3D3701CF85CA900B3F10D /* InstagramLoginViewController.h */,
+				80F3D3711CF85CA900B3F10D /* InstagramLoginViewController.m */,
+				80F3D3721CF85CA900B3F10D /* InstagramLoginViewController.xib */,
+			);
+			path = Instagram;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -359,6 +384,7 @@
 				80F3D2C01CF80D0D00B3F10D /* UIImage+SQExtended.h in Headers */,
 				80F3D2D71CF80D0D00B3F10D /* SQBehaviors.h in Headers */,
 				80F3D2D51CF80D0D00B3F10D /* NKPhotoPickerBehavior.h in Headers */,
+				80F3D3731CF85CA900B3F10D /* InstagramLoginViewController.h in Headers */,
 				80F3D2BC1CF80D0D00B3F10D /* UICollectionView+SQExtended.h in Headers */,
 				80F3D2AF1CF80D0D00B3F10D /* NSData+SQExtended.h in Headers */,
 				80F3D2B71CF80D0D00B3F10D /* NSMutableArray+SQExtended.h in Headers */,
@@ -433,6 +459,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80F3D3751CF85CA900B3F10D /* InstagramLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +486,7 @@
 				80F3D2C11CF80D0D00B3F10D /* UIImage+SQExtended.m in Sources */,
 				80F3D2B61CF80D0D00B3F10D /* NSError+SQExtended.m in Sources */,
 				80F3D2AE1CF80D0D00B3F10D /* NSArray+SQExtended.m in Sources */,
+				80F3D3741CF85CA900B3F10D /* InstagramLoginViewController.m in Sources */,
 				80F3D2D61CF80D0D00B3F10D /* NKPhotoPickerBehavior.m in Sources */,
 				80F3D2DD1CF80D0D00B3F10D /* SeqOnboardingView.m in Sources */,
 				80F3D2BD1CF80D0D00B3F10D /* UICollectionView+SQExtended.m in Sources */,
