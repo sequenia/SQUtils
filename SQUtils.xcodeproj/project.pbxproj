@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80BD54CE1CFD3B43009711C4 /* UIWindow+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80BD54CC1CFD3B43009711C4 /* UIWindow+SQExtended.h */; };
+		80BD54CF1CFD3B43009711C4 /* UIWindow+SQExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 80BD54CD1CFD3B43009711C4 /* UIWindow+SQExtended.m */; };
 		80F3D2AD1CF80D0D00B3F10D /* NSArray+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D26D1CF80D0D00B3F10D /* NSArray+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80F3D2AE1CF80D0D00B3F10D /* NSArray+SQExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F3D26E1CF80D0D00B3F10D /* NSArray+SQExtended.m */; };
 		80F3D2AF1CF80D0D00B3F10D /* NSData+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D26F1CF80D0D00B3F10D /* NSData+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -64,6 +66,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		80BD54CC1CFD3B43009711C4 /* UIWindow+SQExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+SQExtended.h"; sourceTree = "<group>"; };
+		80BD54CD1CFD3B43009711C4 /* UIWindow+SQExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+SQExtended.m"; sourceTree = "<group>"; };
 		80F3D25F1CF80C6000B3F10D /* SQUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SQUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80F3D26D1CF80D0D00B3F10D /* NSArray+SQExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SQExtended.h"; sourceTree = "<group>"; };
 		80F3D26E1CF80D0D00B3F10D /* NSArray+SQExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SQExtended.m"; sourceTree = "<group>"; };
@@ -200,6 +204,8 @@
 		80F3D27C1CF80D0D00B3F10D /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				80BD54CC1CFD3B43009711C4 /* UIWindow+SQExtended.h */,
+				80BD54CD1CFD3B43009711C4 /* UIWindow+SQExtended.m */,
 				80F3D27D1CF80D0D00B3F10D /* UICollectionView+SQExtended.h */,
 				80F3D27E1CF80D0D00B3F10D /* UICollectionView+SQExtended.m */,
 				80F3D27F1CF80D0D00B3F10D /* UIColor+SQExtended.h */,
@@ -385,6 +391,7 @@
 				80F3D2D71CF80D0D00B3F10D /* SQBehaviors.h in Headers */,
 				80F3D2D51CF80D0D00B3F10D /* NKPhotoPickerBehavior.h in Headers */,
 				80F3D3731CF85CA900B3F10D /* InstagramLoginViewController.h in Headers */,
+				80BD54CE1CFD3B43009711C4 /* UIWindow+SQExtended.h in Headers */,
 				80F3D2BC1CF80D0D00B3F10D /* UICollectionView+SQExtended.h in Headers */,
 				80F3D2AF1CF80D0D00B3F10D /* NSData+SQExtended.h in Headers */,
 				80F3D2B71CF80D0D00B3F10D /* NSMutableArray+SQExtended.h in Headers */,
@@ -472,6 +479,7 @@
 			files = (
 				80F3D2D21CF80D0D00B3F10D /* NKBehavior.m in Sources */,
 				80F3D2C51CF80D0D00B3F10D /* UITableView+SQExtended.m in Sources */,
+				80BD54CF1CFD3B43009711C4 /* UIWindow+SQExtended.m in Sources */,
 				80F3D2BF1CF80D0D00B3F10D /* UIColor+SQExtended.m in Sources */,
 				80F3D2BA1CF80D0D00B3F10D /* NSString+SQExtended.m in Sources */,
 				80F3D2C71CF80D0D00B3F10D /* UITextField+SQExtended.m in Sources */,
