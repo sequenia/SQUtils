@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		082BB86E1CFEA608008D300B /* SQEndlessCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 082BB86C1CFEA608008D300B /* SQEndlessCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		082BB86F1CFEA608008D300B /* SQEndlessCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 082BB86D1CFEA608008D300B /* SQEndlessCollectionView.m */; };
 		80BD54CE1CFD3B43009711C4 /* UIWindow+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80BD54CC1CFD3B43009711C4 /* UIWindow+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80BD54CF1CFD3B43009711C4 /* UIWindow+SQExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 80BD54CD1CFD3B43009711C4 /* UIWindow+SQExtended.m */; };
 		80F3D2AD1CF80D0D00B3F10D /* NSArray+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D26D1CF80D0D00B3F10D /* NSArray+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -66,6 +68,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		082BB86C1CFEA608008D300B /* SQEndlessCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQEndlessCollectionView.h; sourceTree = "<group>"; };
+		082BB86D1CFEA608008D300B /* SQEndlessCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQEndlessCollectionView.m; sourceTree = "<group>"; };
 		80BD54CC1CFD3B43009711C4 /* UIWindow+SQExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+SQExtended.h"; sourceTree = "<group>"; };
 		80BD54CD1CFD3B43009711C4 /* UIWindow+SQExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+SQExtended.m"; sourceTree = "<group>"; };
 		80F3D25F1CF80C6000B3F10D /* SQUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SQUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +145,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		082BB86A1CFEA608008D300B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				082BB86B1CFEA608008D300B /* EndlessCollection */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		082BB86B1CFEA608008D300B /* EndlessCollection */ = {
+			isa = PBXGroup;
+			children = (
+				082BB86C1CFEA608008D300B /* SQEndlessCollectionView.h */,
+				082BB86D1CFEA608008D300B /* SQEndlessCollectionView.m */,
+			);
+			path = EndlessCollection;
+			sourceTree = "<group>";
+		};
 		80F3D2551CF80C6000B3F10D = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +252,7 @@
 		80F3D28F1CF80D0D00B3F10D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				082BB86A1CFEA608008D300B /* ViewController */,
 				80F3D2911CF80D0D00B3F10D /* Behavior */,
 				80F3D29F1CF80D0D00B3F10D /* Keyboard */,
 				80F3D2A21CF80D0D00B3F10D /* View */,
@@ -384,6 +406,7 @@
 				80F3D2D11CF80D0D00B3F10D /* NKBehavior.h in Headers */,
 				80F3D2BE1CF80D0D00B3F10D /* UIColor+SQExtended.h in Headers */,
 				80F3D2C61CF80D0D00B3F10D /* UITextField+SQExtended.h in Headers */,
+				082BB86E1CFEA608008D300B /* SQEndlessCollectionView.h in Headers */,
 				80F3D2D81CF80D0D00B3F10D /* GSKeyboardManager.h in Headers */,
 				80F3D2CF1CF80D0D00B3F10D /* NKAddressBookPickerBehavior.h in Headers */,
 				80F3D2B51CF80D0D00B3F10D /* NSError+SQExtended.h in Headers */,
@@ -497,6 +520,7 @@
 				80F3D3741CF85CA900B3F10D /* InstagramLoginViewController.m in Sources */,
 				80F3D2D61CF80D0D00B3F10D /* NKPhotoPickerBehavior.m in Sources */,
 				80F3D2DD1CF80D0D00B3F10D /* SeqOnboardingView.m in Sources */,
+				082BB86F1CFEA608008D300B /* SQEndlessCollectionView.m in Sources */,
 				80F3D2BD1CF80D0D00B3F10D /* UICollectionView+SQExtended.m in Sources */,
 				80F3D2DF1CF80D0D00B3F10D /* TopAlignedLabel.m in Sources */,
 				80F3D2B01CF80D0D00B3F10D /* NSData+SQExtended.m in Sources */,

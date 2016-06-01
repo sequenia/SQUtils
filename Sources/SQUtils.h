@@ -22,3 +22,4 @@ FOUNDATION_EXPORT const unsigned char SQUtilsVersionString[];
 #import "SeqButton.h"
 #import "SeqOnboardingView.h"
 #import "TopAlignedLabel.h"
+#import "SQEndlessCollectionView.h"
