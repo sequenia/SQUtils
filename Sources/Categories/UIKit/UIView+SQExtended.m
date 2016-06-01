@@ -29,7 +29,8 @@
 
 + (UIView*)sq_loadFromNibByClassName {
     NSString* nibName = NSStringFromClass([self class]);
-    NSArray *subviewArray = [[NSBundle mainBundle] loadNibNamed: nibName owner:self options:nil];
+    NSBundle* bundle = [NSBundle bundleForClass: [self class]];
+    NSArray *subviewArray = [bundle loadNibNamed: nibName owner:self options:nil];
     return subviewArray.firstObject;
 }
 
