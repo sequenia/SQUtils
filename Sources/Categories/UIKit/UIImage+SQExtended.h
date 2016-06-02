@@ -10,6 +10,9 @@
 
 @interface UIImage (SQExtended)
 
++ (void)sq_downloadImageFromURL: (NSURL*) url
+                 withCompletion: (void(^)(UIImage* image, NSError* errorOrNil)) completion;
+
 - (UIImage *)sq_imageBlendWithColor:(UIColor *)color;
 
 /**
