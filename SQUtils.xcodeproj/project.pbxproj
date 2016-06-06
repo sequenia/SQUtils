@@ -21,6 +21,8 @@
 		08887ABE1D054FB4007AF782 /* SQNewsListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 08887AB51D054FB4007AF782 /* SQNewsListViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		08887ABF1D054FB4007AF782 /* SQNewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08887AB61D054FB4007AF782 /* SQNewsListViewController.m */; };
 		08887AC01D054FB4007AF782 /* SQNewsSelectDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 08887AB71D054FB4007AF782 /* SQNewsSelectDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		08887AC91D056DB3007AF782 /* SQEdgedCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 08887AC71D056DB3007AF782 /* SQEdgedCollectionViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		08887ACA1D056DB3007AF782 /* SQEdgedCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08887AC81D056DB3007AF782 /* SQEdgedCollectionViewController.m */; };
 		80BD54CE1CFD3B43009711C4 /* UIWindow+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80BD54CC1CFD3B43009711C4 /* UIWindow+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80BD54CF1CFD3B43009711C4 /* UIWindow+SQExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 80BD54CD1CFD3B43009711C4 /* UIWindow+SQExtended.m */; };
 		80F3D2AD1CF80D0D00B3F10D /* NSArray+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D26D1CF80D0D00B3F10D /* NSArray+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -91,6 +93,8 @@
 		08887AB51D054FB4007AF782 /* SQNewsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNewsListViewController.h; sourceTree = "<group>"; };
 		08887AB61D054FB4007AF782 /* SQNewsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQNewsListViewController.m; sourceTree = "<group>"; };
 		08887AB71D054FB4007AF782 /* SQNewsSelectDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNewsSelectDelegate.h; sourceTree = "<group>"; };
+		08887AC71D056DB3007AF782 /* SQEdgedCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQEdgedCollectionViewController.h; sourceTree = "<group>"; };
+		08887AC81D056DB3007AF782 /* SQEdgedCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQEdgedCollectionViewController.m; sourceTree = "<group>"; };
 		80BD54CC1CFD3B43009711C4 /* UIWindow+SQExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+SQExtended.h"; sourceTree = "<group>"; };
 		80BD54CD1CFD3B43009711C4 /* UIWindow+SQExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+SQExtended.m"; sourceTree = "<group>"; };
 		80F3D25F1CF80C6000B3F10D /* SQUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SQUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +170,7 @@
 		082BB86A1CFEA608008D300B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				08887AC61D056DB3007AF782 /* EdgedCollection */,
 				08887AAE1D054FB4007AF782 /* News */,
 				082BB86B1CFEA608008D300B /* EndlessCollection */,
 			);
@@ -205,6 +210,15 @@
 				08887AB71D054FB4007AF782 /* SQNewsSelectDelegate.h */,
 			);
 			path = News;
+			sourceTree = "<group>";
+		};
+		08887AC61D056DB3007AF782 /* EdgedCollection */ = {
+			isa = PBXGroup;
+			children = (
+				08887AC71D056DB3007AF782 /* SQEdgedCollectionViewController.h */,
+				08887AC81D056DB3007AF782 /* SQEdgedCollectionViewController.m */,
+			);
+			path = EdgedCollection;
 			sourceTree = "<group>";
 		};
 		80F3D2551CF80C6000B3F10D = {
@@ -462,6 +476,7 @@
 				80F3D2CC1CF80D0D00B3F10D /* UIViewController+SQExtended.h in Headers */,
 				80F3D2C81CF80D0D00B3F10D /* UITextView+SQExtended.h in Headers */,
 				08887ABE1D054FB4007AF782 /* SQNewsListViewController.h in Headers */,
+				08887AC91D056DB3007AF782 /* SQEdgedCollectionViewController.h in Headers */,
 				80F3D2BB1CF80D0D00B3F10D /* SQCategories.h in Headers */,
 				80F3D2ED1CF80F5900B3F10D /* SQUtils.h in Headers */,
 				80F3D2C21CF80D0D00B3F10D /* UIImageView+SQExtended.h in Headers */,
@@ -551,6 +566,7 @@
 				80F3D2C91CF80D0D00B3F10D /* UITextView+SQExtended.m in Sources */,
 				80F3D2CD1CF80D0D00B3F10D /* UIViewController+SQExtended.m in Sources */,
 				80F3D2CB1CF80D0D00B3F10D /* UIView+SQExtended.m in Sources */,
+				08887ACA1D056DB3007AF782 /* SQEdgedCollectionViewController.m in Sources */,
 				80F3D2B81CF80D0D00B3F10D /* NSMutableArray+SQExtended.m in Sources */,
 				80F3D2D01CF80D0D00B3F10D /* NKAddressBookPickerBehavior.m in Sources */,
 				80F3D2C31CF80D0D00B3F10D /* UIImageView+SQExtended.m in Sources */,

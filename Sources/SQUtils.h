@@ -29,4 +29,8 @@ FOUNDATION_EXPORT const unsigned char SQUtilsVersionString[];
 #import "SQNewsDetailViewController.h"
 #import "SQNewsListViewController.h"
 
+#import "SQEdgedCollectionViewController.h"
+
+
+
 
