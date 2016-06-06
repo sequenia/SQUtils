@@ -12,6 +12,15 @@
 		082BB8871CFEA7A4008D300B /* InstagramLoginViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 082BB87A1CFEA7A4008D300B /* InstagramLoginViewController.h */; };
 		082BB8881CFEA7A4008D300B /* InstagramLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 082BB87B1CFEA7A4008D300B /* InstagramLoginViewController.m */; };
 		082BB8891CFEA7A4008D300B /* InstagramLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 082BB87C1CFEA7A4008D300B /* InstagramLoginViewController.xib */; };
+		08887AB81D054FB4007AF782 /* SQNewsContainerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 08887AAF1D054FB4007AF782 /* SQNewsContainerViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		08887AB91D054FB4007AF782 /* SQNewsContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08887AB01D054FB4007AF782 /* SQNewsContainerViewController.m */; };
+		08887ABA1D054FB4007AF782 /* SQNewsContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08887AB11D054FB4007AF782 /* SQNewsContainerViewController.xib */; };
+		08887ABB1D054FB4007AF782 /* SQNewsDetailViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 08887AB21D054FB4007AF782 /* SQNewsDetailViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		08887ABC1D054FB4007AF782 /* SQNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08887AB31D054FB4007AF782 /* SQNewsDetailViewController.m */; };
+		08887ABD1D054FB4007AF782 /* SQNewsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08887AB41D054FB4007AF782 /* SQNewsDetailViewController.xib */; };
+		08887ABE1D054FB4007AF782 /* SQNewsListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 08887AB51D054FB4007AF782 /* SQNewsListViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		08887ABF1D054FB4007AF782 /* SQNewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08887AB61D054FB4007AF782 /* SQNewsListViewController.m */; };
+		08887AC01D054FB4007AF782 /* SQNewsSelectDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 08887AB71D054FB4007AF782 /* SQNewsSelectDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80BD54CE1CFD3B43009711C4 /* UIWindow+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80BD54CC1CFD3B43009711C4 /* UIWindow+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80BD54CF1CFD3B43009711C4 /* UIWindow+SQExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 80BD54CD1CFD3B43009711C4 /* UIWindow+SQExtended.m */; };
 		80F3D2AD1CF80D0D00B3F10D /* NSArray+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D26D1CF80D0D00B3F10D /* NSArray+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -73,6 +82,15 @@
 		082BB87A1CFEA7A4008D300B /* InstagramLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramLoginViewController.h; sourceTree = "<group>"; };
 		082BB87B1CFEA7A4008D300B /* InstagramLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramLoginViewController.m; sourceTree = "<group>"; };
 		082BB87C1CFEA7A4008D300B /* InstagramLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstagramLoginViewController.xib; sourceTree = "<group>"; };
+		08887AAF1D054FB4007AF782 /* SQNewsContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNewsContainerViewController.h; sourceTree = "<group>"; };
+		08887AB01D054FB4007AF782 /* SQNewsContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQNewsContainerViewController.m; sourceTree = "<group>"; };
+		08887AB11D054FB4007AF782 /* SQNewsContainerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQNewsContainerViewController.xib; sourceTree = "<group>"; };
+		08887AB21D054FB4007AF782 /* SQNewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNewsDetailViewController.h; sourceTree = "<group>"; };
+		08887AB31D054FB4007AF782 /* SQNewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQNewsDetailViewController.m; sourceTree = "<group>"; };
+		08887AB41D054FB4007AF782 /* SQNewsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQNewsDetailViewController.xib; sourceTree = "<group>"; };
+		08887AB51D054FB4007AF782 /* SQNewsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNewsListViewController.h; sourceTree = "<group>"; };
+		08887AB61D054FB4007AF782 /* SQNewsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQNewsListViewController.m; sourceTree = "<group>"; };
+		08887AB71D054FB4007AF782 /* SQNewsSelectDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNewsSelectDelegate.h; sourceTree = "<group>"; };
 		80BD54CC1CFD3B43009711C4 /* UIWindow+SQExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+SQExtended.h"; sourceTree = "<group>"; };
 		80BD54CD1CFD3B43009711C4 /* UIWindow+SQExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+SQExtended.m"; sourceTree = "<group>"; };
 		80F3D25F1CF80C6000B3F10D /* SQUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SQUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +166,7 @@
 		082BB86A1CFEA608008D300B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				08887AAE1D054FB4007AF782 /* News */,
 				082BB86B1CFEA608008D300B /* EndlessCollection */,
 			);
 			path = ViewController;
@@ -170,6 +189,22 @@
 				082BB87C1CFEA7A4008D300B /* InstagramLoginViewController.xib */,
 			);
 			path = Instagram;
+			sourceTree = "<group>";
+		};
+		08887AAE1D054FB4007AF782 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				08887AAF1D054FB4007AF782 /* SQNewsContainerViewController.h */,
+				08887AB01D054FB4007AF782 /* SQNewsContainerViewController.m */,
+				08887AB11D054FB4007AF782 /* SQNewsContainerViewController.xib */,
+				08887AB21D054FB4007AF782 /* SQNewsDetailViewController.h */,
+				08887AB31D054FB4007AF782 /* SQNewsDetailViewController.m */,
+				08887AB41D054FB4007AF782 /* SQNewsDetailViewController.xib */,
+				08887AB51D054FB4007AF782 /* SQNewsListViewController.h */,
+				08887AB61D054FB4007AF782 /* SQNewsListViewController.m */,
+				08887AB71D054FB4007AF782 /* SQNewsSelectDelegate.h */,
+			);
+			path = News;
 			sourceTree = "<group>";
 		};
 		80F3D2551CF80C6000B3F10D = {
@@ -403,9 +438,11 @@
 				80F3D2B11CF80D0D00B3F10D /* NSDate+SQExtended.h in Headers */,
 				082BB8871CFEA7A4008D300B /* InstagramLoginViewController.h in Headers */,
 				80F3D2CA1CF80D0D00B3F10D /* UIView+SQExtended.h in Headers */,
+				08887ABB1D054FB4007AF782 /* SQNewsDetailViewController.h in Headers */,
 				80F3D2D31CF80D0D00B3F10D /* NKPagingBehavior.h in Headers */,
 				80F3D2D11CF80D0D00B3F10D /* NKBehavior.h in Headers */,
 				80F3D2BE1CF80D0D00B3F10D /* UIColor+SQExtended.h in Headers */,
+				08887AB81D054FB4007AF782 /* SQNewsContainerViewController.h in Headers */,
 				80F3D2C61CF80D0D00B3F10D /* UITextField+SQExtended.h in Headers */,
 				082BB86E1CFEA608008D300B /* SQEndlessCollectionView.h in Headers */,
 				80F3D2D81CF80D0D00B3F10D /* GSKeyboardManager.h in Headers */,
@@ -418,11 +455,13 @@
 				80F3D2BC1CF80D0D00B3F10D /* UICollectionView+SQExtended.h in Headers */,
 				80F3D2AF1CF80D0D00B3F10D /* NSData+SQExtended.h in Headers */,
 				80F3D2B71CF80D0D00B3F10D /* NSMutableArray+SQExtended.h in Headers */,
+				08887AC01D054FB4007AF782 /* SQNewsSelectDelegate.h in Headers */,
 				80F3D2B91CF80D0D00B3F10D /* NSString+SQExtended.h in Headers */,
 				80F3D2DE1CF80D0D00B3F10D /* TopAlignedLabel.h in Headers */,
 				80F3D2B31CF80D0D00B3F10D /* NSDictionary+SQExtended.h in Headers */,
 				80F3D2CC1CF80D0D00B3F10D /* UIViewController+SQExtended.h in Headers */,
 				80F3D2C81CF80D0D00B3F10D /* UITextView+SQExtended.h in Headers */,
+				08887ABE1D054FB4007AF782 /* SQNewsListViewController.h in Headers */,
 				80F3D2BB1CF80D0D00B3F10D /* SQCategories.h in Headers */,
 				80F3D2ED1CF80F5900B3F10D /* SQUtils.h in Headers */,
 				80F3D2C21CF80D0D00B3F10D /* UIImageView+SQExtended.h in Headers */,
@@ -490,6 +529,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				082BB8891CFEA7A4008D300B /* InstagramLoginViewController.xib in Resources */,
+				08887ABD1D054FB4007AF782 /* SQNewsDetailViewController.xib in Resources */,
+				08887ABA1D054FB4007AF782 /* SQNewsContainerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,7 +558,9 @@
 				80F3D2D91CF80D0D00B3F10D /* GSKeyboardManager.m in Sources */,
 				80F3D2C11CF80D0D00B3F10D /* UIImage+SQExtended.m in Sources */,
 				80F3D2B61CF80D0D00B3F10D /* NSError+SQExtended.m in Sources */,
+				08887ABC1D054FB4007AF782 /* SQNewsDetailViewController.m in Sources */,
 				80F3D2AE1CF80D0D00B3F10D /* NSArray+SQExtended.m in Sources */,
+				08887ABF1D054FB4007AF782 /* SQNewsListViewController.m in Sources */,
 				80F3D2D61CF80D0D00B3F10D /* NKPhotoPickerBehavior.m in Sources */,
 				80F3D2DD1CF80D0D00B3F10D /* SeqOnboardingView.m in Sources */,
 				082BB86F1CFEA608008D300B /* SQEndlessCollectionView.m in Sources */,
@@ -525,6 +568,7 @@
 				80F3D2DF1CF80D0D00B3F10D /* TopAlignedLabel.m in Sources */,
 				80F3D2B01CF80D0D00B3F10D /* NSData+SQExtended.m in Sources */,
 				80F3D2D41CF80D0D00B3F10D /* NKPagingBehavior.m in Sources */,
+				08887AB91D054FB4007AF782 /* SQNewsContainerViewController.m in Sources */,
 				80F3D2B41CF80D0D00B3F10D /* NSDictionary+SQExtended.m in Sources */,
 				80F3D2DB1CF80D0D00B3F10D /* SeqButton.m in Sources */,
 			);
