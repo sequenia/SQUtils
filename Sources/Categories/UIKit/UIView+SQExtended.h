@@ -18,4 +18,6 @@
 
 - (void)sq_shake;
 
+- (void)sq_setHidden: (BOOL) hidden animated: (BOOL) animated;
+
 @end

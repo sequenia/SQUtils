@@ -47,4 +47,13 @@
     [[self layer] addAnimation:animation forKey:@"position"];
 }
 
+- (void)sq_setHidden: (BOOL) hidden animated: (BOOL) animated {
+    CGFloat duration = animated ? 0.3 : 0.0;
+    CGFloat alpha = hidden ? 0.0 : 1.0;
+    [UIView animateWithDuration: duration
+                     animations:^{
+                         self.alpha = alpha;
+                     }];
+}
+
 @end
