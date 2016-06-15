@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint SQUtils.podspec' to ensure this is a
+# Be sure to run `pod lib lint --use-libraries SQUtils.podspec' to ensure this is a
 # valid spec before submitting.
 #
 
@@ -23,7 +23,22 @@ Pod::Spec.new do |s|
     
     s.subspec 'Classes' do |ss|
         ss.dependency 'SQUtils/Categories'
-        ss.source_files = 'Sources/Classes/**/*'
+        ss.source_files = 'Sources/Classes/**/*.{h,m}'
+        ss.resources = ['Sources/Classes/**/*.xib']
+    end
+    
+    s.subspec 'Social' do |ss|
+        ss.source_files = 'Sources/Social/SQSocial.h'
+        
+        ss.subspec 'VKontakte' do |sss|
+            sss.dependency 'VK-ios-sdk', '~> 1.3.12'
+            sss.source_files = 'Sources/Social/VKontakte/**/*.{h,m}', 'Sources/Social/SQSocnetHelper.{h,m}'
+        end
+        
+        ss.subspec 'Instagram' do |sss|
+            sss.source_files = 'Sources/Social/Instagram/**/*.{h,m}', 'Sources/Social/SQSocnetHelper.{h,m}'
+            sss.resources = ['Sources/Social/Instagram/**/*.xib']
+        end
     end
 
 end

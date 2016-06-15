@@ -20,10 +20,9 @@
 {
     static SQVKontakteHelper *_sharedInstance = nil;
     static dispatch_once_t onceSecurePredicate;
-    dispatch_once(&onceSecurePredicate,^
-                  {
-                      _sharedInstance = [[self alloc] init];
-                  });
+    dispatch_once(&onceSecurePredicate,^{
+        _sharedInstance = [[self alloc] init];
+    });
     return _sharedInstance;
 }
 

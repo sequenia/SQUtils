@@ -7,7 +7,7 @@
 //
 
 #import "SQSocnetHelper.h"
-#import "VKSdk.h" //Pod version = 1.3.12
+#import <VK-ios-sdk/VKSdk.h> //Pod version = 1.3.12
 
 @protocol SQVKontakteHelperDelegate;
 

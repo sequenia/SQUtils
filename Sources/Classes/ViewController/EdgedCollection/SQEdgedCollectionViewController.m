@@ -142,7 +142,7 @@
     pageControl.currentPage = _currentPage;
 }
 
-- (void) setBottomPageIndicatorSpacing:(CGFloat)bottomPageIndicatorSpacing{
+- (void) setPageControllBottomSpacing:(CGFloat)bottomSpacing{
     
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     dict[@"pageControl"] = pageControl;
@@ -156,7 +156,7 @@
     constraints = [NSLayoutConstraint constraintsWithVisualFormat:format options:0 metrics:nil views:dict];
     [self.view addConstraints:constraints];
     
-    format = [NSString stringWithFormat:@"V:[pageControl(height)]-%f-|", bottomPageIndicatorSpacing];
+    format = [NSString stringWithFormat:@"V:[pageControl(height)]-%f-|", bottomSpacing];
     constraints = [NSLayoutConstraint constraintsWithVisualFormat:format options:0 metrics:@{@"height":@37.0} views:dict];
     [self.view addConstraints:constraints];
     

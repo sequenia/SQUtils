@@ -8,9 +8,7 @@
 
 #import "SQSocnetHelper.h"
 
-@interface SQSocnetHelper () {
-
-}
+@interface SQSocnetHelper ()
 
 @end
 

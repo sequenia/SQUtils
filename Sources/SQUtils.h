@@ -31,6 +31,8 @@ FOUNDATION_EXPORT const unsigned char SQUtilsVersionString[];
 
 #import "SQEdgedCollectionViewController.h"
 
+#import "SQSocial.h"
+
 
 
 

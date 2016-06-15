@@ -9,20 +9,18 @@
 /* Begin PBXBuildFile section */
 		082BB86E1CFEA608008D300B /* SQEndlessCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 082BB86C1CFEA608008D300B /* SQEndlessCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		082BB86F1CFEA608008D300B /* SQEndlessCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 082BB86D1CFEA608008D300B /* SQEndlessCollectionView.m */; };
-		082BB8871CFEA7A4008D300B /* InstagramLoginViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 082BB87A1CFEA7A4008D300B /* InstagramLoginViewController.h */; };
+		082BB8871CFEA7A4008D300B /* InstagramLoginViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 082BB87A1CFEA7A4008D300B /* InstagramLoginViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		082BB8881CFEA7A4008D300B /* InstagramLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 082BB87B1CFEA7A4008D300B /* InstagramLoginViewController.m */; };
-		082BB8891CFEA7A4008D300B /* InstagramLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 082BB87C1CFEA7A4008D300B /* InstagramLoginViewController.xib */; };
 		08887AB81D054FB4007AF782 /* SQNewsContainerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 08887AAF1D054FB4007AF782 /* SQNewsContainerViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		08887AB91D054FB4007AF782 /* SQNewsContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08887AB01D054FB4007AF782 /* SQNewsContainerViewController.m */; };
-		08887ABA1D054FB4007AF782 /* SQNewsContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08887AB11D054FB4007AF782 /* SQNewsContainerViewController.xib */; };
 		08887ABB1D054FB4007AF782 /* SQNewsDetailViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 08887AB21D054FB4007AF782 /* SQNewsDetailViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		08887ABC1D054FB4007AF782 /* SQNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08887AB31D054FB4007AF782 /* SQNewsDetailViewController.m */; };
-		08887ABD1D054FB4007AF782 /* SQNewsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08887AB41D054FB4007AF782 /* SQNewsDetailViewController.xib */; };
 		08887ABE1D054FB4007AF782 /* SQNewsListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 08887AB51D054FB4007AF782 /* SQNewsListViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		08887ABF1D054FB4007AF782 /* SQNewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08887AB61D054FB4007AF782 /* SQNewsListViewController.m */; };
 		08887AC01D054FB4007AF782 /* SQNewsSelectDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 08887AB71D054FB4007AF782 /* SQNewsSelectDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		08887AC91D056DB3007AF782 /* SQEdgedCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 08887AC71D056DB3007AF782 /* SQEdgedCollectionViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		08887ACA1D056DB3007AF782 /* SQEdgedCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08887AC81D056DB3007AF782 /* SQEdgedCollectionViewController.m */; };
+		1B6A9FB24654251C304CE70E /* libPods-SQUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D667947ADAD76727DAF381EE /* libPods-SQUtils.a */; };
 		80BD54CE1CFD3B43009711C4 /* UIWindow+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80BD54CC1CFD3B43009711C4 /* UIWindow+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80BD54CF1CFD3B43009711C4 /* UIWindow+SQExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 80BD54CD1CFD3B43009711C4 /* UIWindow+SQExtended.m */; };
 		80F3D2AD1CF80D0D00B3F10D /* NSArray+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D26D1CF80D0D00B3F10D /* NSArray+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -76,6 +74,16 @@
 		80F3D2DE1CF80D0D00B3F10D /* TopAlignedLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D2AA1CF80D0D00B3F10D /* TopAlignedLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80F3D2DF1CF80D0D00B3F10D /* TopAlignedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F3D2AB1CF80D0D00B3F10D /* TopAlignedLabel.m */; };
 		80F3D2ED1CF80F5900B3F10D /* SQUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D2AC1CF80D0D00B3F10D /* SQUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80FE39EE1D10FA8100B203C4 /* SQVKontakteHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 80FE39EC1D10FA8100B203C4 /* SQVKontakteHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80FE39EF1D10FA8100B203C4 /* SQVKontakteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 80FE39ED1D10FA8100B203C4 /* SQVKontakteHelper.m */; };
+		80FE39F21D10FAAB00B203C4 /* SQSocnetHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 80FE39F01D10FAAB00B203C4 /* SQSocnetHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80FE39F31D10FAAB00B203C4 /* SQSocnetHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 80FE39F11D10FAAB00B203C4 /* SQSocnetHelper.m */; };
+		80FE3A191D1108C700B203C4 /* InstagramLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 082BB87C1CFEA7A4008D300B /* InstagramLoginViewController.xib */; };
+		80FE3A1A1D11092E00B203C4 /* SQNewsContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08887AB11D054FB4007AF782 /* SQNewsContainerViewController.xib */; };
+		80FE3A1B1D11092E00B203C4 /* SQNewsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08887AB41D054FB4007AF782 /* SQNewsDetailViewController.xib */; };
+		80FE3A1D1D1113D600B203C4 /* SQSocial.h in Headers */ = {isa = PBXBuildFile; fileRef = 80FE3A1C1D11133300B203C4 /* SQSocial.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80FE3A201D1116C700B203C4 /* SQInstagramHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 80FE3A1E1D1116C700B203C4 /* SQInstagramHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80FE3A211D1116C700B203C4 /* SQInstagramHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 80FE3A1F1D1116C700B203C4 /* SQInstagramHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -154,6 +162,16 @@
 		80F3D2E61CF80DAE00B3F10D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		80F3D2E71CF80DAE00B3F10D /* SQUtils.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SQUtils.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		80F3D2EB1CF80DDE00B3F10D /* Default.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Default.xcconfig; sourceTree = "<group>"; };
+		80FE39EC1D10FA8100B203C4 /* SQVKontakteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQVKontakteHelper.h; sourceTree = "<group>"; };
+		80FE39ED1D10FA8100B203C4 /* SQVKontakteHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQVKontakteHelper.m; sourceTree = "<group>"; };
+		80FE39F01D10FAAB00B203C4 /* SQSocnetHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQSocnetHelper.h; sourceTree = "<group>"; };
+		80FE39F11D10FAAB00B203C4 /* SQSocnetHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQSocnetHelper.m; sourceTree = "<group>"; };
+		80FE3A1C1D11133300B203C4 /* SQSocial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQSocial.h; sourceTree = "<group>"; };
+		80FE3A1E1D1116C700B203C4 /* SQInstagramHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQInstagramHelper.h; sourceTree = "<group>"; };
+		80FE3A1F1D1116C700B203C4 /* SQInstagramHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQInstagramHelper.m; sourceTree = "<group>"; };
+		8B72F7A9763D96D09537C151 /* Pods-SQUtils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQUtils.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SQUtils/Pods-SQUtils.debug.xcconfig"; sourceTree = "<group>"; };
+		C8F3FACEAC5472CCEEB2365D /* Pods-SQUtils.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQUtils.release.xcconfig"; path = "Pods/Target Support Files/Pods-SQUtils/Pods-SQUtils.release.xcconfig"; sourceTree = "<group>"; };
+		D667947ADAD76727DAF381EE /* libPods-SQUtils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SQUtils.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +179,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B6A9FB24654251C304CE70E /* libPods-SQUtils.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +208,8 @@
 		082BB8791CFEA7A4008D300B /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				80FE3A1E1D1116C700B203C4 /* SQInstagramHelper.h */,
+				80FE3A1F1D1116C700B203C4 /* SQInstagramHelper.m */,
 				082BB87A1CFEA7A4008D300B /* InstagramLoginViewController.h */,
 				082BB87B1CFEA7A4008D300B /* InstagramLoginViewController.m */,
 				082BB87C1CFEA7A4008D300B /* InstagramLoginViewController.xib */,
@@ -221,6 +242,23 @@
 			path = EdgedCollection;
 			sourceTree = "<group>";
 		};
+		6D6AB0805FBFA39B4A4BA3A5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B72F7A9763D96D09537C151 /* Pods-SQUtils.debug.xcconfig */,
+				C8F3FACEAC5472CCEEB2365D /* Pods-SQUtils.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		76F403BD174E01A281943FEC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D667947ADAD76727DAF381EE /* libPods-SQUtils.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		80F3D2551CF80C6000B3F10D = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +266,8 @@
 				80F3D2E41CF80DA400B3F10D /* Metadata */,
 				80F3D2E11CF80D4700B3F10D /* Supporting Files */,
 				80F3D2601CF80C6000B3F10D /* Products */,
+				6D6AB0805FBFA39B4A4BA3A5 /* Pods */,
+				76F403BD174E01A281943FEC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -435,9 +475,22 @@
 		80F3D36E1CF85C6600B3F10D /* Social */ = {
 			isa = PBXGroup;
 			children = (
+				80FE3A1C1D11133300B203C4 /* SQSocial.h */,
+				80FE39F01D10FAAB00B203C4 /* SQSocnetHelper.h */,
+				80FE39F11D10FAAB00B203C4 /* SQSocnetHelper.m */,
+				80FE39EB1D10FA8100B203C4 /* VKontakte */,
 				082BB8791CFEA7A4008D300B /* Instagram */,
 			);
 			path = Social;
+			sourceTree = "<group>";
+		};
+		80FE39EB1D10FA8100B203C4 /* VKontakte */ = {
+			isa = PBXGroup;
+			children = (
+				80FE39EC1D10FA8100B203C4 /* SQVKontakteHelper.h */,
+				80FE39ED1D10FA8100B203C4 /* SQVKontakteHelper.m */,
+			);
+			path = VKontakte;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -450,7 +503,6 @@
 				80F3D2DC1CF80D0D00B3F10D /* SeqOnboardingView.h in Headers */,
 				80F3D2C41CF80D0D00B3F10D /* UITableView+SQExtended.h in Headers */,
 				80F3D2B11CF80D0D00B3F10D /* NSDate+SQExtended.h in Headers */,
-				082BB8871CFEA7A4008D300B /* InstagramLoginViewController.h in Headers */,
 				80F3D2CA1CF80D0D00B3F10D /* UIView+SQExtended.h in Headers */,
 				08887ABB1D054FB4007AF782 /* SQNewsDetailViewController.h in Headers */,
 				80F3D2D31CF80D0D00B3F10D /* NKPagingBehavior.h in Headers */,
@@ -467,9 +519,12 @@
 				80F3D2D51CF80D0D00B3F10D /* NKPhotoPickerBehavior.h in Headers */,
 				80BD54CE1CFD3B43009711C4 /* UIWindow+SQExtended.h in Headers */,
 				80F3D2BC1CF80D0D00B3F10D /* UICollectionView+SQExtended.h in Headers */,
+				80FE39EE1D10FA8100B203C4 /* SQVKontakteHelper.h in Headers */,
 				80F3D2AF1CF80D0D00B3F10D /* NSData+SQExtended.h in Headers */,
 				80F3D2B71CF80D0D00B3F10D /* NSMutableArray+SQExtended.h in Headers */,
+				80FE3A201D1116C700B203C4 /* SQInstagramHelper.h in Headers */,
 				08887AC01D054FB4007AF782 /* SQNewsSelectDelegate.h in Headers */,
+				80FE39F21D10FAAB00B203C4 /* SQSocnetHelper.h in Headers */,
 				80F3D2B91CF80D0D00B3F10D /* NSString+SQExtended.h in Headers */,
 				80F3D2DE1CF80D0D00B3F10D /* TopAlignedLabel.h in Headers */,
 				80F3D2B31CF80D0D00B3F10D /* NSDictionary+SQExtended.h in Headers */,
@@ -478,10 +533,12 @@
 				08887ABE1D054FB4007AF782 /* SQNewsListViewController.h in Headers */,
 				08887AC91D056DB3007AF782 /* SQEdgedCollectionViewController.h in Headers */,
 				80F3D2BB1CF80D0D00B3F10D /* SQCategories.h in Headers */,
+				082BB8871CFEA7A4008D300B /* InstagramLoginViewController.h in Headers */,
 				80F3D2ED1CF80F5900B3F10D /* SQUtils.h in Headers */,
 				80F3D2C21CF80D0D00B3F10D /* UIImageView+SQExtended.h in Headers */,
 				80F3D2DA1CF80D0D00B3F10D /* SeqButton.h in Headers */,
 				80F3D2AD1CF80D0D00B3F10D /* NSArray+SQExtended.h in Headers */,
+				80FE3A1D1D1113D600B203C4 /* SQSocial.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,10 +549,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 80F3D2671CF80C6000B3F10D /* Build configuration list for PBXNativeTarget "SQUtils" */;
 			buildPhases = (
+				25F55022B77A4DB8091582CC /* 📦 Check Pods Manifest.lock */,
 				80F3D25A1CF80C6000B3F10D /* Sources */,
 				80F3D25B1CF80C6000B3F10D /* Frameworks */,
 				80F3D25C1CF80C6000B3F10D /* Headers */,
-				80F3D25D1CF80C6000B3F10D /* Resources */,
+				13718F1B82A80AEAFBD2AB77 /* 📦 Copy Pods Resources */,
+				80FE3A181D1108C000B203C4 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -539,17 +598,50 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		80F3D25D1CF80C6000B3F10D /* Resources */ = {
+		80FE3A181D1108C000B203C4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				082BB8891CFEA7A4008D300B /* InstagramLoginViewController.xib in Resources */,
-				08887ABD1D054FB4007AF782 /* SQNewsDetailViewController.xib in Resources */,
-				08887ABA1D054FB4007AF782 /* SQNewsContainerViewController.xib in Resources */,
+				80FE3A1A1D11092E00B203C4 /* SQNewsContainerViewController.xib in Resources */,
+				80FE3A1B1D11092E00B203C4 /* SQNewsDetailViewController.xib in Resources */,
+				80FE3A191D1108C700B203C4 /* InstagramLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13718F1B82A80AEAFBD2AB77 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SQUtils/Pods-SQUtils-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		25F55022B77A4DB8091582CC /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		80F3D25A1CF80C6000B3F10D /* Sources */ = {
@@ -565,10 +657,12 @@
 				80F3D2C71CF80D0D00B3F10D /* UITextField+SQExtended.m in Sources */,
 				80F3D2C91CF80D0D00B3F10D /* UITextView+SQExtended.m in Sources */,
 				80F3D2CD1CF80D0D00B3F10D /* UIViewController+SQExtended.m in Sources */,
+				80FE39EF1D10FA8100B203C4 /* SQVKontakteHelper.m in Sources */,
 				80F3D2CB1CF80D0D00B3F10D /* UIView+SQExtended.m in Sources */,
 				08887ACA1D056DB3007AF782 /* SQEdgedCollectionViewController.m in Sources */,
 				80F3D2B81CF80D0D00B3F10D /* NSMutableArray+SQExtended.m in Sources */,
 				80F3D2D01CF80D0D00B3F10D /* NKAddressBookPickerBehavior.m in Sources */,
+				80FE3A211D1116C700B203C4 /* SQInstagramHelper.m in Sources */,
 				80F3D2C31CF80D0D00B3F10D /* UIImageView+SQExtended.m in Sources */,
 				80F3D2B21CF80D0D00B3F10D /* NSDate+SQExtended.m in Sources */,
 				80F3D2D91CF80D0D00B3F10D /* GSKeyboardManager.m in Sources */,
@@ -582,6 +676,7 @@
 				082BB86F1CFEA608008D300B /* SQEndlessCollectionView.m in Sources */,
 				80F3D2BD1CF80D0D00B3F10D /* UICollectionView+SQExtended.m in Sources */,
 				80F3D2DF1CF80D0D00B3F10D /* TopAlignedLabel.m in Sources */,
+				80FE39F31D10FAAB00B203C4 /* SQSocnetHelper.m in Sources */,
 				80F3D2B01CF80D0D00B3F10D /* NSData+SQExtended.m in Sources */,
 				80F3D2D41CF80D0D00B3F10D /* NKPagingBehavior.m in Sources */,
 				08887AB91D054FB4007AF782 /* SQNewsContainerViewController.m in Sources */,
@@ -597,6 +692,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -645,6 +741,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -685,8 +782,9 @@
 		};
 		80F3D2681CF80C6000B3F10D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80F3D2EB1CF80DDE00B3F10D /* Default.xcconfig */;
+			baseConfigurationReference = 8B72F7A9763D96D09537C151 /* Pods-SQUtils.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -702,8 +800,9 @@
 		};
 		80F3D2691CF80C6000B3F10D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80F3D2EB1CF80DDE00B3F10D /* Default.xcconfig */;
+			baseConfigurationReference = C8F3FACEAC5472CCEEB2365D /* Pods-SQUtils.release.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
