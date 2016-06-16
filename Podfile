@@ -5,4 +5,5 @@ target 'SQUtils' do
     pod 'FBSDKCoreKit', '~> 4.7.1'
     pod 'FBSDKLoginKit', '~> 4.7.1'
     pod 'FBSDKShareKit', '~> 4.7.1'
+    pod 'GoogleSignIn', '~> 4.0.0'
 end

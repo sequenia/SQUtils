@@ -31,7 +31,7 @@
     [GIDSignIn sharedInstance].clientID = self.appId;
     [GIDSignIn sharedInstance].delegate = self;
     [GIDSignIn sharedInstance].uiDelegate = self;
-    [GIDSignIn sharedInstance].allowsSignInWithBrowser = NO;
+//    [GIDSignIn sharedInstance].allowsSignInWithBrowser = NO;
     [GIDSignIn sharedInstance].shouldFetchBasicProfile = YES;
     
     [GIDSignIn sharedInstance].scopes = scope;

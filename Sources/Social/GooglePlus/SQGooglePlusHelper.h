@@ -7,7 +7,7 @@
 //
 
 #import "SQSocnetHelper.h"
-#import <Google/SignIn.h>  //Pod version = 1.3.2
+#import <GoogleSignIn/GoogleSignIn.h> 
 
 @protocol SQGooglePlusHelperDelegate;
 

@@ -46,6 +46,13 @@ Pod::Spec.new do |s|
             sss.dependency 'FBSDKShareKit', '~> 4.7.1'
             sss.source_files = 'Sources/Social/Facebook/**/*.{h,m}', 'Sources/Social/SQSocnetHelper.{h,m}'
         end
+        
+        ss.subspec 'GooglePlus' do |sss|
+            sss.dependency 'GoogleSignIn', '~> 4.0.0'
+            sss.source_files = 'Sources/Social/GooglePlus/**/*.{h,m}', 'Sources/Social/SQSocnetHelper.{h,m}'
+        end
+        
+        
     end
 
 end
