@@ -21,6 +21,8 @@
 		08887AC91D056DB3007AF782 /* SQEdgedCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 08887AC71D056DB3007AF782 /* SQEdgedCollectionViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		08887ACA1D056DB3007AF782 /* SQEdgedCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08887AC81D056DB3007AF782 /* SQEdgedCollectionViewController.m */; };
 		1B6A9FB24654251C304CE70E /* libPods-SQUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D667947ADAD76727DAF381EE /* libPods-SQUtils.a */; };
+		809609E21D12481300935F17 /* SQFacebookHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 809609E01D12481300935F17 /* SQFacebookHelper.h */; };
+		809609E31D12481300935F17 /* SQFacebookHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 809609E11D12481300935F17 /* SQFacebookHelper.m */; };
 		80BD54CE1CFD3B43009711C4 /* UIWindow+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80BD54CC1CFD3B43009711C4 /* UIWindow+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80BD54CF1CFD3B43009711C4 /* UIWindow+SQExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 80BD54CD1CFD3B43009711C4 /* UIWindow+SQExtended.m */; };
 		80F3D2AD1CF80D0D00B3F10D /* NSArray+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F3D26D1CF80D0D00B3F10D /* NSArray+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -103,6 +105,8 @@
 		08887AB71D054FB4007AF782 /* SQNewsSelectDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNewsSelectDelegate.h; sourceTree = "<group>"; };
 		08887AC71D056DB3007AF782 /* SQEdgedCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQEdgedCollectionViewController.h; sourceTree = "<group>"; };
 		08887AC81D056DB3007AF782 /* SQEdgedCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQEdgedCollectionViewController.m; sourceTree = "<group>"; };
+		809609E01D12481300935F17 /* SQFacebookHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQFacebookHelper.h; sourceTree = "<group>"; };
+		809609E11D12481300935F17 /* SQFacebookHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQFacebookHelper.m; sourceTree = "<group>"; };
 		80BD54CC1CFD3B43009711C4 /* UIWindow+SQExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+SQExtended.h"; sourceTree = "<group>"; };
 		80BD54CD1CFD3B43009711C4 /* UIWindow+SQExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+SQExtended.m"; sourceTree = "<group>"; };
 		80F3D25F1CF80C6000B3F10D /* SQUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SQUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -257,6 +261,15 @@
 				D667947ADAD76727DAF381EE /* libPods-SQUtils.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		809609DF1D12481300935F17 /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				809609E01D12481300935F17 /* SQFacebookHelper.h */,
+				809609E11D12481300935F17 /* SQFacebookHelper.m */,
+			);
+			path = Facebook;
 			sourceTree = "<group>";
 		};
 		80F3D2551CF80C6000B3F10D = {
@@ -478,6 +491,7 @@
 				80FE3A1C1D11133300B203C4 /* SQSocial.h */,
 				80FE39F01D10FAAB00B203C4 /* SQSocnetHelper.h */,
 				80FE39F11D10FAAB00B203C4 /* SQSocnetHelper.m */,
+				809609DF1D12481300935F17 /* Facebook */,
 				80FE39EB1D10FA8100B203C4 /* VKontakte */,
 				082BB8791CFEA7A4008D300B /* Instagram */,
 			);
@@ -530,6 +544,7 @@
 				80F3D2B31CF80D0D00B3F10D /* NSDictionary+SQExtended.h in Headers */,
 				80F3D2CC1CF80D0D00B3F10D /* UIViewController+SQExtended.h in Headers */,
 				80F3D2C81CF80D0D00B3F10D /* UITextView+SQExtended.h in Headers */,
+				809609E21D12481300935F17 /* SQFacebookHelper.h in Headers */,
 				08887ABE1D054FB4007AF782 /* SQNewsListViewController.h in Headers */,
 				08887AC91D056DB3007AF782 /* SQEdgedCollectionViewController.h in Headers */,
 				80F3D2BB1CF80D0D00B3F10D /* SQCategories.h in Headers */,
@@ -648,6 +663,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				809609E31D12481300935F17 /* SQFacebookHelper.m in Sources */,
 				80F3D2D21CF80D0D00B3F10D /* NKBehavior.m in Sources */,
 				082BB8881CFEA7A4008D300B /* InstagramLoginViewController.m in Sources */,
 				80F3D2C51CF80D0D00B3F10D /* UITableView+SQExtended.m in Sources */,

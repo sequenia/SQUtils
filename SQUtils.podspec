@@ -39,6 +39,13 @@ Pod::Spec.new do |s|
             sss.source_files = 'Sources/Social/Instagram/**/*.{h,m}', 'Sources/Social/SQSocnetHelper.{h,m}'
             sss.resources = ['Sources/Social/Instagram/**/*.xib']
         end
+        
+        ss.subspec 'Facebook' do |sss|
+            sss.dependency 'FBSDKCoreKit', '~> 4.7.1'
+            sss.dependency 'FBSDKLoginKit', '~> 4.7.1'
+            sss.dependency 'FBSDKShareKit', '~> 4.7.1'
+            sss.source_files = 'Sources/Social/Facebook/**/*.{h,m}', 'Sources/Social/SQSocnetHelper.{h,m}'
+        end
     end
 
 end
