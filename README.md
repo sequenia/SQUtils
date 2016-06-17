@@ -40,7 +40,7 @@ pod 'SQUtils/Social', :git => 'https://github.com/sequenia/SQUtils.git'
 ```
 
 ## Usage
-[Instrutions]() for usage pod
+[Instrutions](Manual.md) for usage pod
 
 ## Author
 
