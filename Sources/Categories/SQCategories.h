@@ -22,4 +22,5 @@
 #import "UIColor+SQExtended.h"
 #import "UIViewController+SQExtended.h"
 #import "UIWindow+SQExtended.h"
+#import "UINavigationController+SQExtended.h"
  

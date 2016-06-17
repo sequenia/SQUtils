@@ -21,6 +21,8 @@
 		08887AC91D056DB3007AF782 /* SQEdgedCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 08887AC71D056DB3007AF782 /* SQEdgedCollectionViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		08887ACA1D056DB3007AF782 /* SQEdgedCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08887AC81D056DB3007AF782 /* SQEdgedCollectionViewController.m */; };
 		1B6A9FB24654251C304CE70E /* libPods-SQUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D667947ADAD76727DAF381EE /* libPods-SQUtils.a */; };
+		8069D9BC1D13F4EF006B37A4 /* UINavigationController+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 8069D9BA1D13F4EF006B37A4 /* UINavigationController+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8069D9BD1D13F4EF006B37A4 /* UINavigationController+SQExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 8069D9BB1D13F4EF006B37A4 /* UINavigationController+SQExtended.m */; };
 		809609E21D12481300935F17 /* SQFacebookHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 809609E01D12481300935F17 /* SQFacebookHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		809609E31D12481300935F17 /* SQFacebookHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 809609E11D12481300935F17 /* SQFacebookHelper.m */; };
 		809609E71D124BFB00935F17 /* SQGooglePlusHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 809609E51D124BFB00935F17 /* SQGooglePlusHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -107,6 +109,8 @@
 		08887AB71D054FB4007AF782 /* SQNewsSelectDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNewsSelectDelegate.h; sourceTree = "<group>"; };
 		08887AC71D056DB3007AF782 /* SQEdgedCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQEdgedCollectionViewController.h; sourceTree = "<group>"; };
 		08887AC81D056DB3007AF782 /* SQEdgedCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQEdgedCollectionViewController.m; sourceTree = "<group>"; };
+		8069D9BA1D13F4EF006B37A4 /* UINavigationController+SQExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SQExtended.h"; sourceTree = "<group>"; };
+		8069D9BB1D13F4EF006B37A4 /* UINavigationController+SQExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SQExtended.m"; sourceTree = "<group>"; };
 		809609E01D12481300935F17 /* SQFacebookHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQFacebookHelper.h; sourceTree = "<group>"; };
 		809609E11D12481300935F17 /* SQFacebookHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQFacebookHelper.m; sourceTree = "<group>"; };
 		809609E51D124BFB00935F17 /* SQGooglePlusHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQGooglePlusHelper.h; sourceTree = "<group>"; };
@@ -370,6 +374,8 @@
 				80F3D28C1CF80D0D00B3F10D /* UIView+SQExtended.m */,
 				80F3D28D1CF80D0D00B3F10D /* UIViewController+SQExtended.h */,
 				80F3D28E1CF80D0D00B3F10D /* UIViewController+SQExtended.m */,
+				8069D9BA1D13F4EF006B37A4 /* UINavigationController+SQExtended.h */,
+				8069D9BB1D13F4EF006B37A4 /* UINavigationController+SQExtended.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -539,6 +545,7 @@
 				08887AB81D054FB4007AF782 /* SQNewsContainerViewController.h in Headers */,
 				80F3D2C61CF80D0D00B3F10D /* UITextField+SQExtended.h in Headers */,
 				082BB86E1CFEA608008D300B /* SQEndlessCollectionView.h in Headers */,
+				8069D9BC1D13F4EF006B37A4 /* UINavigationController+SQExtended.h in Headers */,
 				80F3D2D81CF80D0D00B3F10D /* GSKeyboardManager.h in Headers */,
 				80F3D2CF1CF80D0D00B3F10D /* NKAddressBookPickerBehavior.h in Headers */,
 				80F3D2B51CF80D0D00B3F10D /* NSError+SQExtended.h in Headers */,
@@ -687,6 +694,7 @@
 				80F3D2BA1CF80D0D00B3F10D /* NSString+SQExtended.m in Sources */,
 				80F3D2C71CF80D0D00B3F10D /* UITextField+SQExtended.m in Sources */,
 				80F3D2C91CF80D0D00B3F10D /* UITextView+SQExtended.m in Sources */,
+				8069D9BD1D13F4EF006B37A4 /* UINavigationController+SQExtended.m in Sources */,
 				80F3D2CD1CF80D0D00B3F10D /* UIViewController+SQExtended.m in Sources */,
 				80FE39EF1D10FA8100B203C4 /* SQVKontakteHelper.m in Sources */,
 				80F3D2CB1CF80D0D00B3F10D /* UIView+SQExtended.m in Sources */,
