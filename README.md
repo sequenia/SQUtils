@@ -39,6 +39,9 @@ pod 'SQUtils/Social/VKontakte', :git => 'https://github.com/sequenia/SQUtils.git
 pod 'SQUtils/Social', :git => 'https://github.com/sequenia/SQUtils.git'
 ```
 
+## Usage
+[Instrutions]() for usage pod
+
 ## Author
 
 sequenia, sequenia@sequenia.com
