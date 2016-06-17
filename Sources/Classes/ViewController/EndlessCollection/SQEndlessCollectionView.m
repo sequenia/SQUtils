@@ -185,25 +185,31 @@ static double prevCallOffset = 0;
 - (void) setContent:(NSArray *)content{
     originalCount = content.count;
     pageControl.numberOfPages = originalCount;
-    
-    id firstItem = content[0];
-    id lastItem = [content lastObject];
-    
-    NSMutableArray *workingArray = [content mutableCopy];
-    
-    // Add the copy of the last item to the beginning
-    [workingArray insertObject:lastItem atIndex:0];
-    
-    // Add the copy of the first item to the end
-    [workingArray addObject:firstItem];
-    
-    // Update the collection view's data source property
-    _content =  [NSArray arrayWithArray:workingArray];
-    if(originalCount > 0){
-        enableDidScrollEvent = NO;
-        currentItem = 1;
-        [self processCurrentIndex:1];
-        [self reloadTimer];
+    if(content.count > 1){
+        id firstItem = content[0];
+        id lastItem = [content lastObject];
+        
+        NSMutableArray *workingArray = [content mutableCopy];
+        
+        // Add the copy of the last item to the beginning
+        [workingArray insertObject:lastItem atIndex:0];
+        
+        // Add the copy of the first item to the end
+        [workingArray addObject:firstItem];
+        
+        // Update the collection view's data source property
+        _content =  [NSArray arrayWithArray:workingArray];
+        if(originalCount > 0){
+            enableDidScrollEvent = NO;
+            currentItem = 1;
+            [self processCurrentIndex:1];
+            [self reloadTimer];
+        }
+    }
+    else{
+        _content = content;
+        currentItem = 0;
+        [timer invalidate];
     }
     
     if(_animatedReload){
