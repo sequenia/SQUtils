@@ -20,4 +20,6 @@
 
 - (void)sq_setHidden: (BOOL) hidden animated: (BOOL) animated;
 
+- (UIImage*)sq_image;
+
 @end
