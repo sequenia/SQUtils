@@ -6,7 +6,7 @@
 Pod::Spec.new do |s|
     
     s.name                    = 'SQUtils'
-    s.version                 = '0.1.0'
+    s.version                 = '0.2.0'
     s.summary                 = 'Pack of categories and custom classes'
     s.homepage                = 'https://github.com/sequenia/SQUtils'
     s.license                 = { :type => 'MIT', :file => 'LICENSE' }
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
     s.subspec 'Classes' do |ss|
         ss.dependency 'SQUtils/Categories'
         ss.source_files = 'Sources/Classes/**/*.{h,m}'
-        ss.resources = ['Sources/Classes/**/*.xib']
+        ss.resources = ['Sources/Classes/**/*.{strings,png,xib}']
     end
     
     s.subspec 'Social' do |ss|

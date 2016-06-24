@@ -20,6 +20,42 @@
 		08887AC01D054FB4007AF782 /* SQNewsSelectDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 08887AB71D054FB4007AF782 /* SQNewsSelectDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		08887AC91D056DB3007AF782 /* SQEdgedCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 08887AC71D056DB3007AF782 /* SQEdgedCollectionViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		08887ACA1D056DB3007AF782 /* SQEdgedCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08887AC81D056DB3007AF782 /* SQEdgedCollectionViewController.m */; };
+		0891EBE61D1D071B0042473B /* SQAlbum.h in Headers */ = {isa = PBXBuildFile; fileRef = 0891EBBB1D1D071B0042473B /* SQAlbum.h */; };
+		0891EBE71D1D071B0042473B /* SQAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 0891EBBC1D1D071B0042473B /* SQAlbum.m */; };
+		0891EBE81D1D071B0042473B /* SQPhoto.h in Headers */ = {isa = PBXBuildFile; fileRef = 0891EBBD1D1D071B0042473B /* SQPhoto.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0891EBE91D1D071B0042473B /* SQPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 0891EBBE1D1D071B0042473B /* SQPhoto.m */; };
+		0891EBEA1D1D071B0042473B /* SQPhotoCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 0891EBBF1D1D071B0042473B /* SQPhotoCache.h */; };
+		0891EBEB1D1D071B0042473B /* SQPhotoCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0891EBC01D1D071B0042473B /* SQPhotoCache.m */; };
+		0891EBEC1D1D071B0042473B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0891EBC21D1D071B0042473B /* Localizable.strings */; };
+		0891EBED1D1D071B0042473B /* LocalizeHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 0891EBC41D1D071B0042473B /* LocalizeHeader.h */; };
+		0891EBEE1D1D071B0042473B /* SQAlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0891EBC71D1D071B0042473B /* SQAlbumCell.xib */; };
+		0891EBEF1D1D071B0042473B /* SQAlbumListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0891EBC81D1D071B0042473B /* SQAlbumListViewController.h */; };
+		0891EBF01D1D071B0042473B /* SQAlbumListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0891EBC91D1D071B0042473B /* SQAlbumListViewController.m */; };
+		0891EBF11D1D071B0042473B /* SQPhotoGridViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0891EBCA1D1D071B0042473B /* SQPhotoGridViewController.h */; };
+		0891EBF21D1D071B0042473B /* SQPhotoGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0891EBCB1D1D071B0042473B /* SQPhotoGridViewController.m */; };
+		0891EBF31D1D071B0042473B /* SQPhotoPreviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0891EBCD1D1D071B0042473B /* SQPhotoPreviewCell.xib */; };
+		0891EBF41D1D071B0042473B /* SQPhotoPreviewCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 0891EBCE1D1D071B0042473B /* SQPhotoPreviewCollection.h */; };
+		0891EBF51D1D071B0042473B /* SQPhotoPreviewCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0891EBCF1D1D071B0042473B /* SQPhotoPreviewCollection.m */; };
+		0891EBF61D1D071B0042473B /* SQPhotoPreviewLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 0891EBD01D1D071B0042473B /* SQPhotoPreviewLayout.h */; };
+		0891EBF71D1D071B0042473B /* SQPhotoPreviewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0891EBD11D1D071B0042473B /* SQPhotoPreviewLayout.m */; };
+		0891EBF81D1D071B0042473B /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0891EBD31D1D071B0042473B /* checkmark.png */; };
+		0891EBF91D1D071B0042473B /* checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0891EBD41D1D071B0042473B /* checkmark@2x.png */; };
+		0891EBFA1D1D071B0042473B /* checkmark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0891EBD51D1D071B0042473B /* checkmark@3x.png */; };
+		0891EBFB1D1D071B0042473B /* empty_checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0891EBD61D1D071B0042473B /* empty_checkmark.png */; };
+		0891EBFC1D1D071B0042473B /* empty_checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0891EBD71D1D071B0042473B /* empty_checkmark@2x.png */; };
+		0891EBFD1D1D071B0042473B /* empty_checkmark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0891EBD81D1D071B0042473B /* empty_checkmark@3x.png */; };
+		0891EBFE1D1D071B0042473B /* SQActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0891EBDA1D1D071B0042473B /* SQActionCell.xib */; };
+		0891EBFF1D1D071B0042473B /* SQPhotoSheetCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 0891EBDB1D1D071B0042473B /* SQPhotoSheetCollection.h */; };
+		0891EC001D1D071B0042473B /* SQPhotoSheetCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0891EBDC1D1D071B0042473B /* SQPhotoSheetCollection.m */; };
+		0891EC011D1D071B0042473B /* SQPreviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0891EBDD1D1D071B0042473B /* SQPreviewCell.xib */; };
+		0891EC021D1D071B0042473B /* SQSheetLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 0891EBDE1D1D071B0042473B /* SQSheetLayout.h */; };
+		0891EC031D1D071B0042473B /* SQSheetLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0891EBDF1D1D071B0042473B /* SQSheetLayout.m */; };
+		0891EC041D1D071B0042473B /* SQSheetSeparator.h in Headers */ = {isa = PBXBuildFile; fileRef = 0891EBE01D1D071B0042473B /* SQSheetSeparator.h */; };
+		0891EC051D1D071B0042473B /* SQSheetSeparator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0891EBE11D1D071B0042473B /* SQSheetSeparator.m */; };
+		0891EC061D1D071B0042473B /* SQPhotoPickerSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 0891EBE21D1D071B0042473B /* SQPhotoPickerSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0891EC071D1D071B0042473B /* SQPhotoPickerSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0891EBE31D1D071B0042473B /* SQPhotoPickerSheet.m */; };
+		0891EC081D1D071B0042473B /* SQPresentationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0891EBE41D1D071B0042473B /* SQPresentationController.h */; };
+		0891EC091D1D071B0042473B /* SQPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0891EBE51D1D071B0042473B /* SQPresentationController.m */; };
 		1B6A9FB24654251C304CE70E /* libPods-SQUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D667947ADAD76727DAF381EE /* libPods-SQUtils.a */; };
 		8069D9BC1D13F4EF006B37A4 /* UINavigationController+SQExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 8069D9BA1D13F4EF006B37A4 /* UINavigationController+SQExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8069D9BD1D13F4EF006B37A4 /* UINavigationController+SQExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 8069D9BB1D13F4EF006B37A4 /* UINavigationController+SQExtended.m */; };
@@ -109,6 +145,43 @@
 		08887AB71D054FB4007AF782 /* SQNewsSelectDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNewsSelectDelegate.h; sourceTree = "<group>"; };
 		08887AC71D056DB3007AF782 /* SQEdgedCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQEdgedCollectionViewController.h; sourceTree = "<group>"; };
 		08887AC81D056DB3007AF782 /* SQEdgedCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQEdgedCollectionViewController.m; sourceTree = "<group>"; };
+		0891EBBB1D1D071B0042473B /* SQAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQAlbum.h; sourceTree = "<group>"; };
+		0891EBBC1D1D071B0042473B /* SQAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQAlbum.m; sourceTree = "<group>"; };
+		0891EBBD1D1D071B0042473B /* SQPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQPhoto.h; sourceTree = "<group>"; };
+		0891EBBE1D1D071B0042473B /* SQPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQPhoto.m; sourceTree = "<group>"; };
+		0891EBBF1D1D071B0042473B /* SQPhotoCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQPhotoCache.h; sourceTree = "<group>"; };
+		0891EBC01D1D071B0042473B /* SQPhotoCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQPhotoCache.m; sourceTree = "<group>"; };
+		0891EBC31D1D071B0042473B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0891EBC41D1D071B0042473B /* LocalizeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizeHeader.h; sourceTree = "<group>"; };
+		0891EBC51D1D071B0042473B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0891EBC71D1D071B0042473B /* SQAlbumCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQAlbumCell.xib; sourceTree = "<group>"; };
+		0891EBC81D1D071B0042473B /* SQAlbumListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQAlbumListViewController.h; sourceTree = "<group>"; };
+		0891EBC91D1D071B0042473B /* SQAlbumListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQAlbumListViewController.m; sourceTree = "<group>"; };
+		0891EBCA1D1D071B0042473B /* SQPhotoGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQPhotoGridViewController.h; sourceTree = "<group>"; };
+		0891EBCB1D1D071B0042473B /* SQPhotoGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQPhotoGridViewController.m; sourceTree = "<group>"; };
+		0891EBCD1D1D071B0042473B /* SQPhotoPreviewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQPhotoPreviewCell.xib; sourceTree = "<group>"; };
+		0891EBCE1D1D071B0042473B /* SQPhotoPreviewCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQPhotoPreviewCollection.h; sourceTree = "<group>"; };
+		0891EBCF1D1D071B0042473B /* SQPhotoPreviewCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQPhotoPreviewCollection.m; sourceTree = "<group>"; };
+		0891EBD01D1D071B0042473B /* SQPhotoPreviewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQPhotoPreviewLayout.h; sourceTree = "<group>"; };
+		0891EBD11D1D071B0042473B /* SQPhotoPreviewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQPhotoPreviewLayout.m; sourceTree = "<group>"; };
+		0891EBD31D1D071B0042473B /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
+		0891EBD41D1D071B0042473B /* checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark@2x.png"; sourceTree = "<group>"; };
+		0891EBD51D1D071B0042473B /* checkmark@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark@3x.png"; sourceTree = "<group>"; };
+		0891EBD61D1D071B0042473B /* empty_checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = empty_checkmark.png; sourceTree = "<group>"; };
+		0891EBD71D1D071B0042473B /* empty_checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "empty_checkmark@2x.png"; sourceTree = "<group>"; };
+		0891EBD81D1D071B0042473B /* empty_checkmark@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "empty_checkmark@3x.png"; sourceTree = "<group>"; };
+		0891EBDA1D1D071B0042473B /* SQActionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQActionCell.xib; sourceTree = "<group>"; };
+		0891EBDB1D1D071B0042473B /* SQPhotoSheetCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQPhotoSheetCollection.h; sourceTree = "<group>"; };
+		0891EBDC1D1D071B0042473B /* SQPhotoSheetCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQPhotoSheetCollection.m; sourceTree = "<group>"; };
+		0891EBDD1D1D071B0042473B /* SQPreviewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQPreviewCell.xib; sourceTree = "<group>"; };
+		0891EBDE1D1D071B0042473B /* SQSheetLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQSheetLayout.h; sourceTree = "<group>"; };
+		0891EBDF1D1D071B0042473B /* SQSheetLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQSheetLayout.m; sourceTree = "<group>"; };
+		0891EBE01D1D071B0042473B /* SQSheetSeparator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQSheetSeparator.h; sourceTree = "<group>"; };
+		0891EBE11D1D071B0042473B /* SQSheetSeparator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQSheetSeparator.m; sourceTree = "<group>"; };
+		0891EBE21D1D071B0042473B /* SQPhotoPickerSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQPhotoPickerSheet.h; sourceTree = "<group>"; };
+		0891EBE31D1D071B0042473B /* SQPhotoPickerSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQPhotoPickerSheet.m; sourceTree = "<group>"; };
+		0891EBE41D1D071B0042473B /* SQPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQPresentationController.h; sourceTree = "<group>"; };
+		0891EBE51D1D071B0042473B /* SQPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQPresentationController.m; sourceTree = "<group>"; };
 		8069D9BA1D13F4EF006B37A4 /* UINavigationController+SQExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SQExtended.h"; sourceTree = "<group>"; };
 		8069D9BB1D13F4EF006B37A4 /* UINavigationController+SQExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SQExtended.m"; sourceTree = "<group>"; };
 		809609E01D12481300935F17 /* SQFacebookHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQFacebookHelper.h; sourceTree = "<group>"; };
@@ -254,6 +327,97 @@
 			path = EdgedCollection;
 			sourceTree = "<group>";
 		};
+		0891EBB91D1D071B0042473B /* SQPhotoPicker */ = {
+			isa = PBXGroup;
+			children = (
+				0891EBBA1D1D071B0042473B /* Data */,
+				0891EBC11D1D071B0042473B /* Localize */,
+				0891EBC61D1D071B0042473B /* PhotoGrid */,
+				0891EBCC1D1D071B0042473B /* Preview */,
+				0891EBD21D1D071B0042473B /* Resources */,
+				0891EBD91D1D071B0042473B /* Sheet */,
+				0891EBE21D1D071B0042473B /* SQPhotoPickerSheet.h */,
+				0891EBE31D1D071B0042473B /* SQPhotoPickerSheet.m */,
+				0891EBE41D1D071B0042473B /* SQPresentationController.h */,
+				0891EBE51D1D071B0042473B /* SQPresentationController.m */,
+			);
+			path = SQPhotoPicker;
+			sourceTree = "<group>";
+		};
+		0891EBBA1D1D071B0042473B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0891EBBB1D1D071B0042473B /* SQAlbum.h */,
+				0891EBBC1D1D071B0042473B /* SQAlbum.m */,
+				0891EBBD1D1D071B0042473B /* SQPhoto.h */,
+				0891EBBE1D1D071B0042473B /* SQPhoto.m */,
+				0891EBBF1D1D071B0042473B /* SQPhotoCache.h */,
+				0891EBC01D1D071B0042473B /* SQPhotoCache.m */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0891EBC11D1D071B0042473B /* Localize */ = {
+			isa = PBXGroup;
+			children = (
+				0891EBC21D1D071B0042473B /* Localizable.strings */,
+				0891EBC41D1D071B0042473B /* LocalizeHeader.h */,
+			);
+			path = Localize;
+			sourceTree = "<group>";
+		};
+		0891EBC61D1D071B0042473B /* PhotoGrid */ = {
+			isa = PBXGroup;
+			children = (
+				0891EBC71D1D071B0042473B /* SQAlbumCell.xib */,
+				0891EBC81D1D071B0042473B /* SQAlbumListViewController.h */,
+				0891EBC91D1D071B0042473B /* SQAlbumListViewController.m */,
+				0891EBCA1D1D071B0042473B /* SQPhotoGridViewController.h */,
+				0891EBCB1D1D071B0042473B /* SQPhotoGridViewController.m */,
+			);
+			path = PhotoGrid;
+			sourceTree = "<group>";
+		};
+		0891EBCC1D1D071B0042473B /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				0891EBCD1D1D071B0042473B /* SQPhotoPreviewCell.xib */,
+				0891EBCE1D1D071B0042473B /* SQPhotoPreviewCollection.h */,
+				0891EBCF1D1D071B0042473B /* SQPhotoPreviewCollection.m */,
+				0891EBD01D1D071B0042473B /* SQPhotoPreviewLayout.h */,
+				0891EBD11D1D071B0042473B /* SQPhotoPreviewLayout.m */,
+			);
+			path = Preview;
+			sourceTree = "<group>";
+		};
+		0891EBD21D1D071B0042473B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0891EBD31D1D071B0042473B /* checkmark.png */,
+				0891EBD41D1D071B0042473B /* checkmark@2x.png */,
+				0891EBD51D1D071B0042473B /* checkmark@3x.png */,
+				0891EBD61D1D071B0042473B /* empty_checkmark.png */,
+				0891EBD71D1D071B0042473B /* empty_checkmark@2x.png */,
+				0891EBD81D1D071B0042473B /* empty_checkmark@3x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0891EBD91D1D071B0042473B /* Sheet */ = {
+			isa = PBXGroup;
+			children = (
+				0891EBDA1D1D071B0042473B /* SQActionCell.xib */,
+				0891EBDB1D1D071B0042473B /* SQPhotoSheetCollection.h */,
+				0891EBDC1D1D071B0042473B /* SQPhotoSheetCollection.m */,
+				0891EBDD1D1D071B0042473B /* SQPreviewCell.xib */,
+				0891EBDE1D1D071B0042473B /* SQSheetLayout.h */,
+				0891EBDF1D1D071B0042473B /* SQSheetLayout.m */,
+				0891EBE01D1D071B0042473B /* SQSheetSeparator.h */,
+				0891EBE11D1D071B0042473B /* SQSheetSeparator.m */,
+			);
+			path = Sheet;
+			sourceTree = "<group>";
+		};
 		6D6AB0805FBFA39B4A4BA3A5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +547,7 @@
 		80F3D28F1CF80D0D00B3F10D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				0891EBB91D1D071B0042473B /* SQPhotoPicker */,
 				082BB86A1CFEA608008D300B /* ViewController */,
 				80F3D2911CF80D0D00B3F10D /* Behavior */,
 				80F3D29F1CF80D0D00B3F10D /* Keyboard */,
@@ -542,7 +707,10 @@
 				80F3D2D31CF80D0D00B3F10D /* NKPagingBehavior.h in Headers */,
 				80F3D2D11CF80D0D00B3F10D /* NKBehavior.h in Headers */,
 				80F3D2BE1CF80D0D00B3F10D /* UIColor+SQExtended.h in Headers */,
+				0891EBEA1D1D071B0042473B /* SQPhotoCache.h in Headers */,
 				08887AB81D054FB4007AF782 /* SQNewsContainerViewController.h in Headers */,
+				0891EBE81D1D071B0042473B /* SQPhoto.h in Headers */,
+				0891EC041D1D071B0042473B /* SQSheetSeparator.h in Headers */,
 				80F3D2C61CF80D0D00B3F10D /* UITextField+SQExtended.h in Headers */,
 				082BB86E1CFEA608008D300B /* SQEndlessCollectionView.h in Headers */,
 				8069D9BC1D13F4EF006B37A4 /* UINavigationController+SQExtended.h in Headers */,
@@ -551,29 +719,39 @@
 				80F3D2B51CF80D0D00B3F10D /* NSError+SQExtended.h in Headers */,
 				80F3D2C01CF80D0D00B3F10D /* UIImage+SQExtended.h in Headers */,
 				80F3D2D71CF80D0D00B3F10D /* SQBehaviors.h in Headers */,
+				0891EBE61D1D071B0042473B /* SQAlbum.h in Headers */,
+				0891EBF11D1D071B0042473B /* SQPhotoGridViewController.h in Headers */,
+				0891EBED1D1D071B0042473B /* LocalizeHeader.h in Headers */,
 				80F3D2D51CF80D0D00B3F10D /* NKPhotoPickerBehavior.h in Headers */,
 				80BD54CE1CFD3B43009711C4 /* UIWindow+SQExtended.h in Headers */,
+				0891EBF61D1D071B0042473B /* SQPhotoPreviewLayout.h in Headers */,
 				809609E71D124BFB00935F17 /* SQGooglePlusHelper.h in Headers */,
 				80F3D2BC1CF80D0D00B3F10D /* UICollectionView+SQExtended.h in Headers */,
 				80FE39EE1D10FA8100B203C4 /* SQVKontakteHelper.h in Headers */,
+				0891EC081D1D071B0042473B /* SQPresentationController.h in Headers */,
 				80F3D2AF1CF80D0D00B3F10D /* NSData+SQExtended.h in Headers */,
 				80F3D2B71CF80D0D00B3F10D /* NSMutableArray+SQExtended.h in Headers */,
 				80FE3A201D1116C700B203C4 /* SQInstagramHelper.h in Headers */,
 				08887AC01D054FB4007AF782 /* SQNewsSelectDelegate.h in Headers */,
+				0891EC061D1D071B0042473B /* SQPhotoPickerSheet.h in Headers */,
 				80FE39F21D10FAAB00B203C4 /* SQSocnetHelper.h in Headers */,
 				80F3D2B91CF80D0D00B3F10D /* NSString+SQExtended.h in Headers */,
 				80F3D2DE1CF80D0D00B3F10D /* TopAlignedLabel.h in Headers */,
 				80F3D2B31CF80D0D00B3F10D /* NSDictionary+SQExtended.h in Headers */,
 				80F3D2CC1CF80D0D00B3F10D /* UIViewController+SQExtended.h in Headers */,
 				80F3D2C81CF80D0D00B3F10D /* UITextView+SQExtended.h in Headers */,
+				0891EBF41D1D071B0042473B /* SQPhotoPreviewCollection.h in Headers */,
 				809609E21D12481300935F17 /* SQFacebookHelper.h in Headers */,
+				0891EC021D1D071B0042473B /* SQSheetLayout.h in Headers */,
 				08887ABE1D054FB4007AF782 /* SQNewsListViewController.h in Headers */,
 				08887AC91D056DB3007AF782 /* SQEdgedCollectionViewController.h in Headers */,
 				80F3D2BB1CF80D0D00B3F10D /* SQCategories.h in Headers */,
 				082BB8871CFEA7A4008D300B /* InstagramLoginViewController.h in Headers */,
 				80F3D2ED1CF80F5900B3F10D /* SQUtils.h in Headers */,
+				0891EBEF1D1D071B0042473B /* SQAlbumListViewController.h in Headers */,
 				80F3D2C21CF80D0D00B3F10D /* UIImageView+SQExtended.h in Headers */,
 				80F3D2DA1CF80D0D00B3F10D /* SeqButton.h in Headers */,
+				0891EBFF1D1D071B0042473B /* SQPhotoSheetCollection.h in Headers */,
 				80F3D2AD1CF80D0D00B3F10D /* NSArray+SQExtended.h in Headers */,
 				80FE3A1D1D1113D600B203C4 /* SQSocial.h in Headers */,
 			);
@@ -623,6 +801,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 80F3D2551CF80C6000B3F10D;
 			productRefGroup = 80F3D2601CF80C6000B3F10D /* Products */;
@@ -640,8 +819,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				80FE3A1A1D11092E00B203C4 /* SQNewsContainerViewController.xib in Resources */,
+				0891EBFA1D1D071B0042473B /* checkmark@3x.png in Resources */,
+				0891EBF31D1D071B0042473B /* SQPhotoPreviewCell.xib in Resources */,
+				0891EBEC1D1D071B0042473B /* Localizable.strings in Resources */,
+				0891EC011D1D071B0042473B /* SQPreviewCell.xib in Resources */,
+				0891EBFE1D1D071B0042473B /* SQActionCell.xib in Resources */,
+				0891EBFC1D1D071B0042473B /* empty_checkmark@2x.png in Resources */,
+				0891EBF81D1D071B0042473B /* checkmark.png in Resources */,
 				80FE3A1B1D11092E00B203C4 /* SQNewsDetailViewController.xib in Resources */,
+				0891EBEE1D1D071B0042473B /* SQAlbumCell.xib in Resources */,
+				0891EBFB1D1D071B0042473B /* empty_checkmark.png in Resources */,
+				0891EBF91D1D071B0042473B /* checkmark@2x.png in Resources */,
 				80FE3A191D1108C700B203C4 /* InstagramLoginViewController.xib in Resources */,
+				0891EBFD1D1D071B0042473B /* empty_checkmark@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,9 +875,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0891EC051D1D071B0042473B /* SQSheetSeparator.m in Sources */,
 				809609E31D12481300935F17 /* SQFacebookHelper.m in Sources */,
 				80F3D2D21CF80D0D00B3F10D /* NKBehavior.m in Sources */,
 				082BB8881CFEA7A4008D300B /* InstagramLoginViewController.m in Sources */,
+				0891EC071D1D071B0042473B /* SQPhotoPickerSheet.m in Sources */,
+				0891EBEB1D1D071B0042473B /* SQPhotoCache.m in Sources */,
 				80F3D2C51CF80D0D00B3F10D /* UITableView+SQExtended.m in Sources */,
 				80BD54CF1CFD3B43009711C4 /* UIWindow+SQExtended.m in Sources */,
 				80F3D2BF1CF80D0D00B3F10D /* UIColor+SQExtended.m in Sources */,
@@ -697,27 +890,36 @@
 				8069D9BD1D13F4EF006B37A4 /* UINavigationController+SQExtended.m in Sources */,
 				80F3D2CD1CF80D0D00B3F10D /* UIViewController+SQExtended.m in Sources */,
 				80FE39EF1D10FA8100B203C4 /* SQVKontakteHelper.m in Sources */,
+				0891EBF51D1D071B0042473B /* SQPhotoPreviewCollection.m in Sources */,
 				80F3D2CB1CF80D0D00B3F10D /* UIView+SQExtended.m in Sources */,
 				08887ACA1D056DB3007AF782 /* SQEdgedCollectionViewController.m in Sources */,
 				80F3D2B81CF80D0D00B3F10D /* NSMutableArray+SQExtended.m in Sources */,
+				0891EBE91D1D071B0042473B /* SQPhoto.m in Sources */,
 				80F3D2D01CF80D0D00B3F10D /* NKAddressBookPickerBehavior.m in Sources */,
 				80FE3A211D1116C700B203C4 /* SQInstagramHelper.m in Sources */,
 				809609E81D124BFB00935F17 /* SQGooglePlusHelper.m in Sources */,
 				80F3D2C31CF80D0D00B3F10D /* UIImageView+SQExtended.m in Sources */,
 				80F3D2B21CF80D0D00B3F10D /* NSDate+SQExtended.m in Sources */,
 				80F3D2D91CF80D0D00B3F10D /* GSKeyboardManager.m in Sources */,
+				0891EBF01D1D071B0042473B /* SQAlbumListViewController.m in Sources */,
+				0891EC001D1D071B0042473B /* SQPhotoSheetCollection.m in Sources */,
 				80F3D2C11CF80D0D00B3F10D /* UIImage+SQExtended.m in Sources */,
 				80F3D2B61CF80D0D00B3F10D /* NSError+SQExtended.m in Sources */,
 				08887ABC1D054FB4007AF782 /* SQNewsDetailViewController.m in Sources */,
+				0891EC031D1D071B0042473B /* SQSheetLayout.m in Sources */,
 				80F3D2AE1CF80D0D00B3F10D /* NSArray+SQExtended.m in Sources */,
 				08887ABF1D054FB4007AF782 /* SQNewsListViewController.m in Sources */,
+				0891EBF21D1D071B0042473B /* SQPhotoGridViewController.m in Sources */,
 				80F3D2D61CF80D0D00B3F10D /* NKPhotoPickerBehavior.m in Sources */,
 				80F3D2DD1CF80D0D00B3F10D /* SeqOnboardingView.m in Sources */,
 				082BB86F1CFEA608008D300B /* SQEndlessCollectionView.m in Sources */,
+				0891EC091D1D071B0042473B /* SQPresentationController.m in Sources */,
 				80F3D2BD1CF80D0D00B3F10D /* UICollectionView+SQExtended.m in Sources */,
 				80F3D2DF1CF80D0D00B3F10D /* TopAlignedLabel.m in Sources */,
+				0891EBE71D1D071B0042473B /* SQAlbum.m in Sources */,
 				80FE39F31D10FAAB00B203C4 /* SQSocnetHelper.m in Sources */,
 				80F3D2B01CF80D0D00B3F10D /* NSData+SQExtended.m in Sources */,
+				0891EBF71D1D071B0042473B /* SQPhotoPreviewLayout.m in Sources */,
 				80F3D2D41CF80D0D00B3F10D /* NKPagingBehavior.m in Sources */,
 				08887AB91D054FB4007AF782 /* SQNewsContainerViewController.m in Sources */,
 				80F3D2B41CF80D0D00B3F10D /* NSDictionary+SQExtended.m in Sources */,
@@ -726,6 +928,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0891EBC21D1D071B0042473B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0891EBC31D1D071B0042473B /* en */,
+				0891EBC51D1D071B0042473B /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		80F3D2651CF80C6000B3F10D /* Debug */ = {
