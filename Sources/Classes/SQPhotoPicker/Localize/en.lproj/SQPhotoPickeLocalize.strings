@@ -1,11 +1,10 @@
 /* 
-  Localizable.strings
+  SQPhotoPickeLocalize.strings
   PhotoTest
 
-  Created by Sequenia on 23/06/16.
+  Created by Sequenia on 28/06/16.
   Copyright © 2016 Sequenia. All rights reserved.
 */
-
 "access_denied" = "Access denied";
 "unlock_photos_access" = "Unlock your photos in the app settings to continue";
 "cannt_take_photo" = "Can't take a photo";

@@ -9,6 +9,6 @@
 #ifndef LocalizeHeader_h
 #define LocalizeHeader_h
 
-#define LOCALIZE(key) [[NSBundle bundleForClass:[self class]] localizedStringForKey:(key) value:@"" table:nil]
+#define LOCALIZE(key) [[NSBundle bundleForClass:[self class]] localizedStringForKey:(key) value:@"" table:@"SQPhotoPickeLocalize"]
 
 #endif /* LocalizeHeader_h */
