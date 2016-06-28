@@ -6,7 +6,7 @@
 Pod::Spec.new do |s|
     
     s.name                    = 'SQUtils'
-    s.version                 = '0.2.0'
+    s.version                 = '0.1.0'
     s.summary                 = 'Pack of categories and custom classes'
     s.homepage                = 'https://github.com/sequenia/SQUtils'
     s.license                 = { :type => 'MIT', :file => 'LICENSE' }
