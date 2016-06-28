@@ -34,7 +34,7 @@ static double prevCallOffset = 0;
 
 - (void) registerCellWithIdentifier:(NSString *)identifier nibName:(NSString *)nibName{
     [reuseIdentifiers addObject:identifier];
-    [endlessCollectionView registerNib:[UINib nibWithNibName:nibName bundle:nil] forCellWithReuseIdentifier:identifier];
+    [endlessCollectionView registerNib:[UINib nibWithNibName:nibName bundle:[NSBundle bundleForClass:[self class]]] forCellWithReuseIdentifier:identifier];
 }
 
 - (void) viewDidLoad{

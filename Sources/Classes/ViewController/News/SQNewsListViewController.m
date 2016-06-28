@@ -31,7 +31,7 @@ static double prevCallOffset = 0;
 }
 
 - (void) registerCellWithIdentifier:(NSString *)identifier nibName:(NSString *)nibName{
-    [self.tableView registerNib:[UINib nibWithNibName:nibName bundle:nil] forCellReuseIdentifier:identifier];
+    [self.tableView registerNib:[UINib nibWithNibName:nibName bundle:[NSBundle bundleForClass:[self class]]] forCellReuseIdentifier:identifier];
     [reuseIdentifiers addObject:identifier];
 }
 

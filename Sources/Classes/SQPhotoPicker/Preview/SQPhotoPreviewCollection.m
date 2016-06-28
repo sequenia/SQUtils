@@ -46,7 +46,7 @@ static NSString * const reuseIdentifier = @"SQPhotoPreviewCell";
     selectedCount = 0;
     hasSelection = NO;
     
-    [self registerNib:[UINib nibWithNibName:reuseIdentifier bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
+    [self registerNib:[UINib nibWithNibName:reuseIdentifier bundle:[NSBundle bundleForClass:[self class]]] forCellWithReuseIdentifier:reuseIdentifier];
 }
 
 - (void) setAllPhotos:(NSArray *)allPhotos{

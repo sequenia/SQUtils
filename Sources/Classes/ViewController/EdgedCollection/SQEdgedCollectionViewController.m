@@ -23,7 +23,7 @@
     if(!reuseIdentifiers){
         reuseIdentifiers = [NSMutableArray array];
     }
-    [edgedCollectionView registerNib:[UINib nibWithNibName:nibName bundle:nil] forCellWithReuseIdentifier:identifier];
+    [edgedCollectionView registerNib:[UINib nibWithNibName:nibName bundle:[NSBundle bundleForClass:[self class]]] forCellWithReuseIdentifier:identifier];
     [reuseIdentifiers addObject:identifier];
 }
 

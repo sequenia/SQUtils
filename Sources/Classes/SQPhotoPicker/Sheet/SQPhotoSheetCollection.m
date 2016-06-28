@@ -86,8 +86,8 @@ static CGFloat const bigHeight = 268;
     }
     [previewCollection setAllPhotos:allPhotos];
     
-    [self registerNib:[UINib nibWithNibName:previewReuseIdentifier bundle:nil] forCellWithReuseIdentifier:previewReuseIdentifier];
-    [self registerNib:[UINib nibWithNibName:actionReuseIdentifier bundle:nil] forCellWithReuseIdentifier:actionReuseIdentifier];
+    [self registerNib:[UINib nibWithNibName:previewReuseIdentifier bundle:[NSBundle bundleForClass:[self class]]] forCellWithReuseIdentifier:previewReuseIdentifier];
+    [self registerNib:[UINib nibWithNibName:actionReuseIdentifier bundle:[NSBundle bundleForClass:[self class]]] forCellWithReuseIdentifier:actionReuseIdentifier];
 }
 
 - (void) setMaxImagesCount:(NSInteger)maxImagesCount{
