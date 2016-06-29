@@ -1,11 +1,3 @@
-//
-//  WSCoachMarksView.m
-//  Version 0.2
-//
-//  Created by Dimitry Bentsionov on 4/1/13.
-//  Copyright (c) 2013 Workshirt, Inc. All rights reserved.
-//
-
 #import <QuartzCore/QuartzCore.h>
 #import "SeqOnboardingView.h"
 
@@ -21,6 +13,7 @@ static const CGFloat kBordersDelta = 0;
     NSUInteger markIndex;
     
     NSMutableArray *captions;
+    UIView *closeView;
     
 }
 
@@ -73,6 +66,10 @@ static const CGFloat kBordersDelta = 0;
     self.captionFont = [UIFont systemFontOfSize:19.f];
     self.lastCaptionFont = [UIFont systemFontOfSize:19.f];
     
+    self.skipAllEnable = YES;
+    self.skipLabelFont = [UIFont systemFontOfSize:15.f];
+    self.skipLabelColor = [UIColor whiteColor];
+    
     // Shape layer mask
     mask = [CAShapeLayer layer];
     [mask setFillRule:kCAFillRuleEvenOdd];
@@ -108,6 +105,8 @@ static const CGFloat kBordersDelta = 0;
     _lineWidth = lineWidth;
     decorationLayer.borderWidth = lineWidth;
 }
+
+
 
 #pragma mark - Touch handler
 
@@ -149,6 +148,9 @@ static const CGFloat kBordersDelta = 0;
     }
     
     NSDictionary *markDef = [self.coachMarks objectAtIndex:index];
+    if(closeView && closeView.superview){
+        [closeView removeFromSuperview];
+    }
     
     for(UILabel *oldCaption in captions){
         [UIView animateWithDuration:_animationDuration animations:^{
@@ -159,12 +161,12 @@ static const CGFloat kBordersDelta = 0;
     }
     [captions removeAllObjects];
     
-
+    
     
     if(markIndex == 0){
         UIBezierPath *newPath = [UIBezierPath bezierPathWithRect:self.bounds];
         UIBezierPath *newDecorationPath = [UIBezierPath bezierPath];
-
+        
         if([markDef objectForKey:kShapeElements]){
             for(NSDictionary *element in [markDef objectForKey:kShapeElements]){
                 NSString *shape = [element objectForKey:kElementShape];
@@ -184,6 +186,35 @@ static const CGFloat kBordersDelta = 0;
     
     UIBezierPath *newPath = [UIBezierPath bezierPathWithRect:self.bounds];
     UIBezierPath *newDecorationPath = [UIBezierPath bezierPath];
+    
+    if(self.coachMarks.count > 1 && self.skipAllEnable){
+        
+        if(!closeView){
+            CGFloat textWidth = MAX(70, [self widthForStringDrawing:@"Закрыть" font:self.skipLabelFont height:32]);
+            closeView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, textWidth + 52, 58)];
+            closeView.userInteractionEnabled = YES;
+            closeView.alpha = 0.f;
+            [closeView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(skipAllTips:)]];
+            
+            UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 26, 32, 32)];
+            imageView.image = [UIImage imageNamed:@"ic_close_tips"];
+            [closeView addSubview:imageView];
+            
+            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(52, 26, textWidth, 32)];
+            label.textColor = self.skipLabelColor;
+            label.font = self.skipLabelFont;
+            label.numberOfLines = 0;
+            label.textAlignment = NSTextAlignmentLeft;
+            label.text = @"Закрыть";
+            [closeView addSubview:label];
+        }
+        [self addSubview:closeView];
+        [UIView animateWithDuration:_animationDuration animations:^{
+            closeView.alpha = 1.f;
+        } completion:^(BOOL finished) {
+            
+        }];
+    }
     
     if([markDef objectForKey:kShapeElements]){
         for(NSDictionary *element in [markDef objectForKey:kShapeElements]){
@@ -252,6 +283,14 @@ static const CGFloat kBordersDelta = 0;
     }
 }
 
+- (void) skipAllTips:(UIGestureRecognizer *)sender{
+    closeView.alpha = 0.2f;
+    [UIView animateWithDuration:0.3
+                     animations:^{  closeView.alpha = 1;
+                     }];
+    [self goToCoachMarkIndexed:self.coachMarks.count];
+}
+
 - (NSArray *) createMasksShape:(NSString *)shape withRect:(CGRect)rect withZeroSize:(BOOL)needZeroSize{
     NSMutableArray *array = [NSMutableArray array];
     UIBezierPath *cutoutPath;
@@ -279,7 +318,7 @@ static const CGFloat kBordersDelta = 0;
         CGRect scaledRect = CGRectApplyAffineTransform(decorPath.bounds, CGAffineTransformMakeScale(xScale, yScale));
         [decorPath applyTransform:CGAffineTransformConcat(CGAffineTransformMakeScale(xScale, yScale), CGAffineTransformMakeTranslation(CGRectGetMidX(cutoutPath.bounds) - CGRectGetMidX(scaledRect), CGRectGetMidY(cutoutPath.bounds) - CGRectGetMidY(scaledRect)))];
     }
-
+    
     [array addObject:decorPath];
     return array;
 }
@@ -373,6 +412,22 @@ static const CGFloat kBordersDelta = 0;
         return 0;
     NSTextStorage *textStorage = [[NSTextStorage alloc] initWithString:myString];
     NSTextContainer *textContainer = [[NSTextContainer alloc] initWithSize:CGSizeMake(myWidth, FLT_MAX)];
+    NSLayoutManager *layoutManager = [[NSLayoutManager alloc] init];
+    [layoutManager addTextContainer:textContainer];
+    [textStorage addLayoutManager:layoutManager];
+    [textStorage addAttribute:NSFontAttributeName value:myFont
+                        range:NSMakeRange(0, [textStorage length])];
+    [textContainer setLineFragmentPadding:0.0];
+    (void) [layoutManager glyphRangeForTextContainer:textContainer];
+    
+    return [layoutManager usedRectForTextContainer:textContainer].size.height;
+}
+
+- (float) widthForStringDrawing:(NSString *)myString font:(UIFont *)myFont height:(float) myHeight{
+    if(myString == nil || myFont == nil)
+        return 0;
+    NSTextStorage *textStorage = [[NSTextStorage alloc] initWithString:myString];
+    NSTextContainer *textContainer = [[NSTextContainer alloc] initWithSize:CGSizeMake(FLT_MAX, myHeight)];
     NSLayoutManager *layoutManager = [[NSLayoutManager alloc] init];
     [layoutManager addTextContainer:textContainer];
     [textStorage addLayoutManager:layoutManager];

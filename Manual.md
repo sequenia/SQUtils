@@ -36,3 +36,56 @@ NSArray *filteredArray = [fullArray sq_filter:^(Dog *dog){
 	`NSInteger count` -  число на основе которого нужно сформировать окончание
 	`NSArray* words`- массив слов или окончаний для чисел (1, 4, 5, 0). Например ['яблоко', 'яблока', 'яблок', 'нет яблок']
 
+####UIColor+SQExtended
+`sq_colorWithRGBString:` - возвращает цвет из RGBA-строки
+`sq_encodeToRGBString:` - кодирует цвет в RGBA-строку
+
+##Classes
+Набор полезных классов для ускорения работы с теми или иными операциями
+
+###Примеры и руководства по эксплуатации
+
+####SQPhotoPicker
+Позволяет загружать фотографии из галереи телефона или из камеры телефона. Сделан по образу iMessage и Telegram. Чтобы использовать класс необходимо:
+* Импортировать `<SQPhotoPicker.h>`
+* Настроить максимально возможное для выбора количество фотографий
+* Вызвать picker с помощью метода `presentInViewController:`
+
+```objective-c
+    SQPhotoPickerSheet *picker = [[SQPhotoPickerSheet alloc] init];
+	picker.maxImagesCount = 15;
+    [picker presentInViewController:self withCompletionAction:^(SQPhotoPickerSheet *picker, NSArray *returnedImages) {
+        for(SQPhoto *photo in returnedImages){
+        	//Обработайте полученный массив SQPhoto с помошью асинхронного...
+            [photo getPhotoOriginalAsync:^(UIImage *originalPhoto) {
+            }];
+			//...либо синхронного метода
+			UIImage *image = [photo getPhotoOriginalSync];
+        }
+    }];
+```
+
+####SQEdgedCollectionViewController
+Позволяет отрисовать горизонтальный слайдер с видимыми частями соседних ячеек. Для использования класса необходимо:
+* Отнаследуйте свой контроллер от класса `SQEdgedCollectionViewController`
+* Задайте ширину метрики ячейкам (ширина, высота, расстояния между ячейками и отступы от краев экрана)
+* С помощью методов `setPageControllBottomSpacing:` или `setCollectionViewTopSpacing:(CGFloat) height:(CGFloat) controllSpacing:(CGFloat)` задайте положение индикатора страниц
+* При необходимости измените цвет индикатору страниц
+* Зарегистрируйте xib-ы ячеек, которые хотите отображать в коллекции
+* С помощью метода `setContent:` задайте содержимое галереи
+* Перегрузите методы `cellForItemAtIndexPath:` и `didSelectItemAtIndexPath:` чтобы настроить содержимое ячеек и обработать клики по ним 
+* ?????
+* PROFIT! Галерея готова к работе
+
+####SQEndlessCollectionView
+Позволяет отрисовать бесконечный горизонтальный слайдер с возможностью автоматического листания элементов. Для использования класса необходимо:
+* Отнаследуйте свой контроллер от класса `SQEndlessCollectionView`
+* Включите (или выключите) возможность автоматического листания (`timerEnabled`) и интервал переключения элементов (`timerLength`)
+* С помощью метода `setPageControllBottomSpacing:` задайте положение индикатора страниц
+* При необходимости измените цвет индикатору страниц
+* Зарегистрируйте xib-ы ячеек, которые хотите отображать в коллекции
+* С помощью метода `setContent:` задайте содержимое галереи
+* Перегрузите методы `cellForItemAtIndexPath:` и `didSelectItemAtIndexPath:` чтобы настроить содержимое ячеек и обработать клики по ним 
+* ?????
+* PROFIT! Галерея готова к работе
+

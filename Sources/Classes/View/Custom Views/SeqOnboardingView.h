@@ -33,6 +33,10 @@ static NSString * const kCaptionCenter = @"kCaptionCenter";
 @property (nonatomic, strong) UIFont *captionFont;
 @property (nonatomic, strong) UIFont *lastCaptionFont;
 
+@property (nonatomic) BOOL skipAllEnable;
+@property (nonatomic, strong) UIFont *skipLabelFont;
+@property (nonatomic, strong) UIColor *skipLabelColor;
+
 
 - (id)initWithFrame:(CGRect)frame coachMarks:(NSArray *)marks;
 - (void)start;
