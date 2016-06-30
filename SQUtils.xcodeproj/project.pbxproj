@@ -773,11 +773,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 80F3D2671CF80C6000B3F10D /* Build configuration list for PBXNativeTarget "SQUtils" */;
 			buildPhases = (
-				25F55022B77A4DB8091582CC /* 📦 Check Pods Manifest.lock */,
+				25F55022B77A4DB8091582CC /* [CP] Check Pods Manifest.lock */,
 				80F3D25A1CF80C6000B3F10D /* Sources */,
 				80F3D25B1CF80C6000B3F10D /* Frameworks */,
 				80F3D25C1CF80C6000B3F10D /* Headers */,
-				13718F1B82A80AEAFBD2AB77 /* 📦 Copy Pods Resources */,
+				13718F1B82A80AEAFBD2AB77 /* [CP] Copy Pods Resources */,
 				80FE3A181D1108C000B203C4 /* Resources */,
 			);
 			buildRules = (
@@ -850,14 +850,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		13718F1B82A80AEAFBD2AB77 /* 📦 Copy Pods Resources */ = {
+		13718F1B82A80AEAFBD2AB77 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -865,14 +865,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SQUtils/Pods-SQUtils-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		25F55022B77A4DB8091582CC /* 📦 Check Pods Manifest.lock */ = {
+		25F55022B77A4DB8091582CC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -197,7 +197,7 @@ static const CGFloat kBordersDelta = 0;
             [closeView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(skipAllTips:)]];
             
             UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 26, 32, 32)];
-            imageView.image = [UIImage imageNamed:@"ic_close_tips"];
+            imageView.image = [UIImage imageNamed:@"ic_close_tips" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
             [closeView addSubview:imageView];
             
             UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(52, 26, textWidth, 32)];

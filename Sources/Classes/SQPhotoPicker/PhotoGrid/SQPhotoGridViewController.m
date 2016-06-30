@@ -146,10 +146,10 @@ static NSString * const reuseIdentifier = @"SQPhotoPreviewCell";
     }
 
     if(photo.isSelected){
-        checkmark.image = [UIImage imageNamed:@"checkmark"];
+        checkmark.image = [UIImage imageNamed:@"checkmark" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
     }
     else{
-        checkmark.image = [UIImage imageNamed:@"empty_checkmark"];
+        checkmark.image = [UIImage imageNamed:@"empty_checkmark" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
     }
     
     return cell;
