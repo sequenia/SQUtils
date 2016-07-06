@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "SQUtils"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = 'Pack of categories and custom classes'
   s.homepage     = 'https://github.com/sequenia/SQUtils'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
     ss.source_files = 'Sources/SQBehavior/**/*.{h,m}'
     ss.public_header_files = 'Sources/SQBehavior/SQBehaviors.h'
     ss.frameworks = 'AddressBook', 'AddressBookUI'
-    ss.dependency 'SQUtilites/SQCategories'
+    ss.dependency 'SQUtils/SQCategories'
   end
 
   s.subspec 'SQEdgedCollection' do |ss|
