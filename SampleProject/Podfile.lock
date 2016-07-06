@@ -1,0 +1,35 @@
+PODS:
+  - SQUtilites (0.0.4):
+    - SQUtilites/SQBehavior (= 0.0.4)
+    - SQUtilites/SQCategories (= 0.0.4)
+    - SQUtilites/SQEdgedCollection (= 0.0.4)
+    - SQUtilites/SQEndlessCollection (= 0.0.4)
+    - SQUtilites/SQKeyboard (= 0.0.4)
+    - SQUtilites/SQNews (= 0.0.4)
+    - SQUtilites/SQOnboarding (= 0.0.4)
+    - SQUtilites/SQPhotoPicker (= 0.0.4)
+    - SQUtilites/SQViews (= 0.0.4)
+  - SQUtilites/SQBehavior (0.0.4):
+    - SQUtilites/SQCategories
+  - SQUtilites/SQCategories (0.0.4)
+  - SQUtilites/SQEdgedCollection (0.0.4)
+  - SQUtilites/SQEndlessCollection (0.0.4)
+  - SQUtilites/SQKeyboard (0.0.4)
+  - SQUtilites/SQNews (0.0.4)
+  - SQUtilites/SQOnboarding (0.0.4)
+  - SQUtilites/SQPhotoPicker (0.0.4)
+  - SQUtilites/SQViews (0.0.4)
+
+DEPENDENCIES:
+  - SQUtilites (from `..`)
+
+EXTERNAL SOURCES:
+  SQUtilites:
+    :path: ".."
+
+SPEC CHECKSUMS:
+  SQUtilites: d6e60160a657a001ee8f84f1cab8966ef0a23d1c
+
+PODFILE CHECKSUM: 299f8bb97ffed104875c1b8b5580ec5a8f98b9bc
+
+COCOAPODS: 1.0.1
