@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "SQUtils"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = 'Pack of categories and custom classes'
   s.homepage     = 'https://github.com/sequenia/SQUtils'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
@@ -78,7 +78,5 @@ Pod::Spec.new do |s|
     ss.source_files = 'Sources/SQFileViewer/*.{h,m}'
     ss.public_header_files = 'Sources/SQFileViewer/SQFileManager.h', 'Sources/SQFileViewer/SQFileViewer.h', 'Sources/SQFileViewer/SQAttachment.h'
   end
-
-  # s.dependency "JSONKit", "~> 1.4"
 
 end
