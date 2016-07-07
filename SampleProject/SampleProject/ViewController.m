@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "SQPhotoPickerSheet.h"
+#import <SQPhotoPickerSheet.h>
 
 @interface ViewController ()
 

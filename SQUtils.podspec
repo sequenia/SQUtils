@@ -74,6 +74,34 @@ Pod::Spec.new do |s|
     ss.public_header_files = 'Sources/SQViews/SQTopAlignedLabel.h', 'Sources/SQViews/SQBorderedButton.h'
   end
 
+  # s.subspec 'SQSocial' do |ss|
+  #       ss.source_files = 'Sources/SQSocial/**/*.{h,m}'
+  #       ss.subspec 'VKontakte' do |sss|
+  #           sss.dependency 'VK-ios-sdk', '~> 1.3.12'
+  #           sss.source_files = 'Sources/SQSocial/VKontakte/*.{h,m}'
+  #           sss.public_header_files = 'Sources/SQSocial/VKontakte/.h'
+  #       end
+        
+  #       ss.subspec 'Instagram' do |sss|
+  #           sss.source_files = 'Sources/Social/Instagram/**/*.{h,m}', 'Sources/Social/SQSocnetHelper.{h,m}'
+  #           sss.resources = ['Sources/Social/Instagram/**/*.xib']
+  #       end
+        
+  #       ss.subspec 'Facebook' do |sss|
+  #           sss.dependency 'FBSDKCoreKit', '~> 4.7.1'
+  #           sss.dependency 'FBSDKLoginKit', '~> 4.7.1'
+  #           sss.dependency 'FBSDKShareKit', '~> 4.7.1'
+  #           sss.source_files = 'Sources/Social/Facebook/**/*.{h,m}', 'Sources/Social/SQSocnetHelper.{h,m}'
+  #       end
+        
+  #       ss.subspec 'GooglePlus' do |sss|
+  #           sss.dependency 'GoogleSignIn', '~> 4.0.0'
+  #           sss.source_files = 'Sources/Social/GooglePlus/**/*.{h,m}', 'Sources/Social/SQSocnetHelper.{h,m}'
+  #       end
+        
+        
+  # end
+
   # s.dependency "JSONKit", "~> 1.4"
 
 end

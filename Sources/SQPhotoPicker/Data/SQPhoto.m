@@ -49,7 +49,9 @@
         options.networkAccessAllowed = YES;
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             [[SQPhotoCache sharedCache] requestImageForAsset:_asset withTargetSize:CGSizeMake(_asset.pixelWidth, _asset.pixelHeight) options:options completion:^(UIImage *image) {
-                completion(image);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(image);
+                });
             }];
         });
     }
