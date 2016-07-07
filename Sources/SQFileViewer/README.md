@@ -69,8 +69,7 @@ pod 'SQUtils/SQPhotoPicker', :git => 'https://github.com/sequenia/SQUtils.git'
 @property SQFileViewer *fileViewer;
 ```
 
-- And realize getter for this `fileViewer`
-If you will set `SQFileViewerDelegate` delegate, you can setting progress of loading independently. Else SQFileViewer will show alert with progress label and cancel button.
+- And realize getter for this `fileViewer`. If you will set `SQFileViewerDelegate` delegate, you can setting progress of loading independently. Else `SQFileViewer` will show alert with progress label and cancel button.
 ```obj-c
 - (SQFileViewer *) fileViewer {
     if (!_fileViewer){
@@ -81,13 +80,14 @@ If you will set `SQFileViewerDelegate` delegate, you can setting progress of loa
 }
 ```
 
-> :info: NOTE: `array` is the NSArray of `id<SQAttachment>` objects
+> :warning: NOTE: `array` is the NSArray of `id<SQAttachment>` objects
 
 
 - Controlling of file downloading progress
 ```obj-c
 - (void) fileDownloadedBy:(CGFloat)progress {
     //set progress independently
+    self.progressView.progress = progress; //for example
 }
 ```
 
