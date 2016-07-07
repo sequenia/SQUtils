@@ -74,6 +74,11 @@ Pod::Spec.new do |s|
     ss.public_header_files = 'Sources/SQViews/SQTopAlignedLabel.h', 'Sources/SQViews/SQBorderedButton.h'
   end
 
+  s.subspec 'SQFileViewer' do |ss|
+    ss.source_files = 'Sources/SQFileViewer/*.{h,m}'
+    ss.public_header_files = 'Sources/SQFileViewer/SQFileManager.h', 'Sources/SQFileViewer/SQFileViewer.h', 'Sources/SQFileViewer/SQAttachment.h'
+  end
+
   # s.dependency "JSONKit", "~> 1.4"
 
 end
