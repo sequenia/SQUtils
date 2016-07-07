@@ -32,6 +32,8 @@ FOUNDATION_EXPORT const unsigned char SQUtilsVersionString[];
 
 #import "SQPhotoPickerSheet.h"
 
+#import "SQFileViewer.h"
+
 
 
 

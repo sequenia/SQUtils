@@ -31,7 +31,7 @@ EXTERNAL SOURCES:
     :path: ".."
 
 SPEC CHECKSUMS:
-  SQUtils: 0fbcea3bc0df11c1c89a5ef336df41d40535b264
+  SQUtils: b7ef736b54089b3fd890f46c0a9b446060c5cc8a
 
 PODFILE CHECKSUM: ed18cddd9d7aac42f7af36a6f3ddc1f79adc0621
 
