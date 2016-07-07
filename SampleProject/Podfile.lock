@@ -1,35 +1,38 @@
 PODS:
-  - SQUtils (0.0.5):
-    - SQUtils/SQBehavior (= 0.0.5)
-    - SQUtils/SQCategories (= 0.0.5)
-    - SQUtils/SQEdgedCollection (= 0.0.5)
-    - SQUtils/SQEndlessCollection (= 0.0.5)
-    - SQUtils/SQKeyboard (= 0.0.5)
-    - SQUtils/SQNews (= 0.0.5)
-    - SQUtils/SQOnboarding (= 0.0.5)
-    - SQUtils/SQPhotoPicker (= 0.0.5)
-    - SQUtils/SQViews (= 0.0.5)
-  - SQUtils/SQBehavior (0.0.5):
+
+  - SQUtils (0.0.6):
+    - SQUtils/SQBehavior (= 0.0.6)
+    - SQUtils/SQCategories (= 0.0.6)
+    - SQUtils/SQEdgedCollection (= 0.0.6)
+    - SQUtils/SQEndlessCollection (= 0.0.6)
+    - SQUtils/SQFileViewer (= 0.0.6)
+    - SQUtils/SQKeyboard (= 0.0.6)
+    - SQUtils/SQNews (= 0.0.6)
+    - SQUtils/SQOnboarding (= 0.0.6)
+    - SQUtils/SQPhotoPicker (= 0.0.6)
+    - SQUtils/SQViews (= 0.0.6)
+  - SQUtils/SQBehavior (0.0.6):
     - SQUtils/SQCategories
-  - SQUtils/SQCategories (0.0.5)
-  - SQUtils/SQEdgedCollection (0.0.5)
-  - SQUtils/SQEndlessCollection (0.0.5)
-  - SQUtils/SQKeyboard (0.0.5)
-  - SQUtils/SQNews (0.0.5)
-  - SQUtils/SQOnboarding (0.0.5)
-  - SQUtils/SQPhotoPicker (0.0.5)
-  - SQUtils/SQViews (0.0.5)
+  - SQUtils/SQCategories (0.0.6)
+  - SQUtils/SQEdgedCollection (0.0.6)
+  - SQUtils/SQEndlessCollection (0.0.6)
+  - SQUtils/SQFileViewer (0.0.6)
+  - SQUtils/SQKeyboard (0.0.6)
+  - SQUtils/SQNews (0.0.6)
+  - SQUtils/SQOnboarding (0.0.6)
+  - SQUtils/SQPhotoPicker (0.0.6)
+  - SQUtils/SQViews (0.0.6)
 
 DEPENDENCIES:
   - SQUtils (from `..`)
 
 EXTERNAL SOURCES:
   SQUtils:
-    :path: ".."
+    :path: ..
 
 SPEC CHECKSUMS:
   SQUtils: eab8f797c1df2835682c891b64d083d2307cdc4d
 
 PODFILE CHECKSUM: ed18cddd9d7aac42f7af36a6f3ddc1f79adc0621
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.0.0
