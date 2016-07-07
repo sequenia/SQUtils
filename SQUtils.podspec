@@ -97,9 +97,7 @@ Pod::Spec.new do |s|
   #       ss.subspec 'GooglePlus' do |sss|
   #           sss.dependency 'GoogleSignIn', '~> 4.0.0'
   #           sss.source_files = 'Sources/Social/GooglePlus/**/*.{h,m}', 'Sources/Social/SQSocnetHelper.{h,m}'
-  #       end
-        
-        
+  #       en
   # end
 
   # s.dependency "JSONKit", "~> 1.4"
