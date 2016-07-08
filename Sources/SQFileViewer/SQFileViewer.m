@@ -10,9 +10,7 @@
 #import "SQFileViewer.h"
 #import "SQCategories.h"
 
-#import <QuickLook/QuickLook.h>
-
-static NSInteger kSmallFileSizeB = 1024 * 10;
+//static NSInteger kSmallFileSizeB = 1024 * 10;
 
 @interface SQFileItem () <QLPreviewItem>
 
