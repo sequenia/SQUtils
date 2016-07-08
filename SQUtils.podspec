@@ -8,29 +8,28 @@
 
 Pod::Spec.new do |s|
   s.name         = "SQUtils"
-  s.version      = "0.0.5"
+  s.version      = '0.0.7'
   s.summary      = 'Pack of categories and custom classes'
   s.homepage     = 'https://github.com/sequenia/SQUtils'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { 'sequenia' => 'sequenia@sequenia.com' }
   s.platform     = :ios, '8.0'
-  s.source       = { :git => "https://github.com/sequenia/SQUtils", :tag => s.version, :submodules => true }
+  s.source       = { :git => 'https://github.com/sequenia/SQUtils', :tag => s.version, :submodules => true }
   s.requires_arc = true
-  s.frameworks   = 'Foundation', 'UIKit'
-  
 
   s.source_files        = 'Sources/SQUtils.h'
   s.public_header_files = 'Sources/SQUtils.h'
-  s.exclude_files = "Sources/SQSocial/*"
+  # s.exclude_files = "Sources/SQSocial/*"
+
 
   s.subspec 'SQCategories' do |ss|
     ss.source_files = 'Sources/SQCategories/**/*.{h,m}'
-    ss.public_header_files = 'Sources/SQCategories/SQCategories.h'
+    ss.public_header_files = 'Sources/SQCategories/SQCategories.h', 'Sources/SQCategories/Foundation/*.h', 'Sources/SQCategories/UIKit/*.h'
   end
 
   s.subspec 'SQBehavior' do |ss|
     ss.source_files = 'Sources/SQBehavior/**/*.{h,m}'
-    ss.public_header_files = 'Sources/SQBehavior/SQBehaviors.h'
+    ss.public_header_files = 'Sources/SQBehavior/SQBehaviors.h', 'Sources/SQBehavior/Base/NKBehavior.h', 'Sources/SQBehavior/Address/NKAddressBookPickerBehavior.h', 'Sources/SQBehavior/Paging/NKPagingBehavior.h', 'Sources/SQBehavior/PhotoPicker/NKPhotoPickerBehavior.h'
     ss.frameworks = 'AddressBook', 'AddressBookUI'
     ss.dependency 'SQUtils/SQCategories'
   end
@@ -53,7 +52,7 @@ Pod::Spec.new do |s|
   s.subspec 'SQNews' do |ss|
     ss.source_files = 'Sources/SQNews/*.{h,m}'
     ss.resources = 'Sources/SQNews/Resources/*.{xib}'
-    ss.public_header_files = 'Sources/SQNews/SQNewsContainerViewController.h', 'Sources/SQNews/SQNewsDetailViewController.h', 'Sources/SQNews/SQNewsListViewController.h'
+    ss.public_header_files = 'Sources/SQNews/SQNewsContainerViewController.h', 'Sources/SQNews/SQNewsDetailViewController.h', 'Sources/SQNews/SQNewsListViewController.h', 'Sources/SQNews/SQNewsSelectDelegate.h'
   end
 
   s.subspec 'SQOnboarding' do |ss|
@@ -74,32 +73,44 @@ Pod::Spec.new do |s|
     ss.public_header_files = 'Sources/SQViews/SQTopAlignedLabel.h', 'Sources/SQViews/SQBorderedButton.h'
   end
 
-  # s.subspec 'SQSocial' do |ss|
-  #       ss.source_files = 'Sources/SQSocial/**/*.{h,m}'
-  #       ss.subspec 'VKontakte' do |sss|
-  #           sss.dependency 'VK-ios-sdk', '~> 1.3.12'
-  #           sss.source_files = 'Sources/SQSocial/VKontakte/*.{h,m}'
-  #           sss.public_header_files = 'Sources/SQSocial/VKontakte/.h'
-  #       end
-        
-  #       ss.subspec 'Instagram' do |sss|
-  #           sss.source_files = 'Sources/Social/Instagram/**/*.{h,m}', 'Sources/Social/SQSocnetHelper.{h,m}'
-  #           sss.resources = ['Sources/Social/Instagram/**/*.xib']
-  #       end
-        
-  #       ss.subspec 'Facebook' do |sss|
-  #           sss.dependency 'FBSDKCoreKit', '~> 4.7.1'
-  #           sss.dependency 'FBSDKLoginKit', '~> 4.7.1'
-  #           sss.dependency 'FBSDKShareKit', '~> 4.7.1'
-  #           sss.source_files = 'Sources/Social/Facebook/**/*.{h,m}', 'Sources/Social/SQSocnetHelper.{h,m}'
-  #       end
-        
-  #       ss.subspec 'GooglePlus' do |sss|
-  #           sss.dependency 'GoogleSignIn', '~> 4.0.0'
-  #           sss.source_files = 'Sources/Social/GooglePlus/**/*.{h,m}', 'Sources/Social/SQSocnetHelper.{h,m}'
-  #       en
-  # end
+  s.subspec 'SQFileViewer' do |ss|
+    ss.source_files = 'Sources/SQFileViewer/*.{h,m}'
+    ss.public_header_files = 'Sources/SQFileViewer/SQFileManager.h', 'Sources/SQFileViewer/SQFileViewer.h', 'Sources/SQFileViewer/SQAttachment.h'
+    ss.frameworks = 'QuickLook'
+    s.exclude_files = 'Sources/SQFileViewer/README.md'
+    ss.dependency 'SQUtils/SQCategories'
 
-  # s.dependency "JSONKit", "~> 1.4"
+  end
+
+  s.subspec 'SQSocial' do |ss|
+        ss.source_files = 'Sources/SQSocial/**/*.{h,m}'
+        ss.subspec 'VKontakte' do |sss|
+            sss.source_files = 'Sources/SQSocial/VKontakte/*.{h,m}'
+            sss.public_header_files = 'Sources/SQSocial/VKontakte/SQVKontakteHelper.h'
+            sss.dependency 'VK-ios-sdk', '~> 1.3.12'
+        end
+        
+        ss.subspec 'Instagram' do |sss|
+            sss.source_files = 'Sources/SQSocial/Instagram/*.{h,m}'
+            sss.public_header_files = 'Sources/SQSocial/Instagram/SQInstagramHelper.h', 'Sources/SQSocial/Instagram/InstagramLoginViewController.h'
+            sss.resources = 'Sources/SQSocial/Instagram/Resources/InstagramLoginViewController.xib'
+        end
+        
+        ss.subspec 'Facebook' do |sss|            
+            sss.source_files = 'Sources/SQSocial/Facebook/*.{h,m}'
+            sss.public_header_files = 'Sources/SQSocial/Facebook/SQFacebookHelper.h'
+            sss.dependency 'FBSDKCoreKit', '~> 4.7.1'
+            sss.dependency 'FBSDKLoginKit', '~> 4.7.1'
+            sss.dependency 'FBSDKShareKit', '~> 4.7.1'
+        end
+        
+        ss.subspec 'GooglePlus' do |sss|
+            sss.source_files = 'Sources/SQSocial/GooglePlus/*.{h,m}'
+            sss.public_header_files = 'Sources/SQSocial/GooglePlus/SQGooglePlusHelper.h'
+            sss.dependency 'GoogleSignIn', '~> 4.0.0'
+        end
+  end
+
+
 
 end
