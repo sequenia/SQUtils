@@ -29,6 +29,10 @@
     return self;
 }
 
+- (NSURL *)previewItemURL {
+    return ([_previewItemURL isKindOfClass:[NSURL class]]) ? _previewItemURL : [NSURL URLWithString:_previewItemURL];
+}
+
 @end
 
 @interface SQFileViewer () <QLPreviewControllerDataSource, QLPreviewControllerDelegate>
@@ -47,25 +51,27 @@
 
 + (void) initialize {
     if ([self class] == [SQFileViewer class]){
-        [[UINavigationBar appearanceWhenContainedIn: [QLPreviewController class], nil]
-         setTintColor: [UIColor redColor]];//TODO: color
-        [[UINavigationBar appearanceWhenContainedIn: [QLPreviewController class], nil] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor redColor]}];//TODO: color
+        
     }
 }
 
 #pragma mark - Init
 
 + (SQFileViewer*) fileViewerWithFileAttachments: (NSArray<id<SQAttachment>>*) attachments
-                                       delegate:(id<SQFileViewerDelegate>)delegate {
+                                       delegate: (id<SQFileViewerDelegate>)delegate
+                                 preferredColor: (UIColor *)color {
     return [[self alloc] initWithAttachments: attachments
-                                    delegate: delegate];
+                                    delegate: delegate
+                              preferredColor: color];
 }
 
 - (instancetype) initWithAttachments: (NSArray<id<SQAttachment>>*) attachments
-                            delegate:(id<SQFileViewerDelegate>)delegate {
+                            delegate: (id<SQFileViewerDelegate>)delegate
+                      preferredColor: (UIColor *)color {
     if (self = [super init]){
         self.delegate = delegate;
         self.attachments = attachments;
+        self.preferredColor = color;
         [self commonInit];
     }
     return self;
@@ -76,6 +82,10 @@
     self.previewController = [[QLPreviewController alloc] init];
     self.previewController.dataSource = self;
     self.previewController.delegate = self;
+    [[UINavigationBar appearanceWhenContainedIn: [QLPreviewController class], nil]
+     setTintColor: self.preferredColor];
+    [[UINavigationBar appearanceWhenContainedIn: [QLPreviewController class], nil]
+     setTitleTextAttributes:@{NSForegroundColorAttributeName:self.preferredColor}];
 }
 
 - (void) reloadItems: (NSArray <id<SQAttachment>>*) attachments {
@@ -83,7 +93,10 @@
         
         SQFileItem* item = [[SQFileItem alloc] initWithURL: attachment.fileUrl];
         item.previewItemTitle = attachment.fileName;
-        if ([QLPreviewController canPreviewItem: item] && item.previewItemURL.isFileURL){
+        BOOL isFile = item.previewItemURL.isFileURL;
+        BOOL can = [QLPreviewController canPreviewItem: item];
+        
+        if (can && isFile){
             return item;
         } else {
             return nil;
@@ -124,14 +137,14 @@
                           fileName: attachment.fileName
                         completion:^(NSURL *fileURL, NSError *error) {
                             
-                                if (!completion) { return; }
-                                if (fileURL){
-                                    attachment.fileUrl = fileURL;
-                                    [self reloadItems: @[attachment]];
-                                    completion(self.previewController, error);
-                                } else {
-                                    completion(nil, error);
-                                }
+                            if (!completion) { return; }
+                            if (fileURL){
+                                attachment.fileUrl = fileURL;
+                                [self reloadItems: @[attachment]];
+                                completion(self.previewController, error);
+                            } else {
+                                completion(nil, error);
+                            }
                             
                         }];
     

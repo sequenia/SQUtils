@@ -64,20 +64,22 @@ static NSString* kUnclompetedDocsFolder = @"UncompletedDocuments";
 - (void) downloadFile: (NSURL*) url
              fileName: (NSString*) fileName
            completion: (SQFileManagerDownloadCompletion) completion {
-
-    if (!url) {
-        if (completion) { completion(nil, [self validURL: url]); }
+    
+    NSURL *nsurl = ([url isKindOfClass:[NSURL class]]) ? url : [NSURL URLWithString:url];
+    
+    if (!nsurl) {
+        if (completion) { completion(nil, [self validURL: nsurl]); }
         return;
     }
-    NSURL* existedFileURL = [self fileURLforURL: url];
+    NSURL* existedFileURL = [self fileURLforURL: nsurl];
     if (existedFileURL){
         if (completion) { completion(existedFileURL, nil); }
         return;
     }
     
     self.downloadCompletion = completion;
-    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL: url];
-    NSData* resumeData = [self resumeDataForURL: url];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL: nsurl];
+    NSData* resumeData = [self resumeDataForURL: nsurl];
     NSURLSessionDownloadTask* task = nil;
     if (resumeData){
         task = [self.session downloadTaskWithResumeData: resumeData];
@@ -114,12 +116,12 @@ static NSString* kUnclompetedDocsFolder = @"UncompletedDocuments";
     [request setHTTPMethod: @"HEAD"];
     
     [[self.session dataTaskWithRequest: request
-                    completionHandler:
-     ^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+                     completionHandler:
+      ^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
 #warning GET FILE SIZE - DOESN'T RETURN AN ACTUAL FILE SIZE / ASK ABOUT HEADER "Content-Length"
-         long long size = [response expectedContentLength];
-         if (completion) { completion(size, error); }
-     }] resume];
+          long long size = [response expectedContentLength];
+          if (completion) { completion(size, error); }
+      }] resume];
 }
 
 #pragma mark - Validation
@@ -264,6 +266,5 @@ expectedTotalBytes:(int64_t)expectedTotalBytes {
     }
     return fileURL;
 }
-
 
 @end

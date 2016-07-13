@@ -42,8 +42,11 @@ typedef void(^SQFileViewerCompletion)(UIViewController* fileViewerController, NS
 
 @property NSString *cancel;
 
+@property UIColor *preferredColor;
+
 + (SQFileViewer*) fileViewerWithFileAttachments: (NSArray<id<SQAttachment>>*) attachments
-                                       delegate: (id <SQFileViewerDelegate>) delegate;
+                                       delegate: (id <SQFileViewerDelegate>) delegate
+                                 preferredColor: (UIColor *)color;
 
 - (void) openFileAt:(NSInteger)index controller:(UIViewController *)controller completion: (SQFileViewerCompletion) completion;
 
