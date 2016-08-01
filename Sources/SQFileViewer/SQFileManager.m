@@ -97,10 +97,12 @@ static NSString* kUnclompetedDocsFolder = @"UncompletedDocuments";
 }
 
 - (void) cancelDownloading {
-    [self.downloadTask cancelByProducingResumeData:^(NSData * _Nullable resumeData) {
-        NSURL* url = self.downloadTask.originalRequest.URL;
-        [self saveResumeData: resumeData forURL: url];
-    }];
+    if (self.downloadTask) {
+        [self.downloadTask cancelByProducingResumeData:^(NSData * _Nullable resumeData) {
+            NSURL* url = self.downloadTask.originalRequest.URL;
+            [self saveResumeData: resumeData forURL: url];
+        }];
+    }
 }
 
 #pragma mark - File size
@@ -257,6 +259,7 @@ expectedTotalBytes:(int64_t)expectedTotalBytes {
 - (NSURL*) fileURLforURL: (NSURL*) url {
     NSString* item = url.lastPathComponent;
     if (!item) { return nil; }
+    if ([url isKindOfClass:[NSString class]]) return [NSURL URLWithString:url];
     
     NSURL* fileURL = nil;
     NSString* path = [self.docsDirectory stringByAppendingPathComponent: item];
@@ -266,5 +269,6 @@ expectedTotalBytes:(int64_t)expectedTotalBytes {
     }
     return fileURL;
 }
+
 
 @end

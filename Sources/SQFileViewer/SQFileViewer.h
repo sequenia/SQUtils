@@ -26,11 +26,13 @@
 #import "SQAttachment.h"
 
 @protocol SQFileViewerDelegate <NSObject>
-@required
+@optional
 - (void) fileDownloadedBy:(CGFloat) progress;
+- (void) fileViewerDidDismiss;
 @end
 
 typedef void(^SQFileViewerCompletion)(UIViewController* fileViewerController, NSError* error);
+typedef void(^SQFileViewerProgressCompletion)(CGFloat progress);
 
 @interface SQFileViewer : NSObject
 
@@ -48,9 +50,16 @@ typedef void(^SQFileViewerCompletion)(UIViewController* fileViewerController, NS
                                        delegate: (id <SQFileViewerDelegate>) delegate
                                  preferredColor: (UIColor *)color;
 
-- (void) openFileAt:(NSInteger)index controller:(UIViewController *)controller completion: (SQFileViewerCompletion) completion;
+- (void) openFileAt:(NSInteger)index
+         controller:(UIViewController *)controller
+         downloaded: (SQFileViewerProgressCompletion) downloaded
+         completion: (SQFileViewerCompletion) completion;
+
+- (void) pauseDownloading;
 
 - (SQFileManager*) fileManager;
+
+- (BOOL)isFileExist: (id <SQAttachment>) file;
 
 @end
 

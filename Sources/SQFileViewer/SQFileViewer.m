@@ -83,9 +83,11 @@
     self.previewController.dataSource = self;
     self.previewController.delegate = self;
     [[UINavigationBar appearanceWhenContainedIn: [QLPreviewController class], nil]
-     setTintColor: self.preferredColor];
+     setTintColor: [UIColor whiteColor]];
     [[UINavigationBar appearanceWhenContainedIn: [QLPreviewController class], nil]
-     setTitleTextAttributes:@{NSForegroundColorAttributeName:self.preferredColor}];
+     setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    [[UINavigationBar appearanceWhenContainedIn: [QLPreviewController class], nil]
+     setBarStyle: UIStatusBarStyleLightContent];
 }
 
 - (void) reloadItems: (NSArray <id<SQAttachment>>*) attachments {
@@ -111,13 +113,26 @@
     return [SQFileManager sharedManager];
 }
 
-- (void) openFileAt:(NSInteger)index controller:(UIViewController *)controller completion: (SQFileViewerCompletion) completion {
-    return [self openFileAtIndex:index controller:controller completion:completion];
+- (void) openFileAt:(NSInteger)index
+         controller:(UIViewController *)controller
+         downloaded: (SQFileViewerProgressCompletion) downloaded
+         completion: (SQFileViewerCompletion) completion {
+    [self openFileAtIndex: index
+               controller: controller
+               downloaded: downloaded
+               completion: completion];
+}
+
+- (BOOL)isFileExist: (id <SQAttachment>) file {
+    return ![self needShowAlert:[file fileUrl]];
 }
 
 #pragma mark - Private
 
-- (void) openFileAtIndex: (NSInteger) index controller:(UIViewController *)controller completion: (SQFileViewerCompletion) completion {
+- (void) openFileAtIndex: (NSInteger) index
+              controller:(UIViewController *)controller
+              downloaded: (SQFileViewerProgressCompletion) downloaded
+              completion: (SQFileViewerCompletion) completion {
     id <SQAttachment> attachment = [self.attachments sq_objectAtIndexOrNil: index];
     
     if (!attachment){
@@ -149,8 +164,10 @@
                         }];
     
     self.fileManager.progressBlock = ^(float progress) {
+        downloaded(progress);
         if (self.delegate) {
-            [self.delegate fileDownloadedBy: progress];
+            if ([self.delegate respondsToSelector:@selector(fileDownloadedBy:)])
+                [self.delegate fileDownloadedBy: progress];
         } else {
             self.alert.message = [NSString stringWithFormat:@"Loading... %.0f %%", progress * 100];
             if (progress >= 1.0f) {
@@ -158,6 +175,10 @@
             }
         }
     };
+}
+
+- (void) pauseDownloading {
+    [self.fileManager cancelDownloading];
 }
 
 - (BOOL) needShowAlert:(NSURL *) url {
@@ -188,5 +209,8 @@
 }
 
 #pragma mark - QLPreviewControllerDelegate
+- (void) previewControllerDidDismiss:(QLPreviewController *)controller {
+    
+}
 
 @end
