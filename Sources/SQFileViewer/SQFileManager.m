@@ -18,6 +18,8 @@ static NSString* kUnclompetedDocsFolder = @"UncompletedDocuments";
 
 @property (copy, nonatomic) SQFileManagerDownloadCompletion downloadCompletion;
 
+@property (copy, nonatomic) NSString *fileName;
+
 @property (strong, nonatomic) NSURLSession* session;
 
 @property (strong, nonatomic) NSURLSessionDownloadTask* downloadTask;
@@ -64,6 +66,8 @@ static NSString* kUnclompetedDocsFolder = @"UncompletedDocuments";
 - (void) downloadFile: (NSURL*) url
              fileName: (NSString*) fileName
            completion: (SQFileManagerDownloadCompletion) completion {
+    
+    self.fileName = fileName;
     
     NSURL *nsurl = ([url isKindOfClass:[NSURL class]]) ? url : [NSURL URLWithString:url];
     
@@ -242,14 +246,14 @@ expectedTotalBytes:(int64_t)expectedTotalBytes {
     NSString* item = url.lastPathComponent;
     if (!location) { return nil; }
     
-    NSString* path = [self.docsDirectory stringByAppendingPathComponent: item];
+    NSString* path = [self.docsDirectory stringByAppendingPathComponent: self.fileName];
     NSError* error = nil;
     NSFileManager* fileManager = [NSFileManager defaultManager];
     BOOL success = [fileManager copyItemAtPath: location.path
                                         toPath: path
                                          error: &error];
     if (!success){
-        NSLog(@"Saving file faled (url: %@): %@", url, error);
+        NSLog(@"Saving file (filename: %@) faled (url: %@): %@", self.fileName, url, error);
         return nil;
     } else {
         return [NSURL fileURLWithPath: path];
@@ -262,7 +266,7 @@ expectedTotalBytes:(int64_t)expectedTotalBytes {
     if ([url isKindOfClass:[NSString class]]) return [NSURL URLWithString:url];
     
     NSURL* fileURL = nil;
-    NSString* path = [self.docsDirectory stringByAppendingPathComponent: item];
+    NSString* path = [self.docsDirectory stringByAppendingPathComponent: self.fileName];
     NSFileManager* fileManager = [NSFileManager defaultManager];
     if ([fileManager fileExistsAtPath: path]){
         fileURL = [NSURL fileURLWithPath: path];
