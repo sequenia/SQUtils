@@ -75,5 +75,18 @@
     }
 }
 
+- (NSString *)getPhotoURLString{
+    __block NSString *imagePath = nil;
+    PHImageRequestOptions *options = [[PHImageRequestOptions alloc] init];
+    options.synchronous = YES;
+    options.deliveryMode =  PHImageRequestOptionsDeliveryModeOpportunistic;
+    options.resizeMode = PHImageRequestOptionsResizeModeExact;
+    options.networkAccessAllowed = YES;
+    [[PHImageManager defaultManager] requestImageForAsset:_asset targetSize:CGSizeMake(_asset.pixelWidth, _asset.pixelHeight) contentMode:PHImageContentModeAspectFill options:options resultHandler:^(UIImage *result, NSDictionary *info) {
+        imagePath = [info objectForKey:@"PHImageFileURLKey"];
+    }];
+    return imagePath;
+}
+
 
 @end

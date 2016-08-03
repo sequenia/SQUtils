@@ -24,5 +24,6 @@
 
 - (void) getPhotoOriginalAsync:(void(^)(UIImage *originalPhoto))completion;
 - (UIImage *) getPhotoOriginalSync;
+- (NSString *) getPhotoURLString;
 
 @end

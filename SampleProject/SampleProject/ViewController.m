@@ -25,6 +25,8 @@
     picker.maxImagesCount = 15;
     [picker presentInViewController:self withCompletionAction:^(SQPhotoPickerSheet *picker, NSArray *returnedImages) {
         for(SQPhoto *photo in returnedImages){
+            NSString *url = [photo getPhotoURLString];
+            NSLog(@"%@", url);
             [photo getPhotoOriginalAsync:^(UIImage *originalPhoto) {
                 NSLog(@"%@", originalPhoto);
             }];

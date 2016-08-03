@@ -139,7 +139,7 @@
         [imagePicker setSourceType:UIImagePickerControllerSourceTypeCamera];
         [imagePicker setShowsCameraControls:YES];
         imagePicker.delegate = self;
-        [imagePicker setAllowsEditing:YES];
+        [imagePicker setAllowsEditing:NO];
         [self presentViewController:imagePicker animated:YES completion:nil];
     }
     if([action isEqualToString:kMyPhotosAction]){
