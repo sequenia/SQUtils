@@ -57,14 +57,6 @@ static NSString * const reuseIdentifier = @"SQAlbumCell";
     loaderIndicator.transform = CGAffineTransformMakeScale(0.8, 0.8);
     [self.tableView addSubview:loaderIndicator];
 
-    if(_maxImagesCount == 1){
-        self.navigationController.toolbarHidden = YES;
-    }
-    else{
-        self.navigationController.toolbarHidden = NO;
-    }
-
-    
     self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
     
     doneButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 130, 30)];
@@ -84,8 +76,14 @@ static NSString * const reuseIdentifier = @"SQAlbumCell";
     
     UIBarButtonItem *completePick = [[UIBarButtonItem alloc] initWithCustomView:doneButton];
     
+    self.navigationController.toolbarHidden = NO;
+    if(_maxImagesCount == 1){
+        [self setToolbarItems:@[cancel, flex] animated:YES];
+    }
+    else{
+        [self setToolbarItems:@[cancel, flex, completePick, negativeSpacer] animated:YES];
+    }
     
-    [self setToolbarItems:@[cancel, flex, completePick, negativeSpacer] animated:YES];
     
     allAlbums = [NSMutableArray array];
     selectedPhotos = [NSMutableArray array];

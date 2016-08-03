@@ -64,8 +64,12 @@ static NSString * const reuseIdentifier = @"SQPhotoPreviewCell";
     
     UIBarButtonItem *completePick = [[UIBarButtonItem alloc] initWithCustomView:doneButton];
     
-    
-    [self setToolbarItems:@[cancel, flex, completePick, negativeSpacer] animated:YES];
+    if(_maxImagesCount == 1){
+        [self setToolbarItems:@[cancel, flex] animated:YES];
+    }
+    else{
+        [self setToolbarItems:@[cancel, flex, completePick, negativeSpacer] animated:YES];
+    }
     
     [self.navigationItem setTitle:_album.assetCollection.localizedTitle];
     

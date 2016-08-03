@@ -158,6 +158,12 @@
     listController.targetAlbumType = type;
     
     UINavigationController *controller = [[UINavigationController alloc] initWithRootViewController:listController];
+    if(self.navigationBarTintColor){
+        controller.navigationBar.tintColor = self.navigationBarTintColor;
+    }
+    if(self.navigationBarBackgroundColor){
+        controller.navigationBar.barTintColor = self.navigationBarBackgroundColor;
+    }
     [self presentViewController:controller animated:YES completion:nil];
 }
 

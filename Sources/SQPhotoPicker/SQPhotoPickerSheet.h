@@ -14,6 +14,8 @@
 @property (strong, nonatomic) void (^completionAction)(SQPhotoPickerSheet *picker, NSArray<SQPhoto *> *returnedImages);
 @property (nonatomic) NSInteger maxImagesCount;
 @property (nonatomic, weak) UIViewController *sourceController;
+@property (nonatomic, strong) UIColor *navigationBarBackgroundColor;
+@property (nonatomic, strong) UIColor *navigationBarTintColor;
 
 - (void) presentInViewController:(UIViewController *)controller
               withCompletionAction:(void(^)(SQPhotoPickerSheet *picker, NSArray<SQPhoto *> *returnedImages))completion;

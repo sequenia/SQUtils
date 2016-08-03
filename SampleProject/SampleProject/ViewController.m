@@ -22,7 +22,9 @@
 
 - (IBAction)showPicker:(id)sender {
     SQPhotoPickerSheet *picker = [[SQPhotoPickerSheet alloc] init];
-    picker.maxImagesCount = 15;
+    picker.navigationBarTintColor = [UIColor whiteColor];
+    picker.navigationBarBackgroundColor = [UIColor redColor];
+    picker.maxImagesCount = 1;
     [picker presentInViewController:self withCompletionAction:^(SQPhotoPickerSheet *picker, NSArray *returnedImages) {
         for(SQPhoto *photo in returnedImages){
             NSString *url = [photo getPhotoURLString];
