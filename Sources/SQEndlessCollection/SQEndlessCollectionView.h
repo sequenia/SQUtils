@@ -14,9 +14,12 @@ IB_DESIGNABLE
     
 }
 
+@property (nonatomic, strong) UICollectionView *endlessCollectionView;
+
 @property (nonatomic) IBInspectable BOOL animatedReload;
 @property (nonatomic) IBInspectable BOOL timerEnabled;
 @property (nonatomic) IBInspectable double timerLength;
+
 @property (nonatomic, strong) IBInspectable UIColor *pageIndicatorColor;
 @property (nonatomic, strong) IBInspectable UIColor *pageInidicatorCurPageColor;
 
@@ -25,6 +28,7 @@ IB_DESIGNABLE
 
 @property (nonatomic) CGFloat bottomPageIndicatorSpacing;
 @property (nonatomic, strong) NSArray *content;
+@property (nonatomic) BOOL enableDidScrollEvent;
 
 - (void) registerCellWithIdentifier:(NSString *)identifier nibName:(NSString *)nibName;
 

@@ -9,7 +9,6 @@
 #import "SQEndlessCollectionView.h"
 
 @interface SQEndlessCollectionView () {
-    UICollectionView *endlessCollectionView;
     SQPageControl *pageControl;
     
     NSInteger originalCount;
@@ -18,7 +17,6 @@
     
     CGFloat contentOffsetWhenFullyScrolledRight;
     CGFloat prevOffset;
-    BOOL enableDidScrollEvent;
     double yVelocity;
     BOOL initialScrollDone;
     
@@ -31,6 +29,7 @@ static double prevCallTime = 0;
 static double prevCallOffset = 0;
 
 @implementation SQEndlessCollectionView
+@synthesize endlessCollectionView, enableDidScrollEvent;
 
 - (void) registerCellWithIdentifier:(NSString *)identifier nibName:(NSString *)nibName{
     [reuseIdentifiers addObject:identifier];
@@ -93,7 +92,7 @@ static double prevCallOffset = 0;
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    contentOffsetWhenFullyScrolledRight = self.view.frame.size.width * ([_content count] -1);
+    contentOffsetWhenFullyScrolledRight = CGRectGetWidth([UIScreen mainScreen].bounds) * ([_content count] - 1);
     return [_content count];
 }
 
@@ -125,7 +124,7 @@ static double prevCallOffset = 0;
                 currentItem = 1;
                 
             } else if (scrollView.contentOffset.x <= 0)  {
-                NSIndexPath *newIndexPath = [NSIndexPath indexPathForItem:([_content count] -2) inSection:0];
+                NSIndexPath *newIndexPath = [NSIndexPath indexPathForItem:([_content count] - 2) inSection:0];
                 [endlessCollectionView scrollToItemAtIndexPath:newIndexPath atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
                 currentItem = [_content count] - 2;
             }
