@@ -10,7 +10,7 @@
 
 @interface SQEndlessCollectionView () {
     UICollectionView *endlessCollectionView;
-    UIPageControl *pageControl;
+    SQPageControl *pageControl;
     
     NSInteger originalCount;
     NSTimer *timer;
@@ -63,10 +63,16 @@ static double prevCallOffset = 0;
     
     initialScrollDone = NO;
     
-    pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 37)];
+    pageControl = [[SQPageControl alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 37)];
     [pageControl setContentMode:UIViewContentModeCenter];
     pageControl.pageIndicatorTintColor = _pageIndicatorColor;
     pageControl.currentPageIndicatorTintColor = _pageInidicatorCurPageColor;
+    if(self.pageIndicatorImage){
+        pageControl.inactiveImage = self.pageIndicatorImage;
+    }
+    if(self.pageInidicatorCurPageImage){
+        pageControl.activeImage = self.pageInidicatorCurPageImage;
+    }
     [pageControl setUserInteractionEnabled:NO];
     pageControl.hidesForSinglePage = YES;
     pageControl.translatesAutoresizingMaskIntoConstraints = NO;
@@ -256,6 +262,7 @@ static double prevCallOffset = 0;
     [self.view addConstraints:constraints];
     
     [self.view sendSubviewToBack:endlessCollectionView];
+    [self.view bringSubviewToFront:pageControl];
 }
 
 @end

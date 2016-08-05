@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SQPageControl.h"
 
 IB_DESIGNABLE
 @interface SQEndlessCollectionView : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>{
@@ -18,6 +19,9 @@ IB_DESIGNABLE
 @property (nonatomic) IBInspectable double timerLength;
 @property (nonatomic, strong) IBInspectable UIColor *pageIndicatorColor;
 @property (nonatomic, strong) IBInspectable UIColor *pageInidicatorCurPageColor;
+
+@property (nonatomic, strong) IBInspectable UIImage *pageIndicatorImage;
+@property (nonatomic, strong) IBInspectable UIImage *pageInidicatorCurPageImage;
 
 @property (nonatomic) CGFloat bottomPageIndicatorSpacing;
 @property (nonatomic, strong) NSArray *content;

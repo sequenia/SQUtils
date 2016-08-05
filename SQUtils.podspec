@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "SQUtils"
-  s.version      = '0.0.9'
+  s.version      = '0.0.10'
   s.summary      = 'Pack of categories and custom classes'
   s.homepage     = 'https://github.com/sequenia/SQUtils'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
@@ -41,7 +41,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'SQEndlessCollection' do |ss|
     ss.source_files = 'Sources/SQEndlessCollection/*.{h,m}'
-    ss.public_header_files = 'Sources/SQEndlessCollection/SQEndlessCollectionView.h'
+    ss.public_header_files = 'Sources/SQEndlessCollection/SQEndlessCollectionView.h', 'Sources/SQEndlessCollection/SQPageControl.h'
   end  
 
   s.subspec 'SQKeyboard' do |ss|
