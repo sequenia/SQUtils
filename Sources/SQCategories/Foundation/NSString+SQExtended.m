@@ -16,6 +16,10 @@
     return [self rangeOfString: str].location != NSNotFound;
 }
 
+- (BOOL)sq_containsString:(NSString *)str options:(NSStringCompareOptions)options {
+    return [self rangeOfString: str options:options].location != NSNotFound;
+}
+
 - (NSString*)sq_uppercaseFirstLetterString {
     NSString* resultString = self;
     if (self.length > 0) {

@@ -17,6 +17,8 @@ static NSString * const SQParseErrorDesc =     @"Неопознанный отв
 
 - (BOOL)sq_containsString:(NSString *)str;
 
+- (BOOL)sq_containsString:(NSString *)str options:(NSStringCompareOptions)options;
+
 /**
  * Возвращает описание сетевой ошибки по NSError
  */
