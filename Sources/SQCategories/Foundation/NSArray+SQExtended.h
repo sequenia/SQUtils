@@ -16,4 +16,6 @@
 
 - (NSArray*)sq_filter: (BOOL(^)(id obj)) block;
 
+- (NSString *) sq_jsonString;
+
 @end

@@ -42,4 +42,17 @@
     return filteredArray;
 }
 
+- (NSString *) sq_jsonString {
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject: self
+                                                       options: NSJSONWritingPrettyPrinted
+                                                         error: &error];
+    if (!jsonData) {
+        NSLog(@"sq_jsonString: error: %@", error.localizedDescription);
+        return @"[]";
+    } else {
+        return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    }
+}
+
 @end

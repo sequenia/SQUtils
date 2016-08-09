@@ -10,8 +10,10 @@
 
 @interface NSDictionary (SQExtended)
 
--(NSString*)sq_urlEncodedString;
+- (NSString*)sq_urlEncodedString;
 
 - (NSArray*)sq_valuesForKeys: (NSArray*) keys;
+
+- (NSString *)sq_jsonString;
 
 @end

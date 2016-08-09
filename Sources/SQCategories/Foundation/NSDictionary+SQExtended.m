@@ -19,7 +19,7 @@ static NSString *urlEncode(id object) {
 
 @implementation NSDictionary (SQExtended)
 
--(NSString*)sq_urlEncodedString {
+- (NSString*)sq_urlEncodedString {
     NSMutableArray *parts = [NSMutableArray array];
     for (id key in self) {
         id value = [self objectForKey: key];
@@ -44,6 +44,19 @@ static NSString *urlEncode(id object) {
     }
     
     return values;
+}
+
+- (NSString *) sq_jsonString {
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject: self
+                                                       options: NSJSONWritingPrettyPrinted
+                                                         error: &error];
+    if (!jsonData) {
+        NSLog(@"sq_jsonString: error: %@", error.localizedDescription);
+        return @"{}";
+    } else {
+        return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    }
 }
 
 @end
