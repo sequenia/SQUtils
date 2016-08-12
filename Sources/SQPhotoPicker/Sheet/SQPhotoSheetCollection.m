@@ -127,7 +127,7 @@ static CGFloat const bigHeight = 268;
     UICollectionViewCell *cell;
     if(indexPath.section == 0 && indexPath.row == 0){
         cell = [collectionView dequeueReusableCellWithReuseIdentifier:previewReuseIdentifier forIndexPath:indexPath];
-        cell.backgroundColor = [UIColor colorWithWhite:246/255.f alpha:0.9f];
+        cell.backgroundColor = [UIColor colorWithWhite:246/255.f alpha:1.f];
         
         checkmarkView = (UIImageView *)[cell viewWithTag:200];
         
@@ -163,7 +163,7 @@ static CGFloat const bigHeight = 268;
             action = kCancelAction;
         }
         else{
-            cell.backgroundColor = [UIColor colorWithWhite:246/255.f alpha:0.9f];
+            cell.backgroundColor = [UIColor colorWithWhite:246/255.f alpha:1.f];
             action = [actions objectAtIndex:indexPath.row - 1];
         }
         if([action isEqualToString:kSendAction]){

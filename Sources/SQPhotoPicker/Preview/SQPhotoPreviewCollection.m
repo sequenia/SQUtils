@@ -110,13 +110,20 @@ static NSString * const reuseIdentifier = @"SQPhotoPreviewCell";
 - (void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     SQPhoto *photo = [_allPhotos objectAtIndex:indexPath.row];
     
+    
     if(photo.isSelected){
         selectedCount--;
         photo.isSelected = NO;
     }
     else{
-        selectedCount++;
-        photo.isSelected = YES;
+        if(selectedCount == _maxImagesCount){
+            [[[UIAlertView alloc] initWithTitle:LOCALIZE(@"limit_reached") message:[NSString stringWithFormat:@"%@ %ld %@", LOCALIZE(@"limit_desc"), (long)_maxImagesCount, LOCALIZE(@"photo")] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil] show];
+        }
+        else{
+            selectedCount++;
+            photo.isSelected = YES;
+        }
+        
     }
     
     BOOL prevSelectionState = hasSelection;
