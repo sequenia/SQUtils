@@ -130,7 +130,7 @@
 #pragma mark - Private
 
 - (void) openFileAtIndex: (NSInteger) index
-              controller:(UIViewController *)controller
+              controller: (UIViewController *)controller
               downloaded: (SQFileViewerProgressCompletion) downloaded
               completion: (SQFileViewerCompletion) completion {
     id <SQAttachment> attachment = [self.attachments sq_objectAtIndexOrNil: index];
@@ -210,7 +210,8 @@
 
 #pragma mark - QLPreviewControllerDelegate
 - (void) previewControllerDidDismiss:(QLPreviewController *)controller {
-    
+    if (self.delegate)
+        [self.delegate fileViewerDidDismiss];
 }
 
 @end
