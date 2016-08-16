@@ -23,7 +23,10 @@
         
         dispatch_sync(dispatch_get_main_queue(), ^{
             if (completion) {
-                completion(resultImage, error);
+                __block UIImage *resultImageBlock = resultImage;
+                if (!resultImage)
+                    resultImageBlock = [UIImage new];
+                completion(resultImageBlock, error);
             }
         });
     });
