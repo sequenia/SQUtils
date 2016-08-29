@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "SQUtils"
-  s.version      = '0.0.14'
+  s.version      = '0.0.15'
   s.summary      = 'Pack of categories and custom classes'
   s.homepage     = 'https://github.com/sequenia/SQUtils'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
@@ -87,7 +87,7 @@ Pod::Spec.new do |s|
         ss.subspec 'VKontakte' do |sss|
             sss.source_files = 'Sources/SQSocial/VKontakte/*.{h,m}'
             sss.public_header_files = 'Sources/SQSocial/VKontakte/SQVKontakteHelper.h'
-            sss.dependency 'VK-ios-sdk', '~> 1.3.12'
+            sss.dependency 'VK-ios-sdk'
         end
         
         ss.subspec 'Instagram' do |sss|
@@ -99,9 +99,9 @@ Pod::Spec.new do |s|
         ss.subspec 'Facebook' do |sss|            
             sss.source_files = 'Sources/SQSocial/Facebook/*.{h,m}'
             sss.public_header_files = 'Sources/SQSocial/Facebook/SQFacebookHelper.h'
-            sss.dependency 'FBSDKCoreKit', '~> 4.7.1'
-            sss.dependency 'FBSDKLoginKit', '~> 4.7.1'
-            sss.dependency 'FBSDKShareKit', '~> 4.7.1'
+            sss.dependency 'FBSDKCoreKit'
+            sss.dependency 'FBSDKLoginKit'
+            sss.dependency 'FBSDKShareKit'
         end
         
         ss.subspec 'GooglePlus' do |sss|
