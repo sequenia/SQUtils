@@ -127,6 +127,8 @@
 }
 
 - (void) sheet:(SQPhotoSheetCollection *)sheet didClickAction:(NSString *)action{
+    if (self.pickerSheetClicked)
+        self.pickerSheetClicked(action);
     if([action isEqualToString:kCancelAction]){
         [self dismissPicker];
     }
