@@ -50,7 +50,9 @@
                    completion:(void (^)(UIImage *))completion {
     if(asset.pixelWidth == size.width && asset.pixelHeight == size.height){
         [imageManager requestImageForAsset:asset targetSize:size contentMode:PHImageContentModeAspectFill options:options resultHandler:^(UIImage *result, NSDictionary *info) {
-            [photoCache setObject:result forKey:asset.localIdentifier];
+            if(result){
+                [photoCache setObject:result forKey:asset.localIdentifier];
+            }
             completion(result);
         }];
     }
