@@ -250,7 +250,7 @@ static CGFloat const bigHeight = 268;
         [self.sheetDelegate sheet:self willChangeHeight:newHeight];
         
         [self reloadSections:[NSIndexSet indexSetWithIndex:0]];
-        [collection scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
+        [collection scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
     }
     
     else if(newSelectedCount == 0 && previewCellHeight != smallHeight){
@@ -263,7 +263,7 @@ static CGFloat const bigHeight = 268;
         [self.sheetDelegate sheet:self willChangeHeight:newHeight];
         
         [self reloadSections:[NSIndexSet indexSetWithIndex:0]];
-        [collection scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+        [collection scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
     }
     else{
         if(previewCellHeight == bigHeight){
