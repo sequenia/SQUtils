@@ -10,6 +10,6 @@
 
 @interface NSObject (SQExtended)
 
-@property (nonatomic, copy) NSString *sq_className;
++ (NSString *) sq_className;
 
 @end
