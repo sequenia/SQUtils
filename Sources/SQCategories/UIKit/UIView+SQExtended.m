@@ -8,7 +8,31 @@
 
 #import "UIView+SQExtended.h"
 
-@implementation UIView (NKExtended)
+@implementation UIView (SQExtended)
+
+- (CGFloat) sq_topY {
+    return CGRectGetMinY(self.frame);
+}
+
+- (CGFloat) sq_bottomY {
+    return CGRectGetMaxY(self.frame);
+}
+
+- (CGFloat) sq_leftX {
+    return CGRectGetMinX(self.frame);
+}
+
+- (CGFloat) sq_rightX {
+    return CGRectGetMaxX(self.frame);
+}
+
+- (CGFloat) sq_width {
+    return CGRectGetWidth(self.frame);
+}
+
+- (CGFloat) sq_height {
+    return CGRectGetHeight(self.frame);
+}
 
 - (UIView*)sq_findSuperviewViewWithClass: (Class) clazz {
     if ([self isKindOfClass: clazz]){
@@ -27,7 +51,12 @@
                      }];
 }
 
-+ (UIView*)sq_loadFromNibByClassName {
++ (UINib *) sq_loadNibByClassName {
+    return [UINib nibWithNibName: NSStringFromClass([self class])
+                          bundle: [NSBundle bundleForClass: [self class]]];
+}
+
++ (UIView *) sq_loadFromNibByClassName {
     NSString* nibName = NSStringFromClass([self class]);
     NSBundle* bundle = [NSBundle bundleForClass: [self class]];
     NSArray *subviewArray = [bundle loadNibNamed: nibName owner:self options:nil];

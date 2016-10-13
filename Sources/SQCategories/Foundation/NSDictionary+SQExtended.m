@@ -59,4 +59,39 @@ static NSString *urlEncode(id object) {
     }
 }
 
+- (NSInteger) sq_getIntegerByKey: (NSString *) key {
+    return [self sq_hasKey:key] ? [[self objectForKey:key] integerValue] : 0;
+}
+
+- (float) sq_getFloatByKey: (NSString *) key {
+    return [self sq_hasKey:key] ? [[self objectForKey:key] floatValue] : 0.0f;
+}
+
+- (float) sq_getDoubleByKey: (NSString *) key {
+    return [self sq_hasKey:key] ? [[self objectForKey:key] doubleValue] : 0.0f;
+}
+
+- (NSString *) sq_getStringByKey: (NSString *) key {
+    return [self sq_hasKey:key] ? [self objectForKey:key] : @"";
+}
+
+- (BOOL) sq_getBoolByKey: (NSString *) key {
+    return [self sq_hasKey:key] ? [[self objectForKey:key] boolValue] : NO;
+}
+
+- (NSDictionary *) sq_getDictionaryByKey: (NSString *) key {
+    return [self sq_hasKey:key] ? [self objectForKey:key] : [NSDictionary dictionary];
+}
+
+- (NSArray *) sq_getArrayByKey: (NSString *) key {
+    return [self sq_hasKey:key] ? [self objectForKey:key] : [NSArray array];
+}
+
+- (BOOL) sq_hasKey: (NSString *) key {
+    if ([self objectForKey:key] && [self objectForKey:key] != [NSNull null])
+        return YES;
+    else
+        return NO;
+}
+
 @end

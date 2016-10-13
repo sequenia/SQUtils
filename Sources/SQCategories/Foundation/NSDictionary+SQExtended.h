@@ -16,4 +16,21 @@
 
 - (NSString *)sq_jsonString;
 
+//JSON parse functions
+
+- (BOOL) sq_hasKey: (NSString *) key;
+
+- (NSInteger) sq_getIntegerByKey: (NSString *) key;
+
+- (float) sq_getFloatByKey: (NSString *) key;
+- (double) sq_getDoubleByKey: (NSString *) key;
+
+- (NSString *) sq_getStringByKey: (NSString *) key;
+
+- (BOOL) sq_getBoolByKey: (NSString *) key;
+
+- (NSDictionary *) sq_getDictionaryByKey: (NSString *) key;
+
+- (NSArray *) sq_getArrayByKey: (NSString *) key;
+
 @end
