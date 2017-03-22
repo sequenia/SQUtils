@@ -24,6 +24,11 @@
     SQPhotoPickerSheet *picker = [[SQPhotoPickerSheet alloc] init];
     picker.navigationBarTintColor = [UIColor whiteColor];
     picker.navigationBarBackgroundColor = [UIColor redColor];
+    picker.sheetTextFont = [UIFont boldSystemFontOfSize:15.f];
+    picker.sheetTextColor = [UIColor redColor];
+    picker.toolbarTintColor = [UIColor blackColor];
+    picker.checkmarkIcon = [UIImage imageNamed:@"ic_checkmark"];
+    picker.toolbarButtonFont = [UIFont italicSystemFontOfSize:14.f];
     picker.maxImagesCount = 5;
     [picker presentInViewController:self withCompletionAction:^(SQPhotoPickerSheet *picker, NSArray *returnedImages) {
         for(SQPhoto *photo in returnedImages){

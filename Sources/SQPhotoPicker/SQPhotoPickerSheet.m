@@ -32,6 +32,20 @@
     self = [super init];
     if(self){
         _maxImagesCount = NSIntegerMax;
+        
+        _navigationBarBackgroundColor = [UIColor whiteColor];
+        _navigationBarTintColor = [UIColor blueColor];
+        _navigationBarTitleFont = [UIFont systemFontOfSize:16.f];
+        
+        _toolbarTintColor = [UIColor blueColor];
+        
+        _checkmarkIcon = [UIImage imageNamed:@"checkmark" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
+        _emptyCheckmarkIcon = [UIImage imageNamed:@"empty_checkmark" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
+        
+        _sheetTextColor = [UIColor blueColor];
+        _sheetTextFont = [UIFont systemFontOfSize:14.f];
+        _toolbarButtonFont = [UIFont systemFontOfSize:14.f];
+        
         if ([self respondsToSelector:@selector(setTransitioningDelegate:)]) {
             self.modalPresentationStyle = UIModalPresentationCustom;
             self.transitioningDelegate = self;
@@ -51,6 +65,11 @@
     photoSheet = [[SQPhotoSheetCollection alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds) - 20, 398)];
     photoSheet.maxImagesCount = _maxImagesCount;
     photoSheet.sheetDelegate = self;
+    photoSheet.checkmarkIcon = self.checkmarkIcon;
+    photoSheet.emptyCheckmarkIcon = self.emptyCheckmarkIcon;
+    
+    photoSheet.sheetTextColor = self.sheetTextColor;
+    photoSheet.sheetTextFont = self.sheetTextFont;
     photoSheet.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:photoSheet];
     
@@ -158,14 +177,15 @@
     listController.listDelegate = self;
     listController.maxImagesCount = _maxImagesCount;
     listController.targetAlbumType = type;
+    listController.toolbarTintColor = self.toolbarTintColor;
+    listController.checkmarkIcon = self.checkmarkIcon;
+    listController.toolbarButtonFont = self.toolbarButtonFont;
+    listController.emptyCheckmarkIcon = self.emptyCheckmarkIcon;
     
     UINavigationController *controller = [[UINavigationController alloc] initWithRootViewController:listController];
-    if(self.navigationBarTintColor){
-        controller.navigationBar.tintColor = self.navigationBarTintColor;
-    }
-    if(self.navigationBarBackgroundColor){
-        controller.navigationBar.barTintColor = self.navigationBarBackgroundColor;
-    }
+    controller.navigationBar.tintColor = self.navigationBarTintColor;
+    controller.navigationBar.barTintColor = self.navigationBarBackgroundColor;
+    controller.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : self.navigationBarTintColor, NSFontAttributeName : self.navigationBarTitleFont};
     [self presentViewController:controller animated:YES completion:nil];
 }
 

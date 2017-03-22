@@ -22,6 +22,7 @@
     UIActivityIndicatorView *loaderIndicator;
     
     UIButton *doneButton;
+    UIButton *cancelButton;
 }
 
 @end
@@ -47,22 +48,34 @@ static NSString * const reuseIdentifier = @"SQPhotoPreviewCell";
     picSide = ([UIScreen mainScreen].bounds.size.width / 4) - 0.8;
 
     
+    [self.navigationController.toolbar setTintColor:self.toolbarTintColor];
+    
     doneButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 130, 30)];
     doneButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
-    [self updateDoneButtonTitle];
+    [doneButton setTitle:LOCALIZE(@"send_photos") forState:UIControlStateNormal];
     [doneButton setTitleColor:self.navigationController.toolbar.tintColor forState:UIControlStateNormal];
+    [doneButton.titleLabel setFont:self.toolbarButtonFont];
     [doneButton addTarget:self action:@selector(finishPick) forControlEvents:UIControlEventTouchUpInside];
-
+    
+    cancelButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 130, 30)];
+    cancelButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    [cancelButton setTitle:LOCALIZE(@"cancel_pick") forState:UIControlStateNormal];
+    [cancelButton setTitleColor:self.navigationController.toolbar.tintColor forState:UIControlStateNormal];
+    [cancelButton.titleLabel setFont:self.toolbarButtonFont];
+    [cancelButton addTarget:self action:@selector(dismissGrid) forControlEvents:UIControlEventTouchUpInside];
+    
     UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
                                        initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
                                        target:nil action:nil];
     negativeSpacer.width = -5;
     
-    UIBarButtonItem *cancel = [[UIBarButtonItem alloc] initWithTitle:LOCALIZE(@"cancel_pick") style:UIBarButtonItemStylePlain target:self action:@selector(dismissGrid)];
+    UIBarButtonItem *cancel = [[UIBarButtonItem alloc] initWithCustomView:cancelButton];
     
     UIBarButtonItem *flex = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
     
     UIBarButtonItem *completePick = [[UIBarButtonItem alloc] initWithCustomView:doneButton];
+    
+    self.navigationController.toolbarHidden = NO;
     
     if(_maxImagesCount == 1){
         [self setToolbarItems:@[cancel, flex] animated:YES];
@@ -150,10 +163,10 @@ static NSString * const reuseIdentifier = @"SQPhotoPreviewCell";
     }
 
     if(photo.isSelected){
-        checkmark.image = [UIImage imageNamed:@"checkmark" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
+        checkmark.image = self.checkmarkIcon;
     }
     else{
-        checkmark.image = [UIImage imageNamed:@"empty_checkmark" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
+        checkmark.image = self.emptyCheckmarkIcon;
     }
     
     return cell;

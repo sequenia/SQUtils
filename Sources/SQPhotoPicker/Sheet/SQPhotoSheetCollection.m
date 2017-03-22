@@ -95,6 +95,16 @@ static CGFloat const bigHeight = 268;
     previewCollection.maxImagesCount = maxImagesCount;
 }
 
+- (void) setCheckmarkIcon:(UIImage *)checkmarkIcon {
+    _checkmarkIcon = checkmarkIcon;
+    previewCollection.checkmarkIcon = _checkmarkIcon;
+}
+
+- (void) setEmptyCheckmarkIcon:(UIImage *)emptyCheckmarkIcon {
+    _emptyCheckmarkIcon = emptyCheckmarkIcon;
+    previewCollection.emptyCheckmarkIcon = _emptyCheckmarkIcon;
+}
+
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     return 2;
 }
@@ -130,6 +140,7 @@ static CGFloat const bigHeight = 268;
         cell.backgroundColor = [UIColor colorWithWhite:246/255.f alpha:1.f];
         
         checkmarkView = (UIImageView *)[cell viewWithTag:200];
+        checkmarkView.image = self.checkmarkIcon;
         
         for(UIView *view in cell.subviews){
             if([view isKindOfClass:[SQPhotoPreviewCollection class]]){
@@ -157,6 +168,8 @@ static CGFloat const bigHeight = 268;
     else{
         cell = [collectionView dequeueReusableCellWithReuseIdentifier:actionReuseIdentifier forIndexPath:indexPath];
         UILabel *label = (UILabel *)[cell viewWithTag:100];
+        label.textColor = self.sheetTextColor;
+        label.font = self.sheetTextFont;
         NSString *action;
         if(indexPath.section == 1){
             cell.backgroundColor = [UIColor colorWithWhite:246/255.f alpha:1.f];

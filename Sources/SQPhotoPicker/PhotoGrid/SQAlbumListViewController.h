@@ -17,6 +17,12 @@
 @property (nonatomic) NSInteger maxImagesCount;
 @property (nonatomic) NSInteger targetAlbumType;
 
+@property (nonatomic, strong) UIImage *checkmarkIcon;
+@property (nonatomic, strong) UIImage *emptyCheckmarkIcon;
+
+@property (nonatomic, strong) UIFont *toolbarButtonFont;
+@property (nonatomic, strong) UIColor *toolbarTintColor;
+
 @end
 
 @protocol SQPhotoListDelegate <NSObject>

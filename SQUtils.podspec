@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "SQUtils"
-  s.version      = '0.0.20'
+  s.version      = '0.0.21'
   s.summary      = 'Pack of categories and custom classes'
   s.homepage     = 'https://github.com/sequenia/SQUtils'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
@@ -37,12 +37,12 @@ Pod::Spec.new do |s|
   s.subspec 'SQEdgedCollection' do |ss|
     ss.source_files = 'Sources/SQEdgedCollection/*.{h,m}'
     ss.public_header_files = 'Sources/SQEdgedCollection/SQEdgedCollectionViewController.h'
-  end  
+  end
 
   s.subspec 'SQEndlessCollection' do |ss|
     ss.source_files = 'Sources/SQEndlessCollection/*.{h,m}'
     ss.public_header_files = 'Sources/SQEndlessCollection/SQEndlessCollectionView.h', 'Sources/SQEndlessCollection/SQPageControl.h'
-  end  
+  end
 
   s.subspec 'SQKeyboard' do |ss|
     ss.source_files = 'Sources/SQKeyboard/*.{h,m}'
@@ -89,21 +89,21 @@ Pod::Spec.new do |s|
             sss.public_header_files = 'Sources/SQSocial/VKontakte/SQVKontakteHelper.h'
             sss.dependency 'VK-ios-sdk'
         end
-        
+
         ss.subspec 'Instagram' do |sss|
             sss.source_files = 'Sources/SQSocial/Instagram/*.{h,m}'
             sss.public_header_files = 'Sources/SQSocial/Instagram/SQInstagramHelper.h', 'Sources/SQSocial/Instagram/InstagramLoginViewController.h'
             sss.resources = 'Sources/SQSocial/Instagram/Resources/InstagramLoginViewController.xib'
         end
-        
-        ss.subspec 'Facebook' do |sss|            
+
+        ss.subspec 'Facebook' do |sss|
             sss.source_files = 'Sources/SQSocial/Facebook/*.{h,m}'
             sss.public_header_files = 'Sources/SQSocial/Facebook/SQFacebookHelper.h'
             sss.dependency 'FBSDKCoreKit'
             sss.dependency 'FBSDKLoginKit'
             sss.dependency 'FBSDKShareKit'
         end
-        
+
         ss.subspec 'GooglePlus' do |sss|
             sss.source_files = 'Sources/SQSocial/GooglePlus/*.{h,m}'
             sss.public_header_files = 'Sources/SQSocial/GooglePlus/SQGooglePlusHelper.h'

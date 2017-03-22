@@ -21,6 +21,12 @@ static NSString * const kCancelAction    = @"cancel_pick";
 @property (nonatomic, weak) id<SQSheetDelegate> sheetDelegate;
 @property (nonatomic) NSInteger maxImagesCount;
 
+@property (nonatomic, strong) UIImage *checkmarkIcon;
+@property (nonatomic, strong) UIImage *emptyCheckmarkIcon;
+
+@property (nonatomic, strong) UIColor *sheetTextColor;
+@property (nonatomic, strong) UIFont *sheetTextFont;
+
 @end
 
 @protocol SQSheetDelegate <NSObject>

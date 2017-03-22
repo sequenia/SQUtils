@@ -49,6 +49,16 @@ static NSString * const reuseIdentifier = @"SQPhotoPreviewCell";
     [self registerNib:[UINib nibWithNibName:reuseIdentifier bundle:[NSBundle bundleForClass:[self class]]] forCellWithReuseIdentifier:reuseIdentifier];
 }
 
+//- (void) setCheckmarkIcon:(UIImage *)checkmarkIcon {
+//    _checkmarkIcon = checkmarkIcon;
+//    previewCollection.checkmarkIcon = _checkmarkIcon;
+//}
+//
+//- (void) setEmptyCheckmarkIcon:(UIImage *)emptyCheckmarkIcon {
+//    _emptyCheckmarkIcon = emptyCheckmarkIcon;
+//    previewCollection.emptyCheckmarkIcon = _emptyCheckmarkIcon;
+//}
+
 - (void) setAllPhotos:(NSArray *)allPhotos{
     _allPhotos = allPhotos;
     selectedCount = [_allPhotos filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"isSelected = YES"]].count;
@@ -89,7 +99,6 @@ static NSString * const reuseIdentifier = @"SQPhotoPreviewCell";
     }];
     
     UIImageView *checkmark = (UIImageView *)[cell viewWithTag:200];
-    
     if(hasSelection && _maxImagesCount > 1){
         checkmark.hidden = NO;
     }
@@ -98,10 +107,10 @@ static NSString * const reuseIdentifier = @"SQPhotoPreviewCell";
     }
     
     if(photo.isSelected){
-        checkmark.image = [UIImage imageNamed:@"checkmark" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
+        checkmark.image = self.checkmarkIcon;
     }
     else{
-        checkmark.image = [UIImage imageNamed:@"empty_checkmark" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
+        checkmark.image = self.emptyCheckmarkIcon;
     }
     
     return cell;
