@@ -33,7 +33,7 @@ static NSString * const reuseIdentifier = @"SQPhotoPreviewCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    self.navigationController.navigationBar.translucent = NO;
     [self.collectionView registerNib:[UINib nibWithNibName:reuseIdentifier bundle:[NSBundle bundleForClass:[self class]]] forCellWithReuseIdentifier:reuseIdentifier];
     self.collectionView.backgroundColor = [UIColor whiteColor];
     loaderIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];

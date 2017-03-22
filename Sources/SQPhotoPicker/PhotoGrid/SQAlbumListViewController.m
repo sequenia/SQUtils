@@ -47,6 +47,7 @@ static NSString * const reuseIdentifier = @"SQAlbumCell";
     [super viewDidLoad];
     
     self.navigationItem.title = LOCALIZE(@"albums");
+    self.navigationController.navigationBar.translucent = NO;
     
     self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectZero];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
