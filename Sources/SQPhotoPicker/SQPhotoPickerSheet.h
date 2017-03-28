@@ -29,6 +29,8 @@
 @property (nonatomic, strong) UIColor *sheetTextColor;
 @property (nonatomic, strong) UIFont *sheetTextFont;
 
+@property (nonatomic) CGFloat maxPhotoSide;
+
 - (void) presentInViewController:(UIViewController *)controller
               withCompletionAction:(void(^)(SQPhotoPickerSheet *picker, NSArray<SQPhoto *> *returnedImages))completion;
 

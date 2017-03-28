@@ -17,6 +17,8 @@
 
 @property UIImage *originalImage;
 
+@property CGFloat maxPhotoSide;
+
 
 - (void) getPhotoPreviewWithCompletion:(void(^)(UIImage *previewImage))completion;
 - (void) getPhotoPreviewSize:(CGSize)size withCompletion:(void(^)(UIImage *previewImage))completion;

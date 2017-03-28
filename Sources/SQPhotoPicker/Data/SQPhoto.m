@@ -7,7 +7,7 @@
 //
 
 #import "SQPhoto.h"
-
+#import <SQUtils/SQCategories.h>
 #import "SQPhotoCache.h"
 
 @implementation SQPhoto
@@ -39,7 +39,13 @@
 
 - (void) getPhotoOriginalAsync:(void(^)(UIImage *originalPhoto))completion{
     if(_originalImage){
-        completion(_originalImage);
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            UIImage *scaledImage = [_originalImage sq_scaleProportionalToMaxSide:_maxPhotoSide];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completion(scaledImage);
+            });
+        });
+        
     }
     else{
         PHImageRequestOptions *options = [[PHImageRequestOptions alloc] init];
@@ -49,8 +55,9 @@
         options.networkAccessAllowed = YES;
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             [[SQPhotoCache sharedCache] requestImageForAsset:_asset withTargetSize:CGSizeMake(_asset.pixelWidth, _asset.pixelHeight) options:options completion:^(UIImage *image) {
+                UIImage *scaledImage = [image sq_scaleProportionalToMaxSide:_maxPhotoSide];
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    completion(image);
+                    completion(scaledImage);
                 });
             }];
         });
@@ -59,7 +66,7 @@
 
 - (UIImage *) getPhotoOriginalSync{
     if(_originalImage){
-        return _originalImage;
+        return [_originalImage sq_scaleProportionalToMaxSide:_maxPhotoSide];
     }
     else{
         PHImageRequestOptions *options = [[PHImageRequestOptions alloc] init];
@@ -69,7 +76,9 @@
         options.networkAccessAllowed = YES;
         __block UIImage *imageBlock = nil;
         [[SQPhotoCache sharedCache] requestImageForAsset:_asset withTargetSize:CGSizeMake(_asset.pixelWidth, _asset.pixelHeight) options:options completion:^(UIImage *image) {
-            imageBlock = image;
+            image = [image sq_scaleProportionalToMaxSide:_maxPhotoSide];
+            UIImage *scaledImage = [image sq_scaleProportionalToMaxSide:_maxPhotoSide];
+            imageBlock = scaledImage;
         }];
         return imageBlock;
     }

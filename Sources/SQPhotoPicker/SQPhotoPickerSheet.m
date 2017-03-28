@@ -46,6 +46,8 @@
         _sheetTextFont = [UIFont systemFontOfSize:14.f];
         _toolbarButtonFont = [UIFont systemFontOfSize:14.f];
         
+        _maxPhotoSide = 2000.f;
+        
         if ([self respondsToSelector:@selector(setTransitioningDelegate:)]) {
             self.modalPresentationStyle = UIModalPresentationCustom;
             self.transitioningDelegate = self;
@@ -132,6 +134,9 @@
 
 - (void) sheet:(SQPhotoSheetCollection *)sheet didReturnImages:(NSArray *)images{
     [self dismissPicker];
+    for(SQPhoto *photo in images) {
+        photo.maxPhotoSide = _maxPhotoSide;
+    }
     _completionAction(self, images);
 }
 
@@ -196,6 +201,7 @@
     SQPhoto *photo = [[SQPhoto alloc] init];
     photo.isSelected = YES;
     photo.originalImage = newImage;
+    photo.maxPhotoSide = _maxPhotoSide;
     _completionAction(self, @[photo]);
     
 }
@@ -211,6 +217,9 @@
 - (void) listController:(SQAlbumListViewController *)collection didFinishPickImages:(NSArray<SQPhoto *> *)photos{
     UIViewController *vc = self.presentingViewController;
     [vc dismissViewControllerAnimated:YES completion:nil];
+    for(SQPhoto *photo in photos) {
+        photo.maxPhotoSide = _maxPhotoSide;
+    }
     _completionAction(self, photos);
 }
 
