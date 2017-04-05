@@ -30,6 +30,9 @@
     picker.checkmarkIcon = [UIImage imageNamed:@"ic_checkmark"];
     picker.toolbarButtonFont = [UIFont italicSystemFontOfSize:14.f];
     picker.maxImagesCount = 5;
+    [picker setDismissAction:^(SQPhotoPickerSheet *sheet) {
+        NSLog(@"OLOLO");
+    }];
     [picker presentInViewController:self withCompletionAction:^(SQPhotoPickerSheet *picker, NSArray *returnedImages) {
         for(SQPhoto *photo in returnedImages){
             NSString *url = [photo getPhotoURLString];

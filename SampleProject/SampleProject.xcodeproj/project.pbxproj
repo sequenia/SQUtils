@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		804DF1C21E94D71C0043E545 /* SQUtils.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 804DF1C11E94D71C0043E545 /* SQUtils.podspec */; };
 		806883451E8276B2008C40EC /* ic_checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 806883421E8276B2008C40EC /* ic_checkmark.png */; };
 		806883461E8276B2008C40EC /* ic_checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 806883431E8276B2008C40EC /* ic_checkmark@2x.png */; };
 		806883471E8276B2008C40EC /* ic_checkmark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 806883441E8276B2008C40EC /* ic_checkmark@3x.png */; };
@@ -45,6 +46,7 @@
 		2BB7ED33E89D6F4B19172234 /* Pods-SampleProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SampleProjectUITests/Pods-SampleProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5CCD67D7C557A7EB9378D145 /* libPods-SampleProjectUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SampleProjectUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78D2379DA5E6B1264A192462 /* Pods-SampleProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-SampleProject/Pods-SampleProject.release.xcconfig"; sourceTree = "<group>"; };
+		804DF1C11E94D71C0043E545 /* SQUtils.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SQUtils.podspec; path = ../SQUtils.podspec; sourceTree = "<group>"; };
 		806883421E8276B2008C40EC /* ic_checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_checkmark.png; sourceTree = "<group>"; };
 		806883431E8276B2008C40EC /* ic_checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_checkmark@2x.png"; sourceTree = "<group>"; };
 		806883441E8276B2008C40EC /* ic_checkmark@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_checkmark@3x.png"; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 		80F34A901D2CF048005B6940 = {
 			isa = PBXGroup;
 			children = (
+				804DF1C11E94D71C0043E545 /* SQUtils.podspec */,
 				80F34A9B1D2CF048005B6940 /* SampleProject */,
 				80F34AB51D2CF048005B6940 /* SampleProjectTests */,
 				80F34AC01D2CF048005B6940 /* SampleProjectUITests */,
@@ -316,6 +319,7 @@
 				806883471E8276B2008C40EC /* ic_checkmark@3x.png in Resources */,
 				806883451E8276B2008C40EC /* ic_checkmark.png in Resources */,
 				80F34AA91D2CF048005B6940 /* Assets.xcassets in Resources */,
+				804DF1C21E94D71C0043E545 /* SQUtils.podspec in Resources */,
 				80F34AA71D2CF048005B6940 /* Main.storyboard in Resources */,
 				806883461E8276B2008C40EC /* ic_checkmark@2x.png in Resources */,
 			);

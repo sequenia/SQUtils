@@ -130,6 +130,9 @@
 
 - (void) dismissPicker{
     [self dismissViewControllerAnimated:YES completion:nil];
+    if(self.dismissAction) {
+        self.dismissAction(self);
+    }
 }
 
 - (void) sheet:(SQPhotoSheetCollection *)sheet didReturnImages:(NSArray *)images{
