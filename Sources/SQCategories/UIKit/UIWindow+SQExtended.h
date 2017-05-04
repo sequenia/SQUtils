@@ -12,4 +12,8 @@
 
 - (void)sq_setRootViewController: (UIViewController *)rootViewController animated: (BOOL)animated;
 
+- (void)sq_setRootViewController:(UIViewController *)rootViewController
+                        animated:(BOOL)animated
+                      completion:(void (^)())completion;
+
 @end

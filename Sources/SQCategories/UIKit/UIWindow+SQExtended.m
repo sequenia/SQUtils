@@ -11,27 +11,36 @@
 @implementation UIWindow (SQExtended)
 
 - (void)sq_setRootViewController: (UIViewController *)rootViewController animated: (BOOL)animated {
-    UIView *snapShotView;
+  [self sq_setRootViewController:rootViewController
+                        animated:animated
+                      completion:nil];
+}
+
+- (void)sq_setRootViewController:(UIViewController *)rootViewController
+                        animated:(BOOL)animated
+                      completion:(void (^)())completion {
+  if (animated) {
+    UIView *snapShotView = [self snapshotViewAfterScreenUpdates:YES];
+    [rootViewController.view addSubview:snapShotView];
     
-    if (animated) {
-        snapShotView = [self snapshotViewAfterScreenUpdates: YES];
-        [rootViewController.view addSubview: snapShotView];
+    self.rootViewController = rootViewController;
+    
+    [UIView animateWithDuration:0.3 animations:^{
+      snapShotView.layer.opacity = 0;
+      snapShotView.layer.transform = CATransform3DMakeScale(1.5, 1.5, 1.5);
+    } completion:^(BOOL finished) {
+      [snapShotView removeFromSuperview];
+      if (completion) {
+        completion();
+      }
+    }];
+  }
+  else {
+    self.rootViewController = rootViewController;
+    if (completion) {
+      completion();
     }
-    
-    [self setRootViewController: rootViewController];
-    
-    if (animated) {
-        [UIView animateWithDuration: 0.3 animations:^{
-            
-            snapShotView.layer.opacity = 0;
-            snapShotView.layer.transform = CATransform3DMakeScale(1.5, 1.5, 1.5);
-            
-        } completion:^(BOOL finished) {
-            
-            [snapShotView removeFromSuperview];
-            
-        }];
-    }
+  }
 }
 
 @end
