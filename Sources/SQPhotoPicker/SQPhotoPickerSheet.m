@@ -116,12 +116,13 @@
         self.authAction(self, status);
     }
     switch (status) {
-        case PHAuthorizationStatusAuthorized:
+        case PHAuthorizationStatusAuthorized: {
             [_sourceController presentViewController:self animated:YES completion:nil];
             break;
-        default:
-            [[[UIAlertView alloc] initWithTitle:LOCALIZE(@"access_denied") message:LOCALIZE(@"unlock_photos_access") delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+        }
+        default: {
             break;
+        }
     }
 }
 
