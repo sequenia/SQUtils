@@ -116,14 +116,11 @@
         case PHAuthorizationStatusAuthorized:
             [_sourceController presentViewController:self animated:YES completion:nil];
             break;
-        case PHAuthorizationStatusRestricted:
-            [[[UIAlertView alloc] initWithTitle:LOCALIZE(@"access_denied") message:LOCALIZE(@"unlock_photos_access") delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-            break;
-        case PHAuthorizationStatusDenied:
-            [[[UIAlertView alloc] initWithTitle:LOCALIZE(@"access_denied") message:LOCALIZE(@"unlock_photos_access") delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-            break;
         default:
             [[[UIAlertView alloc] initWithTitle:LOCALIZE(@"access_denied") message:LOCALIZE(@"unlock_photos_access") delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+            if(self.accessDeniedAction) {
+                self.accessDeniedAction(self);
+            }
             break;
     }
 }
