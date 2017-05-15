@@ -112,15 +112,15 @@
 
 - (void) onCompleteAuth{
     PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
+    if (self.onAuthAction) {
+        self.onAuthAction(self, status);
+    }
     switch (status) {
         case PHAuthorizationStatusAuthorized:
             [_sourceController presentViewController:self animated:YES completion:nil];
             break;
         default:
             [[[UIAlertView alloc] initWithTitle:LOCALIZE(@"access_denied") message:LOCALIZE(@"unlock_photos_access") delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-            if(self.accessDeniedAction) {
-                self.accessDeniedAction(self);
-            }
             break;
     }
 }
