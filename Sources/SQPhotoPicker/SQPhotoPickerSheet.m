@@ -112,8 +112,8 @@
 
 - (void) onCompleteAuth{
     PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
-    if (self.onAuthAction) {
-        self.onAuthAction(self, status);
+    if (self.authAction) {
+        self.authAction(self, status);
     }
     switch (status) {
         case PHAuthorizationStatusAuthorized:

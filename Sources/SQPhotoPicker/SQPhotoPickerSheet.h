@@ -12,7 +12,7 @@
 
 @interface SQPhotoPickerSheet : UIViewController
 
-@property (strong, nonatomic) void (^onAuthAction)(SQPhotoPickerSheet *picker, PHAuthorizationStatus status);
+@property (strong, nonatomic) void (^authAction)(SQPhotoPickerSheet *picker, PHAuthorizationStatus status);
 @property (strong, nonatomic) void (^completionAction)(SQPhotoPickerSheet *picker, NSArray<SQPhoto *> *returnedImages);
 @property (strong, nonatomic) void (^dismissAction)(SQPhotoPickerSheet *picker);
 @property (strong, nonatomic) void (^pickerSheetClicked)(NSString *type);
