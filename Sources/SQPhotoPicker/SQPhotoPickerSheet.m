@@ -167,7 +167,9 @@
         [imagePicker setShowsCameraControls:YES];
         imagePicker.delegate = self;
         [imagePicker setAllowsEditing:NO];
-        [self presentViewController:imagePicker animated:YES completion:nil];
+        [self.sourceController dismissViewControllerAnimated: YES completion: ^{
+            [self.sourceController presentViewController: imagePicker animated: YES completion: nil];
+        }];
     }
     if([action isEqualToString:kMyPhotosAction]){
         [self presentAlbumControllerWithAlbumType:PHAssetCollectionSubtypeSmartAlbumUserLibrary];
@@ -197,14 +199,12 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
     UIImage *newImage = [info objectForKey:UIImagePickerControllerOriginalImage];
-    UIViewController *vc = self.presentingViewController;
-    [vc dismissViewControllerAnimated:YES completion:nil];
+    [self.sourceController dismissViewControllerAnimated:YES completion:nil];
     SQPhoto *photo = [[SQPhoto alloc] init];
     photo.isSelected = YES;
     photo.originalImage = newImage;
     photo.maxPhotoSide = _maxPhotoSide;
     _completionAction(self, @[photo]);
-    
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
