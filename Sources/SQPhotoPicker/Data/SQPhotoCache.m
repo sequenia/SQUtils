@@ -57,15 +57,22 @@
         }];
     }
     else{
-        if([photoCache objectForKey:asset.localIdentifier]){
-            completion([photoCache objectForKey:asset.localIdentifier]);
+        if(asset) {
+            if([photoCache objectForKey:asset.localIdentifier]){
+                completion([photoCache objectForKey:asset.localIdentifier]);
+            }
+            else{
+                [imageManager startCachingImagesForAssets:@[asset] targetSize:size contentMode:PHImageContentModeAspectFill options:options];
+                [imageManager requestImageForAsset:asset targetSize:size contentMode:PHImageContentModeAspectFill options:options resultHandler:^(UIImage *result, NSDictionary *info) {
+                    if(result){
+                        [photoCache setObject:result forKey:asset.localIdentifier];
+                    }
+                    completion(result);
+                }];
+            }
         }
-        else{
-            [imageManager startCachingImagesForAssets:@[asset] targetSize:size contentMode:PHImageContentModeAspectFill options:options];
-            [imageManager requestImageForAsset:asset targetSize:size contentMode:PHImageContentModeAspectFill options:options resultHandler:^(UIImage *result, NSDictionary *info) {
-                [photoCache setObject:result forKey:asset.localIdentifier];
-                completion(result);
-            }];
+        else {
+            completion(nil);
         }
     }
 }
