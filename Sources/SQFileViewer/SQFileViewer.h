@@ -46,6 +46,8 @@ typedef void(^SQFileViewerProgressCompletion)(CGFloat progress);
 
 @property UIColor *preferredColor;
 
+@property NSDictionary *customHTTPHeaders;
+
 + (SQFileViewer*) fileViewerWithFileAttachments: (NSArray<id<SQAttachment>>*) attachments
                                        delegate: (id <SQFileViewerDelegate>) delegate
                                  preferredColor: (UIColor *)color;

@@ -19,6 +19,8 @@ typedef void(^SQFileManagerDownloadProgress) (float progress);
 
 @property (copy, nonatomic) SQFileManagerDownloadProgress progressBlock;
 
+@property (strong, nonatomic) NSDictionary *customHTTPHeaders;
+
 + (instancetype) sharedManager;
 
 - (BOOL) needShowAlert: (NSURL *) url;

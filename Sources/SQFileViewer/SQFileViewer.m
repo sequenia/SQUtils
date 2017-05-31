@@ -110,7 +110,9 @@
 #pragma mark - Public
 
 - (SQFileManager*) fileManager {
-    return [SQFileManager sharedManager];
+    SQFileManager *manager = [SQFileManager sharedManager];
+    manager.customHTTPHeaders = self.customHTTPHeaders;
+    return manager;
 }
 
 - (void) openFileAt:(NSInteger)index

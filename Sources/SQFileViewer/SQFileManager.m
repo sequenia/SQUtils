@@ -85,6 +85,10 @@ static NSString* kUnclompetedDocsFolder = @"UncompletedDocuments";
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL: nsurl];
     NSData* resumeData = [self resumeDataForURL: nsurl];
     NSURLSessionDownloadTask* task = nil;
+    for (NSString *key in self.customHTTPHeaders.allKeys) {
+        NSString *value = self.customHTTPHeaders[key];
+        [request setValue: value forHTTPHeaderField: key];
+    }
     if (resumeData){
         task = [self.session downloadTaskWithResumeData: resumeData];
     } else {
